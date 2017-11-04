@@ -80,10 +80,6 @@
 			}
 		}
 
-		/* Toggle display of the dropdown of playlists */
-		function dropdownFunct() {
-
-		}
 	</script>
 
 
@@ -191,14 +187,18 @@ function popup()
 							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}"></img>
 							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
-						<div class="col-1">
+						<div class="col-2">
 							<div class="row">
 								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
 							</div>
-							<div class="row">
-								<button onclick="dropdownFunct()" class="dropbtn">+</button>
-								<ul id="playlists">
-								</ul>
+							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
+								<button class="dropdown-toggle dropbtn btn" type="button" data-toggle="dropdown">Add To</button>
+								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<ul id="playlists">
+										<li><a href="#">TEMP DATA, REMOVE</a></li>
+									</ul>
+									<a href="#" onclick="appendList()">Create New Playlist</a>
+								</div>
 							</div>
 						</div>
 					</div>
