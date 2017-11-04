@@ -29,9 +29,7 @@
 			$("#pDropDown").click(function() {
 				$(this).toggle();
 			});
-			$("#detail").click(function() {
-				$(this).toggle();
-			});
+
 			$("#appendList").click(function() {
 				var newName = prompt("Name the new exercise set.");
 				if (newName) {
@@ -42,6 +40,10 @@
 					localStorage.setItem("newNameName", "New Set");
 				}
 			});*/
+		});
+
+		Handlebars.registerHelper('json', function(context) {
+			return JSON.stringify(context);
 		});
 
 		// Close the dropdown if the user clicks outside of it
@@ -57,6 +59,24 @@
 			  	}
 				}
 		  }
+		}
+
+		/* When the user clicks on the button,
+		toggle between hiding and showing the detail content */
+		function detailFunct() {
+			var preview = document.getElementById("prev" + arguments.index);
+			var description = document.getElementById("description" + arguments.index);
+			alert(arguments);
+			if (preview.display == "none")
+			{
+				preview.display = "block";
+				description.display = "none";
+			}
+			else
+			{
+				preview.display = "none";
+				description.display = "block";
+			}
 		}
 	</script>
 
@@ -164,14 +184,15 @@ function popup()
 					</div>
 					<div class="row">
 						<div class="col">
-							<img src={{prev}} style="width:100%; height:100%">
+							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}"></img>
+							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
 						<div class="col-1">
 							<div class="row">
-								<button onclick="detailFunct()" class="detailbtn">Details</button>
+								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
 							</div>
 							<div class="row">
-								<button onclick="dropdownFunct()" class="addbtn">+</button>
+								<button onclick="dropdownFunct()" class="dropbtn">+</button>
 							</div>
 						</div>
 					</div>
