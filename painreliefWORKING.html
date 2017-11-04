@@ -123,7 +123,7 @@ function popup()
 	</div>
 </nav>
 
-<body>
+<body style="background-color:#dbd9d8">
 <!-- section for defining modal tutorial at https://www.tutorialspoint.com/bootstrap/bootstrap_modal_plugin.htm something similar could be used for details function later-->
 <div class="modal fade" id="gifmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -174,13 +174,13 @@ function popup()
 <div class="col">
 		<h1 style="font-size:25px; text-align:center !important">PAIN RELIEF EXERCISES</h1>
 	<div class="col-ld-3 col-10">
-		<div id="stuff"></div>
+		<div id="stuff" ></div>
 		<script id="entry-template" type="text/x-handlebars-template">
 			<div>
 				{{#each this}}
-				<div class="row" style="padding: 5px">
+				<div class="row" style="padding: 5px;">
 					<div class="row">
-						<h3 style="font-size: 16px">{{title}}</h3>
+						<h3 style="font-size: 16px;">{{title}}</h3>
 					</div>
 					<div class="row">
 						<div class="col">
@@ -194,7 +194,7 @@ function popup()
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button class="dropdown-toggle dropbtn btn" type="button" data-toggle="dropdown">Add To</button>
 								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<ul id="playlists">
+									<ul id="playlists" class="list-unstyled">
 										<li><a href="#">TEMP DATA, REMOVE</a></li>
 									</ul>
 									<a href="#" onclick="appendList()">Create New Playlist</a>
