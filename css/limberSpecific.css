@@ -112,6 +112,7 @@ span.psw {
   font-size: 14px;
   border: none;
   cursor: pointer;
+  border-radius: 15px;
 }
 .detailbtn:hover, .detailbtn:focus {
   background-color: #fff263;
@@ -125,10 +126,11 @@ span.psw {
 .dropbtn {
   background-color:#c49000;
   color: white;
-  padding: 10px;
+  padding: 15px;
   font-size: 14px;
   border: none;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
