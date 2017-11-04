@@ -112,6 +112,7 @@ var glutsStrength = [
 
 // call this function when the apge loads
 // From lab4 code
+/*
 $(document).ready(function() {
   var source = $("#entry-template").html();
   var tempalte = Handlebars.compile(source);
@@ -129,4 +130,6 @@ $(document).ready(function() {
     var curHTML = template(curData);
     parentDiv.append(curHtml);
   }
-})
+
+  // when you first load the page
+}) */
