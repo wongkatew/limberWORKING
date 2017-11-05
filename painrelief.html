@@ -21,21 +21,18 @@
 			var html = template(glutsPain);
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
-			/* var newPlaylist = localStorage.getItem("newNameName");
-			if (newNameName) {
-				$(#pName).html(pName);
+			if (localStorage.length >= 1) {
+				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+				for (var j = 0; j < playlists.length; j++) {
+					// document.getElementById("dropdown" + j).innerHTML = "";
+					document.getElementById("funfun").innerHTML = "";
+					// for (var i = 0; i < playlists.length; i++) {
+						var nameList = "<li>" + playlists[i].name + "</li>";
+					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
+					// }
+					document.getElementById("funfun").innerHTML += nameList;
+				}
 			}
-
-			$("#appendList").click(function() {
-				var newName = prompt("Name the new exercise set.");
-				if (newName) {
-					$("#pName").html(pName);
-					localStorage.setItem("newNameName", pName);
-				}
-				else {
-					localStorage.setItem("newNameName", "New Set");
-				}
-			});*/
 		});
 
 		// so things can be read
@@ -85,6 +82,25 @@
 			var src = arguments[0].video;
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
+		}
+
+		function appendList() {
+			var nameP = prompt("Name your new exercise set.");
+			var newPlaylist = "New Exercise Set";
+			if (nameP != null) {
+				newPlaylist = nameP;
+			}
+			var fullP = {
+				"name": nameP,
+				"vids": [arguments[0]]
+			};
+			// if (playlists.length >= 1) {
+			// 	fullP = ", " + fullP;
+			// }
+			playlists.push(fullP);
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+			var nameList = "<li>" + nameP + "</li>";
+			document.getElementById("dropdown" + arguments[0].index).innerHTML += nameList;
 		}
 
 	</script>
@@ -184,10 +200,12 @@
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button class="dropdown-toggle dropbtn btn" type="button" data-toggle="dropdown">Add To</button>
 								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<ul id="playlists" class="list-unstyled">
-										<li><a href="#">TEMP DATA, REMOVE</a></li>
-									</ul>
-									<a href="#" onclick="appendList()">Create New Playlist</a>
+									<div id="funfun">
+										<ul id="playlistslist" class="list-unstyled">
+											<li><a href="#">TEMP DATA, REMOVE</a></li>
+										</ul>
+									</div>
+									<a href="#" onclick="appendList({{json this}})">Create New Playlist</a>
 								</div>
 							</div>
 						</div>
