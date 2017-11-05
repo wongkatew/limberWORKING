@@ -4,204 +4,134 @@
 	<title>limber</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
-	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script-->
-	<!--Ryan why did you import so many things? Several of these things are overwriting each other...-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+	<script src="js/exercises.js"></script>
+	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
-		/* When the user clicks on the button,
-		toggle between hiding and showing the dropdown content */
-		function fdropdown1() {
-			document.getElementById("myDropdown1").classList.toggle("show");
-		}
-		function fdropdown2() {
-			document.getElementById("myDropdown2").classList.toggle("show");
-		}
-		function fdropdown3() {
-			document.getElementById("myDropdown3").classList.toggle("show");
-		}
+		$(document).ready(function() {
+			console.log('hello world');
+
+			// compile the template
+			var source = $("#entry-template").html();
+			var template = Handlebars.compile(source);
+			var html = template(glutsPain);
+			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
+
+			if (localStorage.length >= 1) {
+				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+				for (var j = 0; j < glutsPain.length; j++) {
+					// document.getElementById("dropdown" + j).innerHTML = "";
+					document.getElementById("funfun" + j).innerHTML = "";
+					// document.getElementById("funfun").innerHTML = "";
+					for (var i = 0; i < playlists.length; i++) {
+						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(glutsPain[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
+					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
+						document.getElementById("funfun" + j).innerHTML += nameList;
+					}
+					// document.getElementById("funfun").innerHTML += nameList;
+				}
+			}
+		});
+
+		// so things can be read
+		Handlebars.registerHelper('json', function(context) {
+			return JSON.stringify(context);
+		});
 
 		// Close the dropdown if the user clicks outside of it
 		window.onclick = function(event) {
 		  if (!event.target.matches('.w3-button')) {
 
-			var dropdowns = document.getElementsByClassName("dropdown-content");
-			var i;
-			for (i = 0; i < dropdowns.length; i++) {
-			  var openDropdown = dropdowns[i];
-			  if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			  }
-			}
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+			  	var openDropdown = dropdowns[i];
+			  	if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+			  	}
+				}
 		  }
-		}
+		};
 
 		/* When the user clicks on the button,
 		toggle between hiding and showing the detail content */
-		function detailFunction1() {
-			var vid = document.getElementById('vid1');
-			if (vid.style.display == "none")
+		function detailFunct() {
+			var preview = document.getElementById("prev" + arguments[0].index);
+			var description = document.getElementById("description" + arguments[0].index);
+			// alert(arguments[0].index);
+			if (preview.style.display == "none")
 			{
-				vid.style.display = "block";
+				preview.style.display = "block";
+				description.style.display = "none";
 			}
 			else
 			{
-				vid.style.display = "none";
+				preview.style.display = "none";
+				description.style.display = "block";
 			}
-		}
-		/* When the user clicks on the button,
-		toggle between hiding and showing the detail content */
-		function detailFunction2() {
-			var vid = document.getElementById('vid2');
-			if (vid.style.display == "none")
-			{
-				vid.style.display = "block";
+		};
+
+		function goBack() {
+			window.history.back();
+		};
+
+		function showVid()
+		{
+			var src = arguments[0].video;
+			$('#vidmodal iframe').attr('src', src);
+			$('#vidmodal').modal('show');
+		};
+
+		function appendList() {
+			var nameP = prompt("Name your new exercise set.");
+			var newPlaylist = "New Exercise Set";
+			if (nameP == null) {	// of the user presses cancel
+				return;
 			}
-			else
-			{
-				vid.style.display = "none";
+			if (nameP != null) {
+				newPlaylist = nameP;
 			}
-		}
-		/* When the user clicks on the button,
-		toggle between hiding and showing the detail content */
-		function detailFunction3() {
-			var vid = document.getElementById('vid3');
-			if (vid.style.display == "none")
-			{
-				vid.style.display = "block";
+			var fullP = {
+				"name": nameP,
+				"vids": [arguments[0]]
+			};
+			// if (playlists.length >= 1) {
+			// 	fullP = ", " + fullP;
+			// }
+			playlists.push(fullP);
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+			for (var i = 0; i < glutsPain.length; i++) {
+				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsPain[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
-			else
-			{
-				vid.style.display = "none";
-			}
-		}
+			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
+		};
+
+		/* If the playlist already exists and we want to add the video to it */
+		function addToPlaylistExisting() {
+			// alert("" + arguments[0]);   // DEBUGGING
+			// alert(JSON.stringify(arguments[1]));  // DEBUGGING
+			var playlistName = "" + arguments[0]; // this is a string
+			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
+
+			// add video to playlist
+			playlists.filter(function(obj) {
+				if (obj.name === playlistName) {
+					obj.vids.push(currentVideoData);
+				}
+			});
+
+			// update the playlist in localStorage
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+
+		};
 	</script>
-	<link href="css/limberSpecific.css" rel="stylesheet"/>
-	<style type = "text/css">
-		.h2 { font-size: 3vh }
-
-		.panel.panel-horizontal {
-			display:table;
-			width:100%;
-		}
-		.panel.panel-horizontal > .panel-footer {
-			display:table-cell;
-		}
-		.panel.panel-horizontal > .panel-footer {
-			width: 25%;
-			border:0;
-			vertical-align: middle;
-		}
-		.panel.panel-horizontal > .panel-footer {
-			border-left: 1px solid #ddd;
-			border-top-left-radius: 0;
-			border-bottom-right-radius: 4px;
-		}
-
-		.w3-button
-		{
-			position: relative;
-			left:15px;
-		}
-
-		.details{
-			position:relative;
-			padding-bottom:30%;
-		}
-		.gifsmall
-		{
-			position:absolute;
-			top:15%;
-			width:69%;
-		}
-
-		.detailbtn {
-			background-color:#cc99ff;
-			color: white;
-			padding: 14px;
-			font-size: 14px;
-			border: none;
-			cursor: pointer;
-		}
-
-		.detailbtn:hover, .detailbtn:focus {
-			background-color: #e6ccff;
-		}
-
-		.detailtab {
-			position: relative;
-			display: inline;
-		}
-
-		.dropbtn {
-			background-color:#cc99ff;
-			color: white;
-			padding: 14px;
-			font-size: 14px;
-			border: none;
-			cursor: pointer;
-		}
-
-		.dropbtn:hover, .dropbtn:focus {
-			background-color: #e6ccff;
-		}
-
-		.dropdown {
-			position: relative;
-			display: inline;
-		}
-
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 160px;
-			overflow: auto;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-
-		.dropdown a:hover {background-color: #f1f1f1}
-
-		.show {display:block;}
-		</style>
-
 </head>
 <body>
-
-<script>
-function goBack() {
-	window.history.back();
-}
-
-function appendList() {
-	var ul = document.getElementById("playlists");
-	var li = document.createElement("li");
-	li.appendChild(document.createTextNode("New Playlist"));
-	ul.appendChild(li);
-}
-$(function()
-{
-		$('.gifsmall').on('click',popup);
-});
-function popup()
-{
-			$('.gifprev').attr('src', $(this).find('img').attr('src'));
-			$('#gifmodal').modal('show');
-}
-</script>
-
 <!-- collapsible navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<button class="navbar-btn float-sm-left" onclick="goBack()">
@@ -225,113 +155,58 @@ function popup()
 
 <body>
 <!-- section for defining modal tutorial at https://www.tutorialspoint.com/bootstrap/bootstrap_modal_plugin.htm something similar could be used for details function later-->
-<div class="modal fade" id="gifmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal modal-lg" id="vidmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+			<div class="modal-header" style="display:none;">
+			</div>
       <div class="modal-body">
       	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <img src="" class="gifprev" style="width: 100%;" >
+        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" style="top: 0; left: 0; width:100%; height: 100%"></iframe>
       </div>
     </div>
   </div>
 </div>
 
-  <h1>PAIN RELIEF EXERCISES</h1>
-  <div class="col-lg-3">
-     <div class="panel panel-default panel-horizontal">
-        <div class="panel-heading" style="background-color:#70db70;color:#fff;"><strong>Pushups</strong></div>
-        <div class="panel-body" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-				<div class="details">
-					With arms shoulder-width apart, bend arms at elbows until chest touches the ground, then push upwards to count for 1 rep.
-				</div>
-				<a href = "#" class="gifsmall">
-					<img src="images/prev2.gif" style = "width: 100%; height: 100%" id = "vid1">
-				</a>
-        </div>
-
-		<div class="panel-footer" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-			<div class="detailtab">
-					<button onclick="detailFunction1()" class="detailbtn">Details</button>
-			</div>
-			<div class="dropdown">
-					<button onclick="fdropdown1()" class="w3-button w3-large w3-circle w3-teal">+</button>
-						<div id="myDropdown1" class="dropdown-content">
-							<ul id="playlists" style="color:#000">
-								<li>Playlist 1</li>
-								<li>Playlist 2</li>
-								<li>Playlist 3</li>
-							</ul>
-							<a href="#" onclick="appendList()">Create New Playlist</a>
+<div class="col">
+		<h1 style="font-size:25px; text-align:center !important">PAIN RELIEF EXERCISES</h1>
+	<div class="col-ld-3 col-10">
+		<div id="stuff" ></div>
+		<script id="entry-template" type="text/x-handlebars-template">
+			<div>
+				{{#each this}}
+				<div class="row" style="padding: 5px;">
+					<div class="row">
+						<h3 style="font-size: 16px;">{{title}}</h3>
+					</div>
+					<div class="row">
+						<div class="col">
+							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
+							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
-			</div>
+						<div class="col-2">
+							<div class="row">
+								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
+							</div>
+							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
+								<button class="dropdown-toggle dropbtn btn" type="button" data-toggle="dropdown">Add To</button>
+								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<div id="funfun{{index}}">
+										<ul id="playlistslist" class="list-unstyled">
 
-		</div>
-     </div>
-	</div>
-
-	 <div class="col-lg-3">
-     <div class="panel panel-default panel-horizontal">
-        <div class="panel-heading" style="background-color:#70db70;color:#fff;"><strong>Pushups</strong></div>
-        <div class="panel-body" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-				<div class="details">
-					With arms shoulder-width apart, bend arms at elbows until chest touches the ground, then push upwards to count for 1 rep.
-				</div>
-				<a href = "#" class="gifsmall">
-					<img src="images/prev3.gif" style = "width: 100%; height: 100%" id = "vid2">
-				</a>
-        </div>
-		<div class="panel-footer" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-			<div class="detailtab">
-					<button onclick="detailFunction2()" class="detailbtn">Details</button>
-			</div>
-			<div class="dropdown">
-					<button onclick="fdropdown2()" class="w3-button w3-large w3-circle w3-teal">+</button>
-						<div id="myDropdown2" class="dropdown-content">
-							<ul id="playlists" style="color:#000">
-								<li>Playlist 1</li>
-								<li>Playlist 2</li>
-								<li>Playlist 3</li>
-							</ul>
-							<a href="#" onclick="appendList()">Create New Playlist</a>
+										</ul>
+									</div>
+									<a href="#" onclick="appendList({{json this}})">Create New Playlist</a>
+								</div>
+							</div>
 						</div>
-			</div>
-
-		</div>
-     </div>
-	</div>
-
-	 <div class="col-lg-3">
-     <div class="panel panel-default panel-horizontal">
-        <div class="panel-heading" style="background-color:#70db70;color:#fff;"><strong>Pushups</strong></div>
-        <div class="panel-body" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-				<div class="details">
-					With arms shoulder-width apart, bend arms at elbows until chest touches the ground, then push upwards to count for 1 rep.
+					</div>
 				</div>
-				<a href = "#" class="gifsmall">
-					<img src="images/prev4.gif" style = "width: 100%; height: 100%" id = "vid3">
-				</a>
-        </div>
-		<div class="panel-footer" style="background-color:#70db70;color:#fff; box-shadow:0 -12px 13px #e6ffe6 inset;">
-			<div class="detailtab">
-					<button onclick="detailFunction3()" class="detailbtn">Details</button>
+				{{/each}}
 			</div>
-			<div class="dropdown">
-					<button onclick="fdropdown3()" class="w3-button w3-large w3-circle w3-teal">+</button>
-						<div id="myDropdown3" class="dropdown-content">
-							<ul id="playlists" style="color:#000">
-								<li>Playlist 1</li>
-								<li>Playlist 2</li>
-								<li>Playlist 3</li>
-							</ul>
-							<a href="#" onclick="appendList()">Create New Playlist</a>
-						</div>
-			</div>
-
-		</div>
-     </div>
+		</script>
 	</div>
-
-
+</div>
 
 
 </body>

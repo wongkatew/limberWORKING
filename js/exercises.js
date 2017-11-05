@@ -4,41 +4,90 @@
   of exercises. Additionally contains the JS to add playlists
   to LocalStorage to display.
 */
+/* ---- FAKE DATABASE OF PLAYLISTS ----*/
+
+
+var playlists = [
+  //{
+    //"name": "play1",
+    //"vids": ["images/glutsFlex1.mp4"]  // DELETE THIS LATER
+  //}
+]
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
 
 // abs pain relief
+var absPain = [
 
+]
 // abs flexibility
+var absFlex = [
+
+]
 
 // abs strength
+var absStrength = [
 
+]
 // arms pain relief
+var armsPain = [
+
+]
 
 // arms flexibility
+var armsFlex = [
 
+]
 // arms strength
+var armsStrength = [
 
+]
 // upper back pain relief (backT3)
+var backTPain = [
 
+]
 // upper back flexibility
+var backTFlex = [
 
+]
 // upper back strength
+var backTStrength = [
 
+]
 // lower back pain relief (backB3)
+var backBPain = [
 
+]
 // lower back flexibility
+var backBFlex = [
 
+]
 // lower back strength
+var backBStrength = [
 
+]
 // calves pain relief
+var calvesPain = [
 
+]
 // calves flexibility
+var calvesFlex = [
 
+]
 // calves strength
+var calvesStrength = [
 
+]
 // feet
+var feetPain = [
 
+]
+var feetFlex =  [
+
+]
+var feetStrength = [
+
+]
 // gluteus maximus pain relief
 var glutsPain = [
   {
@@ -62,28 +111,36 @@ var glutsPain = [
     "description": "Sit down with both legs bent, where one leg is reached over the other leg. Slowly move your torso to the left, then the right. Repeat with the other leg over the other leg.",
     "index": 2
   }
-]
+];
 // gluteus maximus flexibility
 var glutsFlex = [
   {
     "title": "Overhead Leg Extension",
     "video": "images/glutsPain1.mp4",
-    "prev": "images/glutsPain1.gif"
+    "prev": "images/glutsPain1.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 0
   },
   {
     "title": "Crossed Straight Leg Stretch",
     "video": "images/glutsPain2.mp4",
-    "prev": "images/glutsPain2.gif"
+    "prev": "images/glutsPain2.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 1
   },
   {
     "title": "Crossed Bent Leg Stretch",
     "video": "images/glutsPain3.mp4",
-    "prev": "images/glutsPain3.gif"
+    "prev": "images/glutsPain3.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 2
   },
   {
     "title": "Butterfly Legs",
     "video": "images/glutsFlex1.mp4",
-    "prev": "images/glutsFlex1.gif"
+    "prev": "images/glutsFlex1.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 3
   }
 ]
 // gluteus maximus strength
@@ -91,25 +148,86 @@ var glutsStrength = [
   {
     "title": "Fire Hydrant",
     "video": "images/glutsStrength1.mp4",
-    "prev": "images/glutsStrength1.gif"
+    "prev": "images/glutsStrength1.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 0
   },
   {
     "title": "Reverse Leg Lifts",
     "video": "images/glutsStrength2.mp4",
-    "prev": "images/glutsStrength2.gif"
+    "prev": "images/glutsStrength2.gif",
+    "description": "FIXMEFIXMEFIXME",
+    "index": 1
   }
 ]
 
 // hands
+var handsPain = [
 
+]
+var handsFlex = [
+
+]
+var handsStrength = [
+
+]
 // head
+var headPain = [
 
+]
+var headFlex = [
+
+]
+var headStrength = [
+
+]
 // hips
+var hipsPain = [
 
+]
+var hipsFlex = [
+
+]
+var hipsStrength = [
+
+]
 // knees
+var kneesPain = [
 
+]
+var kneesFlex = [
+
+]
+var kneesStrength = [
+
+]
 // neck
+var neckPain = [
 
+]
+var neckFlex = [
+
+]
+var neckStrength = [
+
+]
 // shoulders
+var shouldersPain = [
 
+]
+var shouldersFlex = [
+
+]
+var shouldersStrength = [
+
+]
 // thighs
+var thighsPain = [
+
+]
+var thighsFlex = [
+
+]
+var thighsStrength = [
+  
+]
