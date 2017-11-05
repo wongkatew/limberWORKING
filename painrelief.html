@@ -25,12 +25,14 @@
 				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 				for (var j = 0; j < playlists.length; j++) {
 					// document.getElementById("dropdown" + j).innerHTML = "";
-					document.getElementById("funfun").innerHTML = "";
-					// for (var i = 0; i < playlists.length; i++) {
+					document.getElementById("funfun" + j).innerHTML = "";
+					// document.getElementById("funfun").innerHTML = "";
+					for (var i = 0; i < playlists.length; i++) {
 						var nameList = "<li>" + playlists[i].name + "</li>";
 					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
-					// }
-					document.getElementById("funfun").innerHTML += nameList;
+						document.getElementById("funfun" + j).innerHTML += nameList;
+					}
+					// document.getElementById("funfun").innerHTML += nameList;
 				}
 			}
 		});
@@ -100,7 +102,7 @@
 			playlists.push(fullP);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			var nameList = "<li>" + nameP + "</li>";
-			document.getElementById("dropdown" + arguments[0].index).innerHTML += nameList;
+			document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		}
 
 	</script>
@@ -200,7 +202,7 @@
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button class="dropdown-toggle dropbtn btn" type="button" data-toggle="dropdown">Add To</button>
 								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<div id="funfun">
+									<div id="funfun{{index}}">
 										<ul id="playlistslist" class="list-unstyled">
 											<li><a href="#">TEMP DATA, REMOVE</a></li>
 										</ul>
