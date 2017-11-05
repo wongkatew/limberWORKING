@@ -23,12 +23,12 @@
 
 			if (localStorage.length >= 1) {
 				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
-				for (var j = 0; j < playlists.length; j++) {
+				for (var j = 0; j < glutsPain.length; j++) {
 					// document.getElementById("dropdown" + j).innerHTML = "";
 					document.getElementById("funfun" + j).innerHTML = "";
 					// document.getElementById("funfun").innerHTML = "";
 					for (var i = 0; i < playlists.length; i++) {
-						var nameList = "<li>" + playlists[i].name + "</li>";
+						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(glutsPain[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
 					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
 						document.getElementById("funfun" + j).innerHTML += nameList;
 					}
@@ -55,7 +55,7 @@
 			  	}
 				}
 		  }
-		}
+		};
 
 		/* When the user clicks on the button,
 		toggle between hiding and showing the detail content */
@@ -73,22 +73,25 @@
 				preview.style.display = "none";
 				description.style.display = "block";
 			}
-		}
+		};
 
 		function goBack() {
 			window.history.back();
-		}
+		};
 
 		function showVid()
 		{
 			var src = arguments[0].video;
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
-		}
+		};
 
 		function appendList() {
 			var nameP = prompt("Name your new exercise set.");
 			var newPlaylist = "New Exercise Set";
+			if (nameP == null) {	// of the user presses cancel
+				return;
+			}
 			if (nameP != null) {
 				newPlaylist = nameP;
 			}
@@ -101,10 +104,17 @@
 			// }
 			playlists.push(fullP);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
-			var nameList = "<li>" + nameP + "</li>";
-			document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
-		}
+			for (var i = 0; i < glutsPain.length; i++) {
+				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsPain[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+				document.getElementById("funfun" + i).innerHTML += nameList;
+			}
+			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
+		};
 
+		function addToPlaylistExisting() {
+			alert("" + arguments[0]);
+			alert(JSON.stringify(arguments[1]));
+		};
 	</script>
 </head>
 <body>
@@ -204,7 +214,7 @@
 								<div id="dropdown{{index}}" class="dropdown-content dropdown-menu" aria-labelledby="dropdownMenuButton">
 									<div id="funfun{{index}}">
 										<ul id="playlistslist" class="list-unstyled">
-											<li><a href="#">TEMP DATA, REMOVE</a></li>
+											<li><a href="#">DATA, REMOVE</a></li>
 										</ul>
 									</div>
 									<a href="#" onclick="appendList({{json this}})">Create New Playlist</a>
