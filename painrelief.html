@@ -111,9 +111,23 @@
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		};
 
+		/* If the playlist already exists and we want to add the video to it */
 		function addToPlaylistExisting() {
-			alert("" + arguments[0]);
-			alert(JSON.stringify(arguments[1]));
+			// alert("" + arguments[0]);   // DEBUGGING
+			// alert(JSON.stringify(arguments[1]));  // DEBUGGING
+			var playlistName = "" + arguments[0]; // this is a string
+			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
+
+			// add video to playlist
+			playlists.filter(function(obj) {
+				if (obj.name === playlistName) {
+					obj.vids.push(currentVideoData);
+				}
+			});
+
+			// update the playlist in localStorage
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+
 		};
 	</script>
 </head>

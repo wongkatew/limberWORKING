@@ -8,10 +8,10 @@
 
 
 var playlists = [
-  {
-    "name": "play1",
-    "vids": ["images/glutsFlex1.mp4"]  // DELETE THIS LATER
-  }
+  //{
+    //"name": "play1",
+    //"vids": ["images/glutsFlex1.mp4"]  // DELETE THIS LATER
+  //}
 ];
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
