@@ -7,17 +7,66 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajaz/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+	<script src="js/exercises.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 </head>
 <script>
 function goBack() {
 	window.history.back();
 }
+function promptEmail() {
+	$('#loginModal').modal('show');
+}
+function signUp() {
+	$('#signupModal').modal('show');
+}
+function alertSuccess(){
+	document.getElementById("sentEmail").innerHTML = "<div class=\"alert alert-success\"><strong>Success!</strong> Email sent!</div>";
+}
+function alertSuccess2() {
+	document.getElementById("sentEmail").innerHTML = "<div class=\"alert alert-success\"><strong>Success!</strong> Account created!</div>"
+}
 </script>
+<div class="modal" id="loginModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" title="Close">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<label for="email" class="control-label">Email: </label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com">
+					<button type="submit" id="submit" name="submit" class="btn-lg btn-primary close" data-dismiss="modal" onclick="alertSuccess()">OK</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal" id="signupModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" title="Close">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<label for="email" class="control-label">Email: </label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="you@domain.com" required>
+					<label for="usr">Name: </label>
+					<input type="text" class="form-control" id="usr" required>
+					<label for="pwd">Password: </label>
+					<input type="password" class="form-control" id="pwd" required>
+					<button type="submit" id="submit" name="submit" class="btn-lg btn-primary close" data-dismiss="modal" onclick="alertSuccess2()">OK</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 <body>
 
 	<div class="jumbotron text-center">
@@ -28,11 +77,12 @@ function goBack() {
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h3>Login Form</h3>
+				<h3 style="text-align:center">Login Form</h3>
+				<div id="sentEmail"></div>
 
 				<form action="targetareaF.html">
 					<div class="imgcontainer">
-						<img src="images/Whale.png" alt="Logo" width="70px"> <!--This is a placeholder!-->
+						<img src="images/mainLogo.png" alt="Logo" width="100px"> <!--This is a placeholder!-->
 					</div>
 
 					<div class="container">
@@ -45,7 +95,8 @@ function goBack() {
 					</div>
 
 					<div class="container" style="background-color:#f1f1f1">
-						<span class="psw">Forgot <a href="#">password?</a></span>
+						<span onclick="promptEmail()">Forgot <a href="#">password?</a></span>
+						<span onclick="signUp()">Or sign up <a href="#">here</a>.</span>
 					</div>
 
 				</form>
