@@ -4,6 +4,12 @@
   of exercises. Additionally contains the JS to add playlists
   to LocalStorage to display.
 */
+/* ---- FAKE DATABASE OF PLAYLISTS ----*/
+var playlists = [
+  "play1": {
+    "vid1": "images/glutsFlex1.mp4"   // DELETE THIS LATER
+  }
+]
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
 
