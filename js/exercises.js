@@ -12,42 +12,82 @@ var playlists = [
     //"name": "play1",
     //"vids": ["images/glutsFlex1.mp4"]  // DELETE THIS LATER
   //}
-];
+]
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
 
 // abs pain relief
+var absPain = [
 
+]
 // abs flexibility
+var absFlex = [
+
+]
 
 // abs strength
+var absStrength = [
 
+]
 // arms pain relief
+var armsPain = [
+
+]
 
 // arms flexibility
+var armsFlex = [
 
+]
 // arms strength
+var armsStrength = [
 
+]
 // upper back pain relief (backT3)
+var backTPain = [
 
+]
 // upper back flexibility
+var backTFlex = [
 
+]
 // upper back strength
+var backTStrength = [
 
+]
 // lower back pain relief (backB3)
+var backBPain = [
 
+]
 // lower back flexibility
+var backBFlex = [
 
+]
 // lower back strength
+var backBStrength = [
 
+]
 // calves pain relief
+var calvesPain = [
 
+]
 // calves flexibility
+var calvesFlex = [
 
+]
 // calves strength
+var calvesStrength = [
 
+]
 // feet
+var feetPain = [
 
+]
+var feetFlex =  [
+
+]
+var feetStrength = [
+
+]
 // gluteus maximus pain relief
 var glutsPain = [
   {
@@ -122,15 +162,72 @@ var glutsStrength = [
 ]
 
 // hands
+var handsPain = [
 
+]
+var handsFlex = [
+
+]
+var handsStrength = [
+
+]
 // head
+var headPain = [
 
+]
+var headFlex = [
+
+]
+var headStrength = [
+
+]
 // hips
+var hipsPain = [
 
+]
+var hipsFlex = [
+
+]
+var hipsStrength = [
+
+]
 // knees
+var kneesPain = [
 
+]
+var kneesFlex = [
+
+]
+var kneesStrength = [
+
+]
 // neck
+var neckPain = [
 
+]
+var neckFlex = [
+
+]
+var neckStrength = [
+
+]
 // shoulders
+var shouldersPain = [
 
+]
+var shouldersFlex = [
+
+]
+var shouldersStrength = [
+
+]
 // thighs
+var thighsPain = [
+
+]
+var thighsFlex = [
+
+]
+var thighsStrength = [
+  
+]
