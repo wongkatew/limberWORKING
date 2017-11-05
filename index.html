@@ -15,6 +15,14 @@
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 </head>
 <script>
+$(document).ready(function() {
+	console.log('hello world');
+
+	if (localStorage.getItem("rememberMe") === null) {}
+	else {
+		window.location = "targetareaF.html";
+	}
+});
 function goBack() {
 	window.history.back();
 }
@@ -29,6 +37,13 @@ function alertSuccess(){
 }
 function alertSuccess2() {
 	document.getElementById("sentEmail").innerHTML = "<div class=\"alert alert-success\"><strong>Success!</strong> Account created!</div>"
+}
+function checkIfRemember() {
+	if (document.getElementByIt("remember").checked === true) {
+		localStorage.setItem("rememberMe", true);
+	} else {
+		localStorage.removeItem("rememberMe");
+	}
 }
 </script>
 <div class="modal" id="loginModal">
@@ -90,8 +105,8 @@ function alertSuccess2() {
 
 						<label><b>Password</b></label><input type="text" placeholder="Enter Password" name="psw" required>
 
-						<button type="submit">Login</button>
-						<input type="checkbox" checked="checked"> Remember me
+						<button type="submit" onclick="checkIfRemember()">Login</button>
+						<input type="checkbox" checked="checked" id="remember"> Remember me
 					</div>
 
 					<div class="container" style="background-color:#f1f1f1">
