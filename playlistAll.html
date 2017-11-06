@@ -11,12 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="css/limberSpecific.css" rel="stylesheet"/>
+
   </head>
   <script>
   function goBack() {
     window.history.back();
   }
   </script>
+
   <body>
     <!-- collapsible navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,7 +41,243 @@
     	</div>
     </nav>
 
-  <h1>Playlists</h1>
+  <h1 style="text-align:center">Playlists</h1>
+
+    <!--Individual card-->
+    <div class="card">
+      <a class="btn_playlist1" href="painrelief.html">
+        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <div class="card_content">
+          <h4>Playlist 1</h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="btn_playlist1" href="painrelief.html">
+        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <div class="card_content">
+          <h4>Playlist 2</h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="btn_playlist1" href="painrelief.html">
+        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <div class="card_content">
+          <h4>Playlist 3</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- New Playlist card -->
+    <div id="newPlaylistBtn" class="card">
+        <img src="images/plus-64.jpg" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <div class="card_content">
+          <h4>New Playlist</h4>
+        </div>
+    </div>
+
+    <!-- Modal to name & create new playlist -->
+    <div id="newPlaylistModal" class="playlistModal">
+      <div class="newPlaylistModalContent">
+        <div class="modal-header">
+          <h5>Create New Playlist</h5>
+          <span class="closeBtn">&times;</span>
+        </div>
+        <!-- Where user inputs playlist name -->
+        <div class="modal-body">
+          <p>Insert new playlist name below</p>
+          <input type="text" id="playlistName" class="form-control" placeholder="Playlist name">
+        </div>
+        <!-- Cancel & Create buttons -->
+        <div class="modal-footer">
+          <button type="button" id="cancelBtn" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" id="createBtn" class="btn btn-primary">Create</button>
+        </div>
+      </div>
+    </div>
 
   </body>
+
+  <style>
+
+  .card {
+    display: inline-block;
+    box-shadow: 0 0 5px silver;
+    height: 220px;
+    width: 170px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px;
+    align-items: center;
+    vertical-align: top;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card_content {
+    padding: 10px;
+    color: black;
+  }
+
+  .playlistModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .newPlaylistModalContent {
+    background-color: #f4f4f4;
+    margin: 40% auto;
+    width: 70%;
+    height: 30%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: openModal;
+    animation-duration: 0.5s;
+  }
+
+  .closeBtn {
+    color: #fff;
+    float: right;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @keyframes openModal {
+    from{opacity: 0}
+    to {opacity: 1}
+  }
+
+  .modal-header h5, .modal-footer h5 {
+    margin: 10px;
+  }
+
+  .modal-header {
+    background: #fbc02d;
+    padding: 5px;
+    color: #fff;
+  }
+
+  .modal-body p, .modal-body input {
+    margin: 0;
+    border-color: #fbc02d;
+    margin-bottom: 2px;
+  }
+
+  .modal-body {
+    padding: 5px 20px;
+    text-align: center;
+    background: #fff;
+  }
+
+  .modal-footer {
+    background: #fbc02d;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: inherit;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #cancelBtn {
+    background-color: #fff;
+    color: #fbc02d;
+    height: 50%;
+    width: 50%;
+  }
+
+  #createBtn {
+    background: #fbc02d;
+    border-color: #fff;
+    color: #fff;
+    height: 50%;
+    width: 50%;
+  }
+/*
+  .newPlaylist {
+    display: inline-block;
+    box-shadow: 0 0 5px silver;
+    height: 220px;
+    width: 170px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px;
+    align-items: center;
+    vertical-align: top;
+  }
+*/
+  </style>
+
+  <script>
+
+  //Get modal elements
+  var playlistModal = document.getElementById('newPlaylistModal');
+  var modalBtn = document.getElementById('newPlaylistBtn');
+  var closeBtn = document.getElementsByClassName('closeBtn')[0];
+  var cancelBtn = document.getElementById('cancelBtn');
+  var inputPlaylistName = document.getElementById('playlistName');
+  var createBtn = document.getElementById('createBtn');
+  var playlists = document.getElementsByClassName('card');
+  var newPlaylistCard = document.getElementById('newPlaylistBtn');
+
+  //Listener for open modal click
+  modalBtn.addEventListener('click', openModal);
+  //Listener for close modal click
+  closeBtn.addEventListener('click', closeModal);
+  //Listener for clicking outside the modal
+  window.addEventListener('click', outsideClick);
+  //Listener for clicking Cancel button
+  cancelBtn.addEventListener('click', closeModal);
+  //Listener for clicking Create button
+  createBtn.addEventListener('click', createNewPlaylist);
+
+  //Function to open new playlist modal
+  function openModal() {
+    playlistModal.style.display = 'block';
+  }
+
+  //Function to close new playlist modal
+  function closeModal() {
+    playlistModal.style.display = 'none';
+    inputPlaylistName.value = '';
+  }
+
+  //Function to close new playlist modal when click outside modal
+  function outsideClick(e) {
+    if(e.target == playlistModal) {
+      playlistModal.style.display = 'none';
+      inputPlaylistName.value = '';
+    }
+  }
+
+  function createNewPlaylist() {
+    var newPlaylist = document.createElement('newPlaylist');
+    newPlaylist.className = 'card';
+    newPlaylist.innerHTML= "<img src='images/monkey.png' style='width:100%;height:170px;box-shadow:0 0 5px 2px silver;'/>";
+    document.body.insertBefore(newPlaylist, newPlaylistCard);
+    playlistModal.style.display = 'none';
+  }
+
+
+
+  </script>
+
+
 </html>
