@@ -58,9 +58,7 @@
 			} else if (currBodPart === "thighs") {
 				html = template(thighsPain);
 			} else {
-				console.log("Uh oh: the body part we tried to read from local storage could not be read.");
-				console.log("The current body part we read was: " + currBodPart);
-				console.log("Just for now, we'll show you glutes.");
+				alert("Uh oh: the body part we tried to read from local storage could not be read. The current body part we read was: " + currBodPart ". Just for now, we'll show you glutes.");
 				html = template(glutsPain);
 			}
 
