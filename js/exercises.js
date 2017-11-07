@@ -15,7 +15,7 @@ var playlists = [
 ]
 
 var history = [
-  
+
 ]
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
@@ -34,16 +34,29 @@ var absStrength = [
 
 ]
 // arms pain relief
-var armsPain = [
+var armsTPain = [
 
 ]
 
 // arms flexibility
-var armsFlex = [
+var armsTFlex = [
 
 ]
 // arms strength
-var armsStrength = [
+var armsTStrength = [
+
+]
+// arms pain relief
+var armsBPain = [
+
+]
+
+// arms flexibility
+var armsBFlex = [
+
+]
+// arms strength
+var armsBStrength = [
 
 ]
 // upper back pain relief (backT3)
@@ -80,6 +93,18 @@ var calvesFlex = [
 ]
 // calves strength
 var calvesStrength = [
+
+]
+// calves pain relief
+var chestPain = [
+
+]
+// calves flexibility
+var chestFlex = [
+
+]
+// calves strength
+var chestStrength = [
 
 ]
 // feet
@@ -193,16 +218,6 @@ var hipsFlex = [
 
 ]
 var hipsStrength = [
-
-]
-// knees
-var kneesPain = [
-
-]
-var kneesFlex = [
-
-]
-var kneesStrength = [
 
 ]
 // neck

@@ -15,10 +15,57 @@
 		$(document).ready(function() {
 			console.log('hello world');
 
+			var currBodPart;
+			if (localStorage.getItem("currentBodyPart") === null) {
+				currBodPart = "potato";
+			} else {
+				currBodPart = localStorage.getItem("currentBodyPart");
+			}
+
 			// compile the template
 			var source = $("#entry-template").html();
 			var template = Handlebars.compile(source);
-			var html = template(glutsPain);
+
+			var html;
+			if (currBodPart === "abs") {
+				html = template(absPain);
+			} else if (currBodPart === "upperArm") {
+				html = template(armsTPain);
+			} else if (currBodPart === "foreArm") {
+				html = template(armsBPain);
+			} else if (currBodPart === "upperBack") {
+				html = template(backTPain);
+			} else if (currBodPart === "lowerBack") {
+				html = template(backBPain);
+			} else if (currBodPart === "calves") {
+				html = template(calvesPain);
+			} else if (currBodPart === "chest") {
+				html = template(chestPain);
+			} else if (currBodPart === "feet") {
+				html = template(feetPain);
+			} else if (currBodPart === "glutes") {
+				html = template(glutsPain);
+			} else if (currBodPart === "hands") {
+				html = template(handsPain);
+			} else if (currBodPart === "head") {
+				html = template(headPain);
+			} else if (currBodPart === "hips") {
+				html = template(hipsPain);
+			} else if (currBodPart === "neck") {
+				html = template(neckPain);
+			} else if (currBodPart === "shoulder") {
+				html = template(shouldersPain);
+			} else if (currBodPart === "thighs") {
+				html = template(thighsPain);
+			} else {
+				console.log("Uh oh: the body part we tried to read from local storage could not be read.");
+				console.log("The current body part we read was: " + currBodPart);
+				console.log("Just for now, we'll show you glutes.");
+				html = template(glutsPain);
+			}
+
+
+			// var html = template(glutsPain);
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
 			if (localStorage.length >= 1) {
