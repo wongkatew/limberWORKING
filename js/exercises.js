@@ -14,6 +14,10 @@ var playlists = [
   //}
 ]
 
+var history = [
+  
+]
+
 /* ---- FAKE DATABASES OF VIDEOS -----*/
 
 // abs pain relief
@@ -229,5 +233,5 @@ var thighsFlex = [
 
 ]
 var thighsStrength = [
-  
+
 ]
