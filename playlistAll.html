@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="css/limberSpecific.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
     <script src="js/exercises.js"></script>
 
   </head>
@@ -43,41 +44,24 @@
     </nav>
 
     <h1 style="text-align:center;" >Playlists</h1>
-    <!--
-    <button class="deleteBtn" type="button">DELETE</button> -->
 
-
-    <!--Individual card-->
+<!--Indivdual playlists using Bootstrap-->
+<div class="card-deck-wrapper">
+  <div class="card-deck">
     <div class="card">
       <a class="btn_playlist1" href="painrelief.html">
-        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <img src="images/Whale.png" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
         <div class="card_content">
           <h4>Playlist 1</h4>
         </div>
       </a>
     </div>
-
-    <div class="card">
-      <a class="btn_playlist1" href="painrelief.html">
-        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
-        <div class="card_content">
-          <h4>Playlist 2</h4>
-        </div>
-      </a>
-    </div>
-
-    <div class="card">
-      <a class="btn_playlist1" href="painrelief.html">
-        <img src="images/Whale.png" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
-        <div class="card_content">
-          <h4>Playlist 3</h4>
-        </div>
-      </a>
-    </div>
+  </div>
+</div>
 
     <!-- New Playlist card -->
     <div id="newPlaylistBtn" class="card">
-        <img src="images/plus-64.jpg" style="width:100%;height:170px;box-shadow:0 0 5px 2px silver;">
+        <img src="images/plus-64.jpg" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
         <div class="card_content">
           <h4>New Playlist</h4>
         </div>
@@ -107,6 +91,12 @@
 
   <style>
 
+  .card-deck-wrapper {
+    display: inline-block;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
 
   .card {
     display: inline-block;
@@ -116,7 +106,6 @@
     margin-top: 10px;
     text-align: center;
     margin: 10px;
-    align-items: center;
     vertical-align: top;
   }
 
@@ -259,17 +248,27 @@
   $(document).ready(function() {
     console.log('Playlists page ready');
 
-
+/*    // compile the template
+    var source = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(glutsPain);
+    $('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
+*/
     if (localStorage.length >= 1) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+
+      for (var i = 0; i < playlists.length; i++) {
+        //Set name to each playlist name inside "playlists"
+        var name = JSON.stringify(playlists[i].name);
+        // Insert the playlist onto the web page before the newPlaylistCard
+        //CREATE new playlist everytime we reload the page??
+        //HOW to set a general playlist to THE playlist we want to display?
+        // console.log(name);
+      }
+
+      console.log("listOfSets");
       console.log(playlists);
     }
-
-    // let allPlaylists = ["Playlist1", "Playlist2", "Playlist3"];
-    // let str = JSON.stringify(allPlaylists);
-    // let names = localStorage.getItem("nameOfPlaylist");
-//    localStorage.setItem("nameOfPlaylist", str);
-
 
     // var obj = JSON.parse(names);
     // console.log(obj);
@@ -294,22 +293,28 @@
     }
   }
 
+  //When a user creates a new playlist
   function createNewPlaylist() {
+    var newPlaylistName = document.getElementById('inputName').value;
+    //If the user did not input a playlist name
+    if (newPlaylistName == "") {
+      playlistModal.style.display = 'none';
+      return;
+    }
+
+    //If the user input a playlist name
     var newPlaylist = document.createElement('newPlaylist');
     newPlaylist.className = 'card';
-    newPlaylist.innerHTML= "<img src='images/monkey.png' style='width:100%;height:170px;box-shadow:0 0 5px 2px silver;'/>";
+    //Set new playlist default image to be the monkey
+    newPlaylist.innerHTML= "<img src='images/monkey.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;'/>";
+    //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
+    //Hide the modal
     playlistModal.style.display = 'none';
 
     //Local storage part - save the name of the playlist the user inputs//
     //Get the user input name
 //    var newPlaylistName = JSON.stringify(document.getElementById('inputName').value);
-    var newPlaylistName = document.getElementById('inputName').value;
-    if (newPlaylistName == null) {
-      console.log(newPlaylistName);
-      return;
-    }
-
 /*
     //Get the list of playlist names from localStorage and parse
      tempP = JSON.parse(localStorage.getItem('nameOfPlaylist'));
@@ -318,10 +323,10 @@
     //Add the new playlist onto localStorage
      tempP.push(obj);
      localStorage.setItem('nameOfPlaylist', JSON.stringify(tempP)); */
-    var fullP = {
-      "name": newPlaylistName,
-      "vids": [arguments[0]]
-    };
+     var fullP = {
+       "name": newPlaylistName,
+       "vids": [arguments[0]]
+     };
 
     playlists.push(fullP);
     localStorage.setItem("listsOfSets", JSON.stringify(playlists));
@@ -341,9 +346,6 @@
 
     //Clear input field
     inputPlaylistName.value = '';
-    //Print onto console
-    console.log(obj);
-    console.log(tempP);
   }
 
 
