@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="css/limberSpecific.css" rel="stylesheet"/>
+    <script src="js/exercises.js"></script>
 
   </head>
   <script>
@@ -41,7 +42,10 @@
     	</div>
     </nav>
 
-  <h1 style="text-align:center">Playlists</h1>
+    <h1 style="text-align:center;" >Playlists</h1>
+    <!--
+    <button class="deleteBtn" type="button">DELETE</button> -->
+
 
     <!--Individual card-->
     <div class="card">
@@ -89,7 +93,7 @@
         <!-- Where user inputs playlist name -->
         <div class="modal-body">
           <p>Insert new playlist name below</p>
-          <input type="text" id="playlistName" class="form-control" placeholder="Playlist name">
+          <input type="text" id="inputName" class="form-control" placeholder="Playlist name">
         </div>
         <!-- Cancel & Create buttons -->
         <div class="modal-footer">
@@ -102,6 +106,7 @@
   </body>
 
   <style>
+
 
   .card {
     display: inline-block;
@@ -210,19 +215,19 @@
     height: 50%;
     width: 50%;
   }
-/*
-  .newPlaylist {
-    display: inline-block;
-    box-shadow: 0 0 5px silver;
-    height: 220px;
-    width: 170px;
-    margin-top: 10px;
-    text-align: center;
-    margin: 10px;
-    align-items: center;
-    vertical-align: top;
+
+  .deleteBtn {
+    color: #fbc02d;
+    font-size: 20px;
+    padding: inherit;
+    background-color: #fff;
+    font-weight: bolder;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
-*/
+
   </style>
 
   <script>
@@ -232,10 +237,11 @@
   var modalBtn = document.getElementById('newPlaylistBtn');
   var closeBtn = document.getElementsByClassName('closeBtn')[0];
   var cancelBtn = document.getElementById('cancelBtn');
-  var inputPlaylistName = document.getElementById('playlistName');
+  var inputPlaylistName = document.getElementById('inputName');
   var createBtn = document.getElementById('createBtn');
   var playlists = document.getElementsByClassName('card');
   var newPlaylistCard = document.getElementById('newPlaylistBtn');
+  var deleteBtn = document.getElementsByClassName('deleteBtn');
 
   //Listener for open modal click
   modalBtn.addEventListener('click', openModal);
@@ -247,6 +253,27 @@
   cancelBtn.addEventListener('click', closeModal);
   //Listener for clicking Create button
   createBtn.addEventListener('click', createNewPlaylist);
+  //TODO: Delete button.... T_T
+
+  //Ready function runs every time page loads
+  $(document).ready(function() {
+    console.log('Playlists page ready');
+
+
+    if (localStorage.length >= 1) {
+      playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+      console.log(playlists);
+    }
+
+    // let allPlaylists = ["Playlist1", "Playlist2", "Playlist3"];
+    // let str = JSON.stringify(allPlaylists);
+    // let names = localStorage.getItem("nameOfPlaylist");
+//    localStorage.setItem("nameOfPlaylist", str);
+
+
+    // var obj = JSON.parse(names);
+    // console.log(obj);
+  });
 
   //Function to open new playlist modal
   function openModal() {
@@ -273,8 +300,51 @@
     newPlaylist.innerHTML= "<img src='images/monkey.png' style='width:100%;height:170px;box-shadow:0 0 5px 2px silver;'/>";
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     playlistModal.style.display = 'none';
-  }
 
+    //Local storage part - save the name of the playlist the user inputs//
+    //Get the user input name
+//    var newPlaylistName = JSON.stringify(document.getElementById('inputName').value);
+    var newPlaylistName = document.getElementById('inputName').value;
+    if (newPlaylistName == null) {
+      console.log(newPlaylistName);
+      return;
+    }
+
+/*
+    //Get the list of playlist names from localStorage and parse
+     tempP = JSON.parse(localStorage.getItem('nameOfPlaylist'));
+    //Change input name string into JS object
+     var obj = JSON.parse(newPlaylistName);
+    //Add the new playlist onto localStorage
+     tempP.push(obj);
+     localStorage.setItem('nameOfPlaylist', JSON.stringify(tempP)); */
+    var fullP = {
+      "name": newPlaylistName,
+      "vids": [arguments[0]]
+    };
+
+    playlists.push(fullP);
+    localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+    // for (var i = 0; i < playlists.length; i++) {
+      // var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(playlists[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+
+    var newDiv = document.createElement("divdiv");
+    newDiv.className = 'card_content';
+    var hLabel = document.createElement("h4");
+    var newOne = new String();
+    newOne = newPlaylistName.replace(/"/g, "");
+    var title = document.createTextNode(newOne);
+
+    newDiv.appendChild(hLabel);
+    hLabel.appendChild(title);
+    newPlaylist.appendChild(hLabel);
+
+    //Clear input field
+    inputPlaylistName.value = '';
+    //Print onto console
+    console.log(obj);
+    console.log(tempP);
+  }
 
 
   </script>
