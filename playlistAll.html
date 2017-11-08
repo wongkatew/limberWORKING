@@ -221,7 +221,7 @@
   var cancelBtn = document.getElementById('cancelBtn');
   var inputPlaylistName = document.getElementById('inputName');
   var createBtn = document.getElementById('createBtn');
-  var playlists = document.getElementsByClassName('card');
+  //var playlists = document.getElementsByClassName('card');
   var newPlaylistCard = document.getElementById('newPlaylistBtn');
   var deleteBtn = document.getElementsByClassName('deleteBtn');
 
@@ -247,7 +247,6 @@
     var html = template(glutsPain);
     $('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 */
-
     if (localStorage.length >= 1) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
