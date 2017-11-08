@@ -84,7 +84,9 @@
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
 
-			// TODO: add things to the history list TODO TODO TODO
+			// add things to the history called historyOfVids in localStorage, history in code
+			historyVids.push(arguments[0]);
+			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 		};
 
 		function moveUp() {

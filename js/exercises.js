@@ -333,7 +333,7 @@ var calvesPain = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+    "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
@@ -350,7 +350,7 @@ var calvesFlex = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+    "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
@@ -374,7 +374,7 @@ var calvesStrength = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+    "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
@@ -704,7 +704,7 @@ var thighsPain = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+    "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   }
 ]
@@ -713,14 +713,15 @@ var thighsFlex = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+	"description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
+
     "index": 0
   },
   {
     "title": "Lunges",
     "video": "images/lunges.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
+    "description": "Lower yourself on one leg, maintaining your body position no further than your foot.",
     "index": 1
   }
 ]
@@ -729,7 +730,7 @@ var thighsStrength = [
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
+    "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
