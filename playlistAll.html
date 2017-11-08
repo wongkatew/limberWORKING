@@ -48,14 +48,7 @@
 <!--Indivdual playlists using Bootstrap-->
 <div class="card-deck-wrapper">
   <div class="card-deck">
-    <div class="card">
-      <a class="btn_playlist1" href="painrelief.html">
-        <img src="images/Whale.png" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
-        <div class="card_content">
-          <h4>Playlist 1</h4>
-        </div>
-      </a>
-    </div>
+
   </div>
 </div>
 
@@ -254,6 +247,7 @@
     var html = template(glutsPain);
     $('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 */
+
     if (localStorage.length >= 1) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
@@ -261,9 +255,24 @@
         //Set name to each playlist name inside "playlists"
         var name = JSON.stringify(playlists[i].name);
         // Insert the playlist onto the web page before the newPlaylistCard
-        //CREATE new playlist everytime we reload the page??
+        //Create a new playlist card for every playlist
+        var one = document.createElement('one');
+        one.className = 'card';
+        one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;'/>";
+        document.body.insertBefore(one, newPlaylistCard);
+
+        var newDiv = document.createElement("divdiv");
+        newDiv.className = 'card_content';
+        var hLabel = document.createElement("h4");
+        var newOne = new String();
+        newOne = name.replace(/"/g, "");
+        var title = document.createTextNode(newOne);
+
+        newDiv.appendChild(hLabel);
+        hLabel.appendChild(title);
+        one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
-        // console.log(name);
+        console.log(name);
       }
 
       console.log("listOfSets");
@@ -346,6 +355,8 @@
 
     //Clear input field
     inputPlaylistName.value = '';
+
+    console.log(playlists.length);
   }
 
 
