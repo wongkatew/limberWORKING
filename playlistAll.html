@@ -247,7 +247,7 @@
 
       for (var i = 0; i < playlists.length; i++) {
         //Set name to each playlist name inside "playlists"
-        var name = JSON.stringify(playlists[i].name);
+        var name = playlists[i].name;
         // Insert the playlist onto the web page before the newPlaylistCard
         //Create a new playlist card for every playlist
         var one = document.createElement('one');
@@ -349,7 +349,7 @@
      localStorage.setItem('nameOfPlaylist', JSON.stringify(tempP)); */
      var fullP = {
        "name": newPlaylistName,
-       "vids": [arguments[0]]
+       "vids": []
      };
 
     playlists.push(fullP);
