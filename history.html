@@ -82,10 +82,13 @@
 
 		//deletes item
 		function deleteVid() {
-			//var indexThis = editSet.vids.findIndex( x => x.title == "title");
+			
 			var indexThis = arguments[0].index;
+		//	var element1 = document.getElementById("element" + indexThis);
+			//element1.style.display = "none";
 			historyVids.splice(indexThis,1);
 			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
+			location.reload();
 		};
 	</script>
 </head>
@@ -133,7 +136,7 @@
 		<script id="entry-template" type="text/x-handlebars-template">
 			<div>
 				{{#each this}}
-				<div class="row" style="padding: 5px;">
+				<div class="row" style="padding: 5px;" id = "element{{index}}">
 					<div class="row">
 						<h3 style="font-size: 16px;">{{title}}</h3>
 					</div>

@@ -89,6 +89,7 @@
 				editSet.vids[indexThis] = editSet.vids[indexThis - 1];
 				editSet.vids[indexThis-1] = tmp;
 			}
+			location.reload();
 			localStorage.setItem("listsOfSets", JSON.stringify(editSet));
 		};
 	</script>
