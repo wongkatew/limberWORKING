@@ -96,8 +96,9 @@
 				editSet.vids[indexThis] = editSet.vids[indexThis - 1];
 				editSet.vids[indexThis-1] = tmp;
 			}
+			playlists[localStorage.getItem("currentSet")] = editSet;
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
-			localStorage.setItem("listsOfSets", JSON.stringify(editSet));
 		};
 	</script>
 </head>
