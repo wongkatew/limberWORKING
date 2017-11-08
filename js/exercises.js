@@ -14,83 +14,252 @@ var playlists = [
   //}
 ]
 
-var history = [
-  
+var historyVids = [
+
 ]
 
 /* ---- FAKE DATABASES OF VIDEOS -----*/
 
 // abs pain relief
 var absPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // abs flexibility
 var absFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 
 // abs strength
 var absStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // arms pain relief
-var armsPain = [
-
+var armsTPain = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 
 // arms flexibility
-var armsFlex = [
-
+var armsTFlex = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // arms strength
-var armsStrength = [
+var armsTStrength = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
+// arms pain relief
+var armsBPain = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
 
+// arms flexibility
+var armsBFlex = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
+// arms strength
+var armsBStrength = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // upper back pain relief (backT3)
 var backTPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // upper back flexibility
 var backTFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // upper back strength
 var backTStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // lower back pain relief (backB3)
 var backBPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // lower back flexibility
 var backBFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // lower back strength
 var backBStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // calves pain relief
 var calvesPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // calves flexibility
 var calvesFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // calves strength
 var calvesStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
+// calves pain relief
+var chestPain = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
+// calves flexibility
+var chestFlex = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
+]
+// calves strength
+var chestStrength = [
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // feet
 var feetPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var feetFlex =  [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var feetStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // gluteus maximus pain relief
 var glutsPain = [
@@ -167,71 +336,169 @@ var glutsStrength = [
 
 // hands
 var handsPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var handsFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var handsStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // head
 var headPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var headFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var headStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // hips
 var hipsPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var hipsFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var hipsStrength = [
-
-]
-// knees
-var kneesPain = [
-
-]
-var kneesFlex = [
-
-]
-var kneesStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // neck
 var neckPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var neckFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var neckStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // shoulders
 var shouldersPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var shouldersFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var shouldersStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 // thighs
 var thighsPain = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var thighsFlex = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]
 var thighsStrength = [
-
+  {
+    "title": "Placeholder",
+    "video": "images/glutsPain1.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
+    "index": 0
+  }
 ]

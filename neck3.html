@@ -16,6 +16,11 @@
   function goBack() {
     window.history.back();
   }
+  
+    $(document).ready(function() {
+			console.log('hello world');
+			localStorage.setItem("currentBodyPart", "neck");
+		})
   </script>
   <body>
     <!-- collapsible navbar -->

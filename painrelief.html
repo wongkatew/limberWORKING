@@ -15,20 +15,87 @@
 		$(document).ready(function() {
 			console.log('hello world');
 
+			var currBodPart;
+			if (localStorage.getItem("currentBodyPart") === null) {
+				currBodPart = "potato";
+			} else {
+				currBodPart = localStorage.getItem("currentBodyPart");
+			}
+
 			// compile the template
 			var source = $("#entry-template").html();
 			var template = Handlebars.compile(source);
-			var html = template(glutsPain);
+
+			var html;
+			var currListOfVids;
+			if (currBodPart === "abs") {
+				html = template(absPain);
+				currListOfVids = absPain;
+			} else if (currBodPart === "upperArm") {
+				html = template(armsTPain);
+				currListOfVids = armsTPain;
+			} else if (currBodPart === "foreArm") {
+				html = template(armsBPain);
+				currListOfVids = armsBPain;
+			} else if (currBodPart === "upperBack") {
+				html = template(backTPain);
+				currListOfVids = backTPain;
+			} else if (currBodPart === "lowerBack") {
+				html = template(backBPain);
+				currListOfVids = backBPain;
+			} else if (currBodPart === "calves") {
+				html = template(calvesPain);
+				currListOfVids = calvesPain;
+			} else if (currBodPart === "chest") {
+				html = template(chestPain);
+				currListOfVids = chestPain;
+			} else if (currBodPart === "feet") {
+				html = template(feetPain);
+				currListOfVids = feetPain;
+			} else if (currBodPart === "glutes") {
+				html = template(glutsPain);
+				currListOfVids = glutsPain;
+			} else if (currBodPart === "hands") {
+				html = template(handsPain);
+				currListOfVids = handsPain;
+			} else if (currBodPart === "head") {
+				html = template(headPain);
+				currListOfVids = headPain;
+			} else if (currBodPart === "hips") {
+				html = template(hipsPain);
+				currListOfVids = hipsPain;
+			} else if (currBodPart === "neck") {
+				html = template(neckPain);
+				currListOfVids = neckPain;
+			} else if (currBodPart === "shoulder") {
+				html = template(shouldersPain);
+				currListOfVids = shouldersPain;
+			} else if (currBodPart === "thighs") {
+				html = template(thighsPain);
+				currListOfVids = thighsPain;
+			} else {
+				alert("Uh oh: the body part we tried to read from local storage could not be read. The current body part we read was: " + currBodPart + ". Just for now, we'll show you glutes.");
+				html = template(glutsPain);
+				currListOfVids = glutsPain;
+			}
+
+
+			// var html = template(glutsPain);
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
 			if (localStorage.length >= 1) {
-				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
-				for (var j = 0; j < glutsPain.length; j++) {
+				if (localStorage.getItem("listsOfSets") != null) {
+					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+				}
+				if (localStorage.getItem("historyOfVids") != null) {
+					history = JSON.parse(localStorage.getItem("historyOfVids"));
+				}
+				for (var j = 0; j < currListOfVids.length; j++) {
 					// document.getElementById("dropdown" + j).innerHTML = "";
 					document.getElementById("funfun" + j).innerHTML = "";
 					// document.getElementById("funfun").innerHTML = "";
 					for (var i = 0; i < playlists.length; i++) {
-						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(glutsPain[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
+						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(currListOfVids[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
 					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
 						document.getElementById("funfun" + j).innerHTML += nameList;
 					}
@@ -84,6 +151,10 @@
 			var src = arguments[0].video;
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
+
+			// add things to the history called historyOfVids in localStorage, history in code
+			historyVids.push(arguments[0]);
+			localStorage.setItem("historyOfVids", JSON.stringify(history));
 		};
 
 		function appendList() {
@@ -147,7 +218,6 @@
 			<a class="nav-item nav-link" href="targetareaF.html">Pick Target Area</a>
 			<a class="nav-item nav-link" href="playlistAll.html">Playlists</a>
 			<a class="nav-item nav-link" href="history.html">History</a>
-			<a class="nav-item nav-link" href="settings.html">Settings</a>
 			<a class="nav-item nav-link" href="index.html">Log Out</a>
 		</div>
 	</div>
