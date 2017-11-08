@@ -237,6 +237,7 @@
   createBtn.addEventListener('click', createNewPlaylist);
   //TODO: Delete button.... T_T
 
+  
   //Ready function runs every time page loads
   $(document).ready(function() {
     console.log('Playlists page ready');
@@ -256,10 +257,19 @@
         document.body.insertBefore(one, newPlaylistCard);
 
         one.id = i;
-        document.getElementById(i).addEventListener("click", function() {
-          localStorage.setItem("currentSet", name);
-          location.href = "setexercises.html";
-        });
+	/*	var self = document.getElementById(i);
+		(function(self){
+			self.chart.addEventListener("click", function() {
+				localStorage.setItem("currentSet", self.attr('id'));
+				location.href = "setexercises.html";
+			})
+		}
+		); */
+       // document.getElementById(i).addEventListener("click", function() {
+        //  localStorage.setItem("currentSet", this.attr('id'));
+        //  location.href = "setexercises.html";
+        //});
+		console.log(localStorage.getItem("currentSet"));
 
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
@@ -272,7 +282,7 @@
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
-        console.log(name);
+
       }
       console.log(playlists);
     }
@@ -281,7 +291,19 @@
     // console.log(obj);
   });
 
-
+	$(function()
+	{
+			$(".card").on('click',popup);
+	});
+	function popup()
+	{
+			if ($(this).attr('id') != "newPlaylistBtn")
+			{
+				console.log("ding");
+				window.location.href = "setexercises.html";
+				localStorage.setItem("currentSet",$(this).attr('id'));
+			}
+	}
   //Function to open new playlist modal
   function openModal() {
     playlistModal.style.display = 'block';
