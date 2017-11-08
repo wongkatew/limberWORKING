@@ -27,6 +27,7 @@
       <button class="navbar-btn float-sm-left" onclick="goBack()">
   			<
   		</button>
+
     	<a class="navbar-brand" href="targetareaF.html">Limber</a>
     	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#limberNavBar" aria-controls="limberNavBar" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
@@ -35,15 +36,14 @@
     	<div class="collapse navbar-collapse" id="limberNavBar">
     		<div class="navbar-nav mr-auto mt-2 mt-md-0">
     			<a class="nav-item nav-link" href="targetareaF.html">Pick Target Area</a>
-    			<a class="nav-item nav-link active" href="playlistAll.html">Playlists</a>
+    			<a class="nav-item nav-link active" href="playlistAll.html">Exercise Sets</a>
     			<a class="nav-item nav-link" href="history.html">History</a>
-    			<a class="nav-item nav-link" href="settings.html">Settings</a>
     			<a class="nav-item nav-link" href="index.html">Log Out</a>
     		</div>
     	</div>
     </nav>
 
-    <h1 style="text-align:center;" >Playlists</h1>
+    <h1 style="text-align:center;">Exercise Sets</h1>
 
 <!--Indivdual playlists using Bootstrap-->
 <div class="card-deck-wrapper">
@@ -56,7 +56,7 @@
     <div id="newPlaylistBtn" class="card">
         <img src="images/plus-64.jpg" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
         <div class="card_content">
-          <h5>New Playlist</h5>
+          <h5>New Exercise Set</h5>
         </div>
     </div>
 
@@ -64,12 +64,12 @@
     <div id="newPlaylistModal" class="playlistModal">
       <div class="newPlaylistModalContent">
         <div class="modal-header">
-          <h5>Create New Playlist</h5>
+          <h5>Create New Exercise Set</h5>
           <span class="closeBtn">&times;</span>
         </div>
         <!-- Where user inputs playlist name -->
         <div class="modal-body">
-          <p>Insert new playlist name below</p>
+          <p>Insert new exercise set name below</p>
           <input type="text" id="inputName" class="form-control" placeholder="Playlist name">
         </div>
         <!-- Cancel & Create buttons -->
@@ -241,13 +241,8 @@
   $(document).ready(function() {
     console.log('Playlists page ready');
 
-/*    // compile the template
-    var source = $("#entry-template").html();
-    var template = Handlebars.compile(source);
-    var html = template(glutsPain);
-    $('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
-*/
-    if (localStorage.length >= 1) {
+  //  localStorage.removeItem("listsOfSets");
+    if (localStorage.getItem("listsOfSets") != null) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
       for (var i = 0; i < playlists.length; i++) {
@@ -257,8 +252,14 @@
         //Create a new playlist card for every playlist
         var one = document.createElement('one');
         one.className = 'card';
-        one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;'/>";
+        one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
         document.body.insertBefore(one, newPlaylistCard);
+
+        one.id = i;
+        document.getElementById(i).addEventListener("click", function() {
+          localStorage.setItem("currentSet", name);
+          location.href = "setexercises.html";
+        });
 
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
@@ -273,14 +274,13 @@
         //HOW to set a general playlist to THE playlist we want to display?
         console.log(name);
       }
-
-      console.log("listOfSets");
       console.log(playlists);
     }
 
     // var obj = JSON.parse(names);
     // console.log(obj);
   });
+
 
   //Function to open new playlist modal
   function openModal() {
@@ -314,11 +314,27 @@
     var newPlaylist = document.createElement('newPlaylist');
     newPlaylist.className = 'card';
     //Set new playlist default image to be the monkey
-    newPlaylist.innerHTML= "<img src='images/monkey.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;'/>";
+
+
+/*    one.id = i;
+    document.getElementById(i).addEventListener("click", function() {
+      localStorage.setItem("currentSet", name);
+      window.location.href = "setexercises.html";
+    })
+*/
+
+    newPlaylist.innerHTML= "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
     //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     //Hide the modal
     playlistModal.style.display = 'none';
+
+    newPlaylist.id = playlists.length;
+    console.log(newPlaylist.id);
+    document.getElementById(newPlaylist.id).addEventListener("click", function() {
+      localStorage.setItem("currentSet", newPlaylistName);
+      location.href = "setexercises.html";
+    });
 
     //Local storage part - save the name of the playlist the user inputs//
     //Get the user input name
@@ -354,8 +370,6 @@
 
     //Clear input field
     inputPlaylistName.value = '';
-
-    console.log(playlists.length);
   }
 
 

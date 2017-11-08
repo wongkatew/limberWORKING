@@ -16,7 +16,7 @@
 		var setlists = localStorage.getItem("listsOfSets");
 		var thisSet = JSON.parse(setlists);
 		var editSet = thisSet[0]; // change to variable playlist
-		
+
 		$(document).ready(function() {
 			console.log('hello world');
 
@@ -77,7 +77,7 @@
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
 
-			// TODO: add things to the history list TODO TODO TODO 
+			// TODO: add things to the history list TODO TODO TODO
 		};
 
 		function moveUp() {
@@ -110,7 +110,7 @@
 	<div class="collapse navbar-collapse" id="limberNavBar">
 		<div class="navbar-nav mr-auto mt-2 mt-md-0">
 			<a class="nav-item nav-link" href="targetareaF.html">Pick Target Area</a>
-			<a class="nav-item nav-link" href="playlistAll.html">Playlists</a>
+			<a class="nav-item nav-link" href="playlistAll.html">Exercise Sets</a>
 			<a class="nav-item nav-link" href="history.html">History</a>
 			<a class="nav-item nav-link" href="index.html">Log Out</a>
 		</div>
