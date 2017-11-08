@@ -18,8 +18,8 @@
 					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
 		}
-		var setIndex = playlists.findIndex(x => x.name == localStorage.getItem("currentSet"));
-		var editSet = playlists[setIndex]; // change to variable playlist
+	//	var setIndex = playlists.findIndex(x => x.name == localStorage.getItem("currentSet"));
+		var editSet = playlists[localStorage.getItem("currentSet")]; // change to variable playlist
 
 		$(document).ready(function() {
 			console.log('hello world');

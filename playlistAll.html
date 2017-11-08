@@ -237,6 +237,7 @@
   createBtn.addEventListener('click', createNewPlaylist);
   //TODO: Delete button.... T_T
 
+  
   //Ready function runs every time page loads
   $(document).ready(function() {
     console.log('Playlists page ready');
@@ -256,11 +257,28 @@
         one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
         document.body.insertBefore(one, newPlaylistCard);
 
+<<<<<<< HEAD
         one.id = name;
         document.getElementById(name).addEventListener("click", function() {
           localStorage.setItem("currentSet", name);
           location.href = "setexercises.html";
         });
+=======
+        one.id = i;
+	/*	var self = document.getElementById(i);
+		(function(self){
+			self.chart.addEventListener("click", function() {
+				localStorage.setItem("currentSet", self.attr('id'));
+				location.href = "setexercises.html";
+			})
+		}
+		); */
+       // document.getElementById(i).addEventListener("click", function() {
+        //  localStorage.setItem("currentSet", this.attr('id'));
+        //  location.href = "setexercises.html";
+        //});
+		console.log(localStorage.getItem("currentSet"));
+>>>>>>> 184e7e21e0ed64333d59002ccb6588961d76fbab
 
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
@@ -273,7 +291,11 @@
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
+<<<<<<< HEAD
 //        console.log(name);
+=======
+
+>>>>>>> 184e7e21e0ed64333d59002ccb6588961d76fbab
       }
       console.log(playlists);
     }
@@ -282,7 +304,19 @@
     // console.log(obj);
   });
 
-
+	$(function()
+	{
+			$(".card").on('click',popup);
+	});
+	function popup()
+	{
+			if ($(this).attr('id') != "newPlaylistBtn")
+			{
+				console.log("ding");
+				window.location.href = "setexercises.html";
+				localStorage.setItem("currentSet",$(this).attr('id'));
+			}
+	}
   //Function to open new playlist modal
   function openModal() {
     playlistModal.style.display = 'block';
