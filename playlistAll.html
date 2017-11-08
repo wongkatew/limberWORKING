@@ -256,10 +256,9 @@
         one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
         document.body.insertBefore(one, newPlaylistCard);
 
-        one.id = i;
-        document.getElementById(i).addEventListener("click", function() {
+        one.id = name;
+        document.getElementById(name).addEventListener("click", function() {
           localStorage.setItem("currentSet", name);
-          console.log(name);
           location.href = "setexercises.html";
         });
 
@@ -274,7 +273,7 @@
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
-        console.log(name);
+//        console.log(name);
       }
       console.log(playlists);
     }
@@ -331,11 +330,10 @@
     //Hide the modal
     playlistModal.style.display = 'none';
 
-    newPlaylist.id = playlists.length;
-    console.log(newPlaylist.id);
-    document.getElementById(newPlaylist.id).addEventListener("click", function() {
+    newPlaylist.id = newPlaylistName;
+    console.log(newPlaylistName);
+    document.getElementById(newPlaylistName).addEventListener("click", function() {
       localStorage.setItem("currentSet", newPlaylistName);
-      console.log("HELLO");
       location.href = "setexercises.html";
     });
 
