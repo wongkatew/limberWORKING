@@ -13,16 +13,21 @@
     <link href="css/limberSpecific.css" rel="stylesheet"/>
   </head>
   <script>
-  function goBack() {
-    window.history.back();
-  }
+
+  $(document).ready(function() {
+      console.log('hello world');
+      localStorage.setItem("currentBodyPart", "chest");
+    });
   </script>
   <body>
     <!-- collapsible navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-btn float-sm-left" onclick="goBack()">
-  			<
-  		</button>
+      <a href="targetareaF.html">
+        <button class="navbar-btn float-sm-left">
+          <
+        </button>
+      </a>
+
     	<a class="navbar-brand" href="targetareaF.html">Limber</a>
     	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#limberNavBar" aria-controls="limberNavBar" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
@@ -33,20 +38,76 @@
     			<a class="nav-item nav-link" href="targetareaF.html">Pick Target Area</a>
     			<a class="nav-item nav-link" href="playlistAll.html">Playlists</a>
     			<a class="nav-item nav-link" href="history.html">History</a>
-    			<a class="nav-item nav-link" href="settings.html">Settings</a>
     			<a class="nav-item nav-link" href="index.html">Log Out</a>
     		</div>
     	</div>
     </nav>
 
     <div class="container">
-      <h1>Thighs</h1>
+      <img class="bodyIcon" src="images/thighs.png">
 
-      <p>Select Focus</p>
-      <a class="btn btn-primary" href="flexibility.html">Flexibility</a>
-      <a class="btn btn-primary" href="strength.html">Strength</a>
-      <a class="btn btn-primary" href="painrelief.html">Pain Relief</a>
+      <h5 style="text-align: center; margin-bottom: 10px;">How would you like to focus on your body today?</h5>
+
+      <div class="column">
+        <div class="row">
+            <a href="flexibility.html">
+              <img class="goalIcon" src="images/flexButton.png">
+            </a>
+            <a class="goalLink" href="flexibility.html">Flexibility</a>
+        </div>
+        <div class="row">
+          <a href="strength.html">
+            <img class="goalIcon" src="images/strengthButton.png">
+          </a>
+          <a class="goalLink" href="strength.html">Strength</a>
+        </div>
+        <div class="row">
+          <a href="painrelief.html">
+            <img class="goalIcon" src="images/painButton.png">
+          </a>
+          <a class="goalLink" href="painrelief.html">Pain Relief</a>
+        </div>
+      </div>
     </div>
 
   </body>
+
+  <style>
+
+  .bodyIcon {
+    width: 40%;
+    height: 20%;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .goalIcon {
+    width: 20%;
+    height: 20%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px
+  }
+
+  .row a {
+    text-decoration: none;
+  }
+
+  .goalLink:hover {
+    color: #fbc02d;
+  }
+
+  .goalLink {
+    font-size: 30px;
+    color: #000;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  .row {
+    display: inline-block;
+  }
+
+  </style>
 </html>
