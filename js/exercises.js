@@ -64,7 +64,7 @@ var armsTPain = [
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm."",
+    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
   {
@@ -89,7 +89,7 @@ var armsTFlex = [
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm."",
+    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
   {
@@ -104,8 +104,8 @@ var armsTFlex = [
 var armsTStrength = [
   {
     "title": "Bicep Curl",
-    "video": "images/glutsPain1.mp4",
-    "prev": "images/bicepCurl.gif",
+    "video": "images/bicepCurl.mp4",
+    "prev": "images/glutsPain1.gif",
     "description": "With some weight in hand, curl your arm upwards for one repetition.",
     "index": 0
   },
@@ -144,7 +144,7 @@ var armsBPain = [
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm."",
+    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
   {
@@ -169,7 +169,7 @@ var armsBFlex = [
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
     "prev": "images/glutsPain1.gif",
-    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm."",
+    "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
   {
@@ -332,7 +332,7 @@ var calvesPain = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and don't go over your knees.",
     "index": 0
   },
@@ -359,7 +359,7 @@ var calvesFlex = [
     "prev": "images/glutsPain1.gif",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
     "index": 1
-  } ,
+  },
   {
     "title": "Lunges",
     "video": "images/lunges.mp4",

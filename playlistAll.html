@@ -83,14 +83,12 @@
   </body>
 
   <style>
-
   .card-deck-wrapper {
     display: inline-block;
     justify-content: flex-start;
     flex-flow: row wrap;
     align-items: stretch;
   }
-
   .card {
     display: inline-block;
     box-shadow: 0 0 5px silver;
@@ -101,16 +99,13 @@
     margin: 10px;
     vertical-align: top;
   }
-
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-
   .card_content {
     padding: 10px;
     color: black;
   }
-
   .playlistModal {
     display: none;
     position: fixed;
@@ -122,7 +117,6 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.2);
   }
-
   .newPlaylistModalContent {
     background-color: #f4f4f4;
     margin: 40% auto;
@@ -132,47 +126,39 @@
     animation-name: openModal;
     animation-duration: 0.5s;
   }
-
   .closeBtn {
     color: #fff;
     float: right;
     font-size: 30px;
     margin: 0;
   }
-
   .closeBtn:hover, .closeBtn:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
-
   @keyframes openModal {
     from{opacity: 0}
     to {opacity: 1}
   }
-
   .modal-header h5, .modal-footer h5 {
     margin: 10px;
   }
-
   .modal-header {
     background: #fbc02d;
     padding: 5px;
     color: #fff;
   }
-
   .modal-body p, .modal-body input {
     margin: 0;
     border-color: #fbc02d;
     margin-bottom: 2px;
   }
-
   .modal-body {
     padding: 5px 20px;
     text-align: center;
     background: #fff;
   }
-
   .modal-footer {
     background: #fbc02d;
     color: #fff;
@@ -182,14 +168,12 @@
     padding-left: 5px;
     padding-right: 5px;
   }
-
   #cancelBtn {
     background-color: #fff;
     color: #fbc02d;
     height: 50%;
     width: 50%;
   }
-
   #createBtn {
     background: #fbc02d;
     border-color: #fff;
@@ -197,7 +181,6 @@
     height: 50%;
     width: 50%;
   }
-
   .deleteBtn {
     color: #fbc02d;
     font-size: 20px;
@@ -209,11 +192,9 @@
     margin-bottom: 0px;
     margin-top: 0px;
   }
-
   </style>
 
   <script>
-
   //Get modal elements
   var playlistModal = document.getElementById('newPlaylistModal');
   var modalBtn = document.getElementById('newPlaylistBtn');
@@ -224,7 +205,6 @@
   //var playlists = document.getElementsByClassName('card');
   var newPlaylistCard = document.getElementById('newPlaylistBtn');
   var deleteBtn = document.getElementsByClassName('deleteBtn');
-
   //Listener for open modal click
   modalBtn.addEventListener('click', openModal);
   //Listener for close modal click
@@ -236,35 +216,23 @@
   //Listener for clicking Create button
   createBtn.addEventListener('click', createNewPlaylist);
   //TODO: Delete button.... T_T
-
-
+  
   //Ready function runs every time page loads
   $(document).ready(function() {
     console.log('Playlists page ready');
-
   //  localStorage.removeItem("listsOfSets");
     if (localStorage.getItem("listsOfSets") != null) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
-
       for (var i = 0; i < playlists.length; i++) {
         //Set name to each playlist name inside "playlists"
         var name = playlists[i].name;
-
         // Insert the playlist onto the web page before the newPlaylistCard
         //Create a new playlist card for every playlist
         var one = document.createElement('one');
         one.className = 'card';
         one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
         document.body.insertBefore(one, newPlaylistCard);
-/*
-<<<<<<< HEAD
-        one.id = name;
-        document.getElementById(name).addEventListener("click", function() {
-          localStorage.setItem("currentSet", name);
-          location.href = "setexercises.html";
-        });
-=======
-        one.id = i;*/
+        one.id = i;
 	/*	var self = document.getElementById(i);
 		(function(self){
 			self.chart.addEventListener("click", function() {
@@ -278,28 +246,22 @@
         //  location.href = "setexercises.html";
         //});
 		console.log(localStorage.getItem("currentSet"));
-
-
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
         var hLabel = document.createElement("h4");
         var newOne = new String();
         newOne = name.replace(/"/g, "");
         var title = document.createTextNode(newOne);
-
         newDiv.appendChild(hLabel);
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
-
       }
       console.log(playlists);
     }
-
     // var obj = JSON.parse(names);
     // console.log(obj);
   });
-
 	$(function()
 	{
 			$(".card").on('click',popup);
@@ -317,13 +279,11 @@
   function openModal() {
     playlistModal.style.display = 'block';
   }
-
   //Function to close new playlist modal
   function closeModal() {
     playlistModal.style.display = 'none';
     inputPlaylistName.value = '';
   }
-
   //Function to close new playlist modal when click outside modal
   function outsideClick(e) {
     if(e.target == playlistModal) {
@@ -331,7 +291,6 @@
       inputPlaylistName.value = '';
     }
   }
-
   //When a user creates a new playlist
   function createNewPlaylist() {
     var newPlaylistName = document.getElementById('inputName').value;
@@ -340,33 +299,27 @@
       playlistModal.style.display = 'none';
       return;
     }
-
     //If the user input a playlist name
     var newPlaylist = document.createElement('newPlaylist');
     newPlaylist.className = 'card';
     //Set new playlist default image to be the monkey
-
-
 /*    one.id = i;
     document.getElementById(i).addEventListener("click", function() {
       localStorage.setItem("currentSet", name);
       window.location.href = "setexercises.html";
     })
 */
-
     newPlaylist.innerHTML= "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
     //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     //Hide the modal
     playlistModal.style.display = 'none';
-
-    newPlaylist.id = newPlaylistName;
-    console.log(newPlaylistName);
-    document.getElementById(newPlaylistName).addEventListener("click", function() {
+    newPlaylist.id = playlists.length;
+    console.log(newPlaylist.id);
+    document.getElementById(newPlaylist.id).addEventListener("click", function() {
       localStorage.setItem("currentSet", newPlaylistName);
       location.href = "setexercises.html";
     });
-
     //Local storage part - save the name of the playlist the user inputs//
     //Get the user input name
 //    var newPlaylistName = JSON.stringify(document.getElementById('inputName').value);
@@ -382,28 +335,22 @@
        "name": newPlaylistName,
        "vids": []
      };
-
     playlists.push(fullP);
     localStorage.setItem("listsOfSets", JSON.stringify(playlists));
     // for (var i = 0; i < playlists.length; i++) {
       // var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(playlists[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
-
     var newDiv = document.createElement("divdiv");
     newDiv.className = 'card_content';
     var hLabel = document.createElement("h4");
     var newOne = new String();
     newOne = newPlaylistName.replace(/"/g, "");
     var title = document.createTextNode(newOne);
-
     newDiv.appendChild(hLabel);
     hLabel.appendChild(title);
     newPlaylist.appendChild(hLabel);
-
     //Clear input field
     inputPlaylistName.value = '';
   }
-
-
   </script>
 
 

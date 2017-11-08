@@ -88,14 +88,15 @@
 		};
 
 		function moveUp() {
-			//var indexThis = editSet.vids.findIndex( x => x.title == "title");
-			var indexThis = arguments[0].index;
+			var indexThis = editSet.vids.findIndex( x => x.title == arguments[0].title);
+			//var indexThis = arguments[0].index;
 			if (indexThis > 0)
 			{
 				var tmp = editSet.vids[indexThis];
 				editSet.vids[indexThis] = editSet.vids[indexThis - 1];
 				editSet.vids[indexThis-1] = tmp;
 			}
+			console.log(arguments[0].title);
 			playlists[localStorage.getItem("currentSet")] = editSet;
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
