@@ -12,15 +12,19 @@
 	<script src="js/exercises.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
+	
+		
+		if (localStorage.getItem("listsOfSets") != null) {
+					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
-		var setlists = localStorage.getItem("listsOfSets");
-		var thisSet = JSON.parse(setlists);
-		var editSet = thisSet[0]; // change to variable playlist
+		}
+		var setIndex = playlists.findIndex(x => x.name == localStorage.getItem("currentSet"));
+		var editSet = playlists[setIndex]; // change to variable playlist
 
 		$(document).ready(function() {
 			console.log('hello world');
-
-
+			
+			
 			// compile the template
 			var source = $("#entry-template").html();
 			var template = Handlebars.compile(source);
@@ -28,7 +32,10 @@
 			document.getElementById("setname").innerHTML += editSet.name;
 
 			// var html = template(glutsPain);
-			html = template(editSet.vids)
+			if (editSet.vids.length > 0)
+			{
+				html = template(editSet.vids);
+			}
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
 		});
@@ -89,6 +96,7 @@
 				editSet.vids[indexThis] = editSet.vids[indexThis - 1];
 				editSet.vids[indexThis-1] = tmp;
 			}
+			location.reload();
 			localStorage.setItem("listsOfSets", JSON.stringify(editSet));
 		};
 	</script>
