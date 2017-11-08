@@ -12,6 +12,8 @@
 	<script src="js/exercises.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
+		var currListOfVids;
+
 		$(document).ready(function() {
 			console.log('hello world');
 
@@ -27,7 +29,7 @@
 			var template = Handlebars.compile(source);
 
 			var html;
-			var currListOfVids;
+
 			if (currBodPart === "abs") {
 				html = template(absPain);
 				currListOfVids = absPain;
@@ -88,7 +90,7 @@
 					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 				}
 				if (localStorage.getItem("historyOfVids") != null) {
-					history = JSON.parse(localStorage.getItem("historyOfVids"));
+					historyVids = JSON.parse(localStorage.getItem("historyOfVids"));
 				}
 				for (var j = 0; j < currListOfVids.length; j++) {
 					// document.getElementById("dropdown" + j).innerHTML = "";
@@ -154,9 +156,10 @@
 
 			// add things to the history called historyOfVids in localStorage, history in code
 			historyVids.push(arguments[0]);
-			localStorage.setItem("historyOfVids", JSON.stringify(history));
+			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 		};
 
+		// to create a new playlist on the spot
 		function appendList() {
 			var nameP = prompt("Name your new exercise set.");
 			var newPlaylist = "New Exercise Set";
@@ -175,8 +178,8 @@
 			// }
 			playlists.push(fullP);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
-			for (var i = 0; i < glutsPain.length; i++) {
-				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsPain[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+			for (var i = 0; i < currListOfVids.length; i++) {
+				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(currListOfVids[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
 				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;

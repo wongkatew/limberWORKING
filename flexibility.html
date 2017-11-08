@@ -12,23 +12,90 @@
 	<script src="js/exercises.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
+		var currListOfVids;
+
 		$(document).ready(function() {
 			console.log('hello world');
+
+			var currBodPart;
+			if (localStorage.getItem("currentBodyPart") === null) {
+				currBodPart = "potato";
+			} else {
+				currBodPart = localStorage.getItem("currentBodyPart");
+			}
 
 			// compile the template
 			var source = $("#entry-template").html();
 			var template = Handlebars.compile(source);
-			var html = template(glutsPain);
+
+			var html;
+
+			if (currBodPart === "abs") {
+				html = template(absFlex);
+				currListOfVids = absFlex;
+			} else if (currBodPart === "upperArm") {
+				html = template(armsTFlex);
+				currListOfVids = armsTFlex;
+			} else if (currBodPart === "foreArm") {
+				html = template(armsBFlex);
+				currListOfVids = armsBFlex;
+			} else if (currBodPart === "upperBack") {
+				html = template(backTFlex);
+				currListOfVids = backTFlex;
+			} else if (currBodPart === "lowerBack") {
+				html = template(backBFlex);
+				currListOfVids = backBFlex;
+			} else if (currBodPart === "calves") {
+				html = template(calvesFlex);
+				currListOfVids = calvesFlex;
+			} else if (currBodPart === "chest") {
+				html = template(chestFlex);
+				currListOfVids = chestFlex;
+			} else if (currBodPart === "feet") {
+				html = template(feetFlex);
+				currListOfVids = feetFlex;
+			} else if (currBodPart === "glutes") {
+				html = template(glutsFlex);
+				currListOfVids = glutsFlex;
+			} else if (currBodPart === "hands") {
+				html = template(handsFlex);
+				currListOfVids = handsFlex;
+			} else if (currBodPart === "head") {
+				html = template(headFlex);
+				currListOfVids = headFlex;
+			} else if (currBodPart === "hips") {
+				html = template(hipsFlex);
+				currListOfVids = hipsFlex;
+			} else if (currBodPart === "neck") {
+				html = template(neckFlex);
+				currListOfVids = neckFlex;
+			} else if (currBodPart === "shoulder") {
+				html = template(shouldersFlex);
+				currListOfVids = shouldersFlex;
+			} else if (currBodPart === "thighs") {
+				html = template(thighsFlex);
+				currListOfVids = thighsFlex;
+			} else {
+				alert("Uh oh: the body part we tried to read from local storage could not be read. The current body part we read was: " + currBodPart + ". Just for now, we'll show you glutes.");
+				html = template(glutsFlex);
+				currListOfVids = glutsFlex;
+			}
+
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
 			if (localStorage.length >= 1) {
-				playlists = JSON.parse(localStorage.getItem("listsOfSets"));
-				for (var j = 0; j < glutsPain.length; j++) {
+				if (localStorage.getItem("listsOfSets") != null) {
+					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
+				}
+				if (localStorage.getItem("historyOfVids") != null) {
+					historyVids = JSON.parse(localStorage.getItem("historyOfVids"));
+				}
+				for (var j = 0; j < currListOfVids.length; j++) {
 					// document.getElementById("dropdown" + j).innerHTML = "";
 					document.getElementById("funfun" + j).innerHTML = "";
 					// document.getElementById("funfun").innerHTML = "";
 					for (var i = 0; i < playlists.length; i++) {
-						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(glutsPain[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
+						var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ playlists[i].name +"', " + (JSON.stringify(currListOfVids[j])).replace(/"/g, "'") + ")\">" + playlists[i].name + "</a></li>";
 					// 	document.getElementById("dropdown" + j).innerHTML += nameList;
 						document.getElementById("funfun" + j).innerHTML += nameList;
 					}
@@ -84,6 +151,10 @@
 			var src = arguments[0].video;
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
+
+			// add things to the history called historyOfVids in localStorage, history in code
+			historyVids.push(arguments[0]);
+			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 		};
 
 		function appendList() {
@@ -104,8 +175,8 @@
 			// }
 			playlists.push(fullP);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
-			for (var i = 0; i < glutsPain.length; i++) {
-				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsPain[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+			for (var i = 0; i < glutsFlex.length; i++) {
+				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsFlex[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
 				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
