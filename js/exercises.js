@@ -14,7 +14,7 @@ var playlists = [
   //}
 ]
 
-var history = [
+var historyVids = [
 
 ]
 

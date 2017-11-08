@@ -153,8 +153,8 @@
 			$('#vidmodal').modal('show');
 
 			// add things to the history called historyOfVids in localStorage, history in code
-			history.push(arguments[0]);
-			JSON.setItem("historyOfVids", JSON.stringify(history));
+			historyVids.push(arguments[0]);
+			localStorage.setItem("historyOfVids", JSON.stringify(history));
 		};
 
 		function appendList() {
