@@ -98,7 +98,7 @@
 				bodyPart = "Glutes";
 			}
 
-			document.getElementById("bodbod").innerHTML = "<h3 style=\"text-align:center; font-size: 20px;\">" + bodyPart + "</h3>"
+			document.getElementById("bodbod").innerHTML = "<h3 style=\"text-align:center; font-size: 20px;\">" + bodyPart + "</h3>";
 
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
@@ -245,7 +245,7 @@
 <body>
 <!-- section for defining modal tutorial at https://www.tutorialspoint.com/bootstrap/bootstrap_modal_plugin.htm something similar could be used for details function later-->
 <div class="modal modal-lg" id="vidmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog" style="-webkit-transform: translate(0, -50%); -o-transform: translate(0, -50%); transform: translate(0, -50%); top: 50%; margin: 0 auto;">
     <div class="modal-content">
 			<div class="modal-header" style="display:none;">
 			</div>
@@ -272,7 +272,7 @@
 					<div class="row">
 						<div class="col">
 							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
-							<img src="images/play.png" class="overlay_pic"></img>
+							<img src="images/play.png" class="overlay_pic" onclick="showVid({{json this}})"></img>
 							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
 						<div class="col-2">
