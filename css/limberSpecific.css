@@ -166,3 +166,11 @@ span.psw {
 .dropdown a:hover {background-color: #fff263}
 
 .show {display:block;}
+
+.overlay_pic {
+  position: absolute;
+  right: 38%;
+  top: 27%;
+  width: 25%;
+  max-width: 25%;
+}
