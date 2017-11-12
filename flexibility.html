@@ -180,13 +180,23 @@
 			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 		};
 
+		//Open modal when user clicks on "create new playlist"
+		function openModal() {
+			$('#myModal').modal('show');
+			//If the user clicks on "create" button, then call appendList
+			var createBtn = document.getElementById("createBtn");
+			createBtn.addEventListener('click', appendList);
+		}
+
 		function appendList() {
-			var nameP = prompt("Name your new exercise set.");
-			var newPlaylist = "New Exercise Set";
-			if (nameP == null) {	// of the user presses cancel
+			$('#myModal').modal('hide');
+
+			var newPlaylist = "";
+			var nameP = document.getElementById('inputName').value;
+			if (nameP == "") {	// of the user presses cancel
 				return;
 			}
-			if (nameP != null) {
+			if (nameP != "") {
 				newPlaylist = nameP;
 			}
 			var fullP = {
@@ -202,6 +212,7 @@
 				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsFlex[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
 				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
+			$('#inputName').val('');
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		};
 
@@ -262,6 +273,28 @@
   </div>
 </div>
 
+<!-- Hee Ro added this - modal to create new playlist -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create New Exercise Set</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+				<p>Insert new exercise set name below</p>
+				<input type="text" id="inputName" class="form-control" placeholder="Playlist name">
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancelBtn" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" id="createBtn" class="btn btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="col">
 		<h1 style="font-size:25px; text-align:center !important">FLEXIBILITY EXERCISES:</h1>
 		<div id="bodbod"></div>
@@ -292,7 +325,7 @@
 
 										</ul>
 									</div>
-									<a href="#" onclick="appendList({{json this}})">Create New Exercise Set</a>
+									<a href="#" onclick="openModal({{json this}})">Create New Exercise Set</a>
 								</div>
 							</div>
 						</div>
@@ -306,5 +339,53 @@
 
 
 </body>
+
+<style>
+.close {
+	color: #fff;
+	float: right;
+	font-size: 30px;
+	margin: 0;
+}
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+.modal-header {
+	background: #fbc02d;
+	color: #fff;
+}
+.modal-body p, .modal-body input {
+	border-color: #fbc02d;
+}
+.modal-body {
+	text-align: center;
+	background: #fff;
+}
+.modal-footer {
+	background: #fbc02d;
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+	padding: inherit;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#cancelBtn {
+	background-color: #fff;
+	border-color: #fff;
+	color: #fbc02d;
+	height: 50%;
+	width: 50%;
+}
+#createBtn {
+	background: #fbc02d;
+	border-color: #fff;
+	color: #fff;
+	height: 50%;
+	width: 50%;
+}
+</style>
 
 </html>
