@@ -148,16 +148,19 @@
 		function detailFunct() {
 			var preview = document.getElementById("prev" + arguments[0].index);
 			var description = document.getElementById("description" + arguments[0].index);
+			var playButton = document.getElementById("play" + arguments[0].index);
 			// alert(arguments[0].index);
 			if (preview.style.display == "none")
 			{
 				preview.style.display = "block";
 				description.style.display = "none";
+				playButton.style.display = "block";
 			}
 			else
 			{
 				preview.style.display = "none";
 				description.style.display = "block";
+				playButton.style.display = "none";
 			}
 		};
 
@@ -170,6 +173,8 @@
 			var src = arguments[0].video;
 			$('#vidmodal iframe').attr('src', src);
 			$('#vidmodal').modal('show');
+
+			document.getElementById("vidTitleMod").innerHTML = "" + arguments[0].title;
 
 			// add things to the history called historyOfVids in localStorage, history in code
 			historyVids.push(arguments[0]);
@@ -248,10 +253,11 @@
 <div class="modal modal-lg" id="vidmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" style="-webkit-transform: translate(0, -50%); -o-transform: translate(0, -50%); transform: translate(0, -50%); top: 50%; margin: 0 auto;">
     <div class="modal-content">
-			<div class="modal-header" style="display:none;">
+			<div class="modal-header">
+				<h5 class="modal-title" id="vidTitleMod"></h5>
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 			</div>
       <div class="modal-body">
-      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" style="top: 0; left: 0; width:100%; height: 100%"></iframe>
       </div>
     </div>
@@ -273,7 +279,7 @@
 					<div class="row">
 						<div class="col">
 							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
-							<img src="images/play.png" class="overlay_pic" onclick="showVid({{json this}})"></img>
+							<img src="images/play.png" class="overlay_pic" onclick="showVid({{json this}})" id="play{{index}}"></img>
 							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
 						<div class="col-2">
