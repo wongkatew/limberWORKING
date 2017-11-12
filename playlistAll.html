@@ -45,40 +45,41 @@
 
     <h1 style="text-align:center;">Exercise Sets</h1>
 
-<!--Indivdual playlists using Bootstrap-->
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-
-  </div>
-</div>
-
-    <!-- New Playlist card -->
-    <div id="newPlaylistBtn" class="card">
-        <img src="images/plus-64.jpg" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
-        <div class="card_content">
-          <h5>New Exercise Set</h5>
-        </div>
+  <!--Indivdual playlists using Bootstrap-->
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
     </div>
+  </div>
 
-    <!-- Modal to name & create new playlist -->
-    <div id="newPlaylistModal" class="playlistModal">
-      <div class="newPlaylistModalContent">
+  <!-- New Playlist card -->
+  <div id="newPlaylistBtn" class="card">
+      <img src="images/plus-64.jpg" style="width:100%;height:80%;box-shadow:0 0 5px 2px silver;">
+      <div class="card_content">
+        <h5>New Exercise Set</h5>
+      </div>
+  </div>
+
+  <!-- Hee Ro added this - modal to create new playlist -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
         <div class="modal-header">
-          <h5>Create New Exercise Set</h5>
-          <span class="closeBtn">&times;</span>
+          <h5 class="modal-title" id="exampleModalLabel">Create New Exercise Set</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <!-- Where user inputs playlist name -->
         <div class="modal-body">
-          <p>Insert new exercise set name below</p>
-          <input type="text" id="inputName" class="form-control" placeholder="Playlist name">
+  				<p>Insert new exercise set name below</p>
+  				<input type="text" id="inputName" class="form-control" placeholder="Playlist name">
         </div>
-        <!-- Cancel & Create buttons -->
         <div class="modal-footer">
-          <button type="button" id="cancelBtn" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" id="cancelBtn" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           <button type="button" id="createBtn" class="btn btn-primary">Create</button>
         </div>
       </div>
     </div>
+  </div>
 
   </body>
 
@@ -106,117 +107,68 @@
     padding: 10px;
     color: black;
   }
-  .playlistModal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.2);
+  .close {
+  	color: #fff;
+  	float: right;
+  	font-size: 30px;
+  	margin: 0;
   }
-  .newPlaylistModalContent {
-    background-color: #f4f4f4;
-    margin: 40% auto;
-    width: 70%;
-    height: 30%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    animation-name: openModal;
-    animation-duration: 0.5s;
-  }
-  .closeBtn {
-    color: #fff;
-    float: right;
-    font-size: 30px;
-    margin: 0;
-  }
-  .closeBtn:hover, .closeBtn:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  @keyframes openModal {
-    from{opacity: 0}
-    to {opacity: 1}
-  }
-  .modal-header h5, .modal-footer h5 {
-    margin: 10px;
+  .close:hover, .close:focus {
+  	color: #000;
+  	text-decoration: none;
+  	cursor: pointer;
   }
   .modal-header {
-    background: #fbc02d;
-    padding: 5px;
-    color: #fff;
+  	background: #fbc02d;
+  	color: #fff;
   }
   .modal-body p, .modal-body input {
-    margin: 0;
-    border-color: #fbc02d;
-    margin-bottom: 2px;
+  	border-color: #fbc02d;
   }
   .modal-body {
-    padding: 5px 20px;
-    text-align: center;
-    background: #fff;
+  	text-align: center;
+  	background: #fff;
   }
   .modal-footer {
-    background: #fbc02d;
-    color: #fff;
-    text-align: center;
-    justify-content: center;
-    padding: inherit;
-    padding-left: 5px;
-    padding-right: 5px;
+  	background: #fbc02d;
+  	color: #fff;
+  	text-align: center;
+  	justify-content: center;
+  	padding: inherit;
+  	padding-left: 5px;
+  	padding-right: 5px;
   }
   #cancelBtn {
-    background-color: #fff;
-    color: #fbc02d;
-    height: 50%;
-    width: 50%;
+  	background-color: #fff;
+  	border-color: #fff;
+  	color: #fbc02d;
+  	height: 50%;
+  	width: 50%;
   }
   #createBtn {
-    background: #fbc02d;
-    border-color: #fff;
-    color: #fff;
-    height: 50%;
-    width: 50%;
+  	background: #fbc02d;
+  	border-color: #fff;
+  	color: #fff;
+  	height: 50%;
+  	width: 50%;
   }
-  .deleteBtn {
-    color: #fbc02d;
-    font-size: 20px;
-    padding: inherit;
-    background-color: #fff;
-    font-weight: bolder;
-    float: right;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
+
   </style>
 
   <script>
   //Get modal elements
-  var playlistModal = document.getElementById('newPlaylistModal');
+  var playlistModal = document.getElementById('myModal');
   var modalBtn = document.getElementById('newPlaylistBtn');
-  var closeBtn = document.getElementsByClassName('closeBtn')[0];
+  var closeBtn = document.getElementsByClassName('close')[0];
   var cancelBtn = document.getElementById('cancelBtn');
   var inputPlaylistName = document.getElementById('inputName');
-  var createBtn = document.getElementById('createBtn');
+  //var createBtn = document.getElementById('createBtn');
   //var playlists = document.getElementsByClassName('card');
   var newPlaylistCard = document.getElementById('newPlaylistBtn');
   var deleteBtn = document.getElementsByClassName('deleteBtn');
   //Listener for open modal click
   modalBtn.addEventListener('click', openModal);
-  //Listener for close modal click
-  closeBtn.addEventListener('click', closeModal);
-  //Listener for clicking outside the modal
-  window.addEventListener('click', outsideClick);
-  //Listener for clicking Cancel button
-  cancelBtn.addEventListener('click', closeModal);
-  //Listener for clicking Create button
-  createBtn.addEventListener('click', createNewPlaylist);
-  //TODO: Delete button.... T_T
-  
+
   //Ready function runs every time page loads
   $(document).ready(function() {
     console.log('Playlists page ready');
@@ -277,22 +229,15 @@
 	}
   //Function to open new playlist modal
   function openModal() {
-    playlistModal.style.display = 'block';
+    $('#myModal').modal('show');
+    var createBtn = document.getElementById('createBtn');
+    //Listener for clicking Create button
+    createBtn.addEventListener('click', createNewPlaylist);
   }
-  //Function to close new playlist modal
-  function closeModal() {
-    playlistModal.style.display = 'none';
-    inputPlaylistName.value = '';
-  }
-  //Function to close new playlist modal when click outside modal
-  function outsideClick(e) {
-    if(e.target == playlistModal) {
-      playlistModal.style.display = 'none';
-      inputPlaylistName.value = '';
-    }
-  }
+
   //When a user creates a new playlist
   function createNewPlaylist() {
+    $('#myModal').modal('hide');
     var newPlaylistName = document.getElementById('inputName').value;
     //If the user did not input a playlist name
     if (newPlaylistName == "") {
@@ -303,19 +248,10 @@
     var newPlaylist = document.createElement('newPlaylist');
     newPlaylist.className = 'card';
     //Set new playlist default image to be the monkey
-/*    one.id = i;
-    document.getElementById(i).addEventListener("click", function() {
-      localStorage.setItem("currentSet", name);
-      window.location.href = "setexercises.html";
-    })
-*/
     newPlaylist.innerHTML= "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
     //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
-    //Hide the modal
-    playlistModal.style.display = 'none';
     newPlaylist.id = playlists.length;
-    console.log(newPlaylist.id);
     document.getElementById(newPlaylist.id).addEventListener("click", function() {
       localStorage.setItem("currentSet", newPlaylistName);
       location.href = "setexercises.html";
@@ -349,7 +285,7 @@
     hLabel.appendChild(title);
     newPlaylist.appendChild(hLabel);
     //Clear input field
-    inputPlaylistName.value = '';
+    $('#inputName').val('');
   }
   </script>
 
