@@ -19,8 +19,8 @@
 
 		}
 	//	var setIndex = playlists.findIndex(x => x.name == localStorage.getItem("currentSet"));
-		var editSet = playlists[localStorage.getItem("currentSet")]; // change to variable playlist
-
+		var editSet = playlists[localStorage.getItem("currentSet")];
+		
 		$(document).ready(function() {
 			console.log('hello world');
 			
@@ -38,6 +38,7 @@
 			}
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
+			
 		});
 
 		// so things can be read
@@ -63,6 +64,10 @@
 		/* When the user clicks on the button,
 		toggle between hiding and showing the detail content */
 		function detailFunct() {
+		console.log("clear");
+			console.log(arguments[0].index);
+			var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title);
+			console.log(indSet);
 			var preview = document.getElementById("prev" + arguments[0].index);
 			var description = document.getElementById("description" + arguments[0].index);
 			// alert(arguments[0].index);

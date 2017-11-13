@@ -714,7 +714,6 @@ var thighsFlex = [
     "video": "images/airSquat.mp4",
     "prev": "images/glutsPain1.gif",
 	"description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-
     "index": 0
   },
   {

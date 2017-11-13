@@ -14,6 +14,7 @@
 	<script>
 		var currListOfVids;
 		var bodyPart;
+		var vidP;
 
 		$(document).ready(function() {
 			console.log('hello world');
@@ -184,6 +185,7 @@
 		//Open modal when user clicks on "create new playlist"
 		function openModal() {
 			$('#myModal').modal('show');
+			vidP = arguments[0];
 			//If the user clicks on "create" button, then call appendList
 			var createBtn = document.getElementById("createBtn");
 			createBtn.addEventListener('click', appendList);
@@ -202,7 +204,7 @@
 			}
 			var fullP = {
 				"name": nameP,
-				"vids": [arguments[0]]
+				"vids": [vidP]
 			};
 			// if (playlists.length >= 1) {
 			// 	fullP = ", " + fullP;

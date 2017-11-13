@@ -253,7 +253,8 @@
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     newPlaylist.id = playlists.length;
     document.getElementById(newPlaylist.id).addEventListener("click", function() {
-      localStorage.setItem("currentSet", newPlaylistName);
+		var lastIndex = playlists.length - 1;
+      localStorage.setItem("currentSet", lastIndex);
       location.href = "setexercises.html";
     });
     //Local storage part - save the name of the playlist the user inputs//
