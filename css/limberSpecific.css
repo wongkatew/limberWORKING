@@ -227,3 +227,27 @@ span.psw {
 	height: 50%;
 	width: 50%;
 }
+
+.card-deck-wrapper {
+  display: inline-block;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+.card {
+  display: inline-block;
+  box-shadow: 0 0 5px silver;
+  height: 200px;
+  width: 150px;
+  margin-top: 10px;
+  text-align: center;
+  margin: 10px;
+  vertical-align: top;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card_content {
+  padding: 10px;
+  color: black;
+}
