@@ -115,6 +115,16 @@
 			playlists.splice(ind, 1);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 		}
+		
+		//deletes item
+		function deleteVid() {
+			var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title) ;
+		//	var element1 = document.getElementById("element" + indexThis);
+			//element1.style.display = "none";
+			editSet.vids.splice(indSet,1);
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+			location.reload();
+		};
 	</script>
 </head>
 <body>
@@ -175,9 +185,11 @@
 						<div class="col-2">
 							<div class="row">
 								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
+								
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button onclick = "moveUp({{json this}})" class = "btn btn-warning">^</button>
+								<button onclick="deleteVid({{json this}})" class="btn btn-warning">X</button>
 							</div>
 						</div>
 					</div>

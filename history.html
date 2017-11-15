@@ -84,11 +84,10 @@
 
 		//deletes item
 		function deleteVid() {
-			
-			var indexThis = arguments[0].index;
+			var indSet = historyVids.findIndex(x => x.title == arguments[0].title) ;
 		//	var element1 = document.getElementById("element" + indexThis);
 			//element1.style.display = "none";
-			historyVids.splice(indexThis,1);
+			historyVids.splice(indSet,1);
 			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 			location.reload();
 		};
