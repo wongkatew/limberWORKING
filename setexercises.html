@@ -66,7 +66,8 @@
 		function detailFunct() {
 		console.log("clear");
 			console.log(arguments[0].index);
-			var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title) ;
+			var indSet = arguments[0];
+			//var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title) ;
 			console.log(indSet);
 			var preview = document.getElementById("prev" + indSet);//arguments[0].index);
 			var description = document.getElementById("description" + indSet);//arguments[0].index);
@@ -95,7 +96,8 @@
 		};
 
 		function moveUp() {
-			var indexThis = editSet.vids.findIndex( x => x.title == arguments[0].title);
+			var indexThis = editSet.vids.indexOf(arguments[0]);
+			//var indexThis = editSet.vids.findIndex( x => x.title == arguments[0].title);
 			//var indexThis = arguments[0].index;
 			if (indexThis > 0)
 			{
@@ -184,7 +186,7 @@
 						</div>
 						<div class="col-2">
 							<div class="row">
-								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
+								<button onclick="detailFunct({{@index}})" class="detailbtn">Details</button>
 								
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->

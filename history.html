@@ -56,7 +56,7 @@
 		/* When the user clicks on the button,
 		toggle between hiding and showing the detail content */
 		function detailFunct() {
-			var indSet = historyVids.findIndex(x => x.title == arguments[0].title) ;
+			var indSet = arguments[0];
 			var preview = document.getElementById("prev" + indSet);//arguments[0].index);
 			var description = document.getElementById("description" + indSet);//arguments[0].index);
 			
@@ -148,7 +148,7 @@
 						</div>
 						<div class="col-2">
 							<div class="row">
-								<button onclick="detailFunct({{json this}})" class="detailbtn">Details</button>
+								<button onclick="detailFunct({{@index}})" class="detailbtn">Details</button>
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button onclick = "deleteVid({{json this}})" class = "btn btn-warning">Delete</button>
