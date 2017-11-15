@@ -108,6 +108,13 @@
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
 		};
+		
+		function deleteSet()
+		{
+			var ind = playlists.indexOf(localStorage.getItem("currentSet"));
+			playlists.splice(ind, 1);
+			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+		}
 	</script>
 </head>
 <body>
@@ -150,6 +157,7 @@
 
 <div class="col">
 		<h1 id = "setname" style="font-size:25px; text-align:center !important"></h1>
+		<a href = "playlistAll.html" role = "button" class = "btn btn-warning" onclick = "deleteSet()">DELETE EXERCISE SET</a>
 	<div class="col-ld-3 col-10">
 		<div id="stuff" ></div>
 		<script id="entry-template" type="text/x-handlebars-template">
