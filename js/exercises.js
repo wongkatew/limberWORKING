@@ -94,18 +94,19 @@ var absStrength = [
   }
 ]
 // arms pain relief
+// arms pain relief
 var armsTPain = [
   {
     "title": "Arm Pull",
     "video": "images/armPull.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
     "index": 0
   },
   {
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
@@ -123,14 +124,14 @@ var armsTFlex = [
   {
     "title": "Arm Pull",
     "video": "images/armPull.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
     "index": 0
   },
   {
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
@@ -147,28 +148,28 @@ var armsTStrength = [
   {
     "title": "Bicep Curl",
     "video": "images/bicepCurl.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/bicepCurlPrev.png",
     "description": "With some weight in hand, curl your arm upwards for one repetition.",
     "index": 0
   },
   {
     "title": "Pushup Regular",
     "video": "images/pushupRegular.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/pushupRegularPrev.png",
     "description": "Arms shoulder-width apart, lower yourself then push up for one repetition.",
     "index": 1
   },
   {
     "title": "Pushup Tricep",
     "video": "images/pushupClose.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/pushupClosePrev.png",
     "description": "hands in triangle form, lower yourself then push up for one repetition. Works tricep muscles.",
     "index": 2
   },
   {
     "title": "Pushup Broad",
     "video": "images/pushupOpen.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/pushupOpenPrev.png",
     "description": "hands far apart, lower yourself then push up for one repetition. Works chest and shoulder muscles.",
     "index": 3
   }
@@ -178,14 +179,14 @@ var armsBPain = [
   {
     "title": "Arm Pull",
     "video": "images/armPull.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
     "index": 0
   },
   {
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
@@ -203,14 +204,14 @@ var armsBFlex = [
   {
     "title": "Arm Pull",
     "video": "images/armPull.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
     "index": 0
   },
   {
     "title": "Bicep Stretch",
     "video": "images/bicepStretch.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
     "index": 1
   },
@@ -227,14 +228,14 @@ var armsBStrength = [
   {
     "title": "Bicep Curl",
     "video": "images/glutsPain1.mp4",
-    "prev": "images/bicepCurl.gif",
+    "prev": "images/bicepCurlPrev.png",
     "description": "With some weight in hand, curl your arm upwards for one repetition.",
     "index": 0
   },
   {
     "title": "Dumbbell Grip",
     "video": "images/dumbellGrip.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/forearmHoldPrev.png",
     "description": "Grip dumbbell and let go, repeat for finger and forearm strength.",
     "index": 1
   }
@@ -369,7 +370,7 @@ var backBStrength = [
     "index": 2
   }
 ]
-// calves pain relief
+//calves pain
 var calvesPain = [
   {
     "title": "Air Squats",
@@ -381,7 +382,7 @@ var calvesPain = [
   {
     "title": "Calf Rotation",
     "video": "images/calfRotate.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
     "index": 1
   },
@@ -398,22 +399,22 @@ var calvesFlex = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
     "title": "Calf Rotation",
     "video": "images/calfRotate.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
     "index": 1
   },
   {
     "title": "Lunges",
-    "video": "images/lunges.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Lower yourself on one leg, make sure knee do not go over foot to maintain joint health.",
     "index": 2
   }
 ]
@@ -422,23 +423,30 @@ var calvesStrength = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
     "title": "Calf Rotation",
     "video": "images/calfRotate.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
     "index": 1
   },
   {
     "title": "Lunges",
-    "video": "images/lunges.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Lower yourself on one leg, make sure knee does not go over foot to maintain joint health.",
     "index": 2
+  }
+  {
+	  "title": "Tip Toes",
+	  "video": "images/tipToe.mp4",
+	  "prev": "images/tipToePrev.png",
+	  "description": "Get on your tip toes and push up with your calf muscles for one repetition",
+	  "index": 3
   }
 ]
 // calves pain relief
@@ -710,32 +718,46 @@ var handsPain = [
   {
     "title": "Claw Hand",
     "video": "images/clawHand.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
     "index": 0
+  },
+  {
+    "title": "Thumb Stretch",
+    "video": "images/thumbStretch.mp4",
+    "prev": "images/genericHandPrev.png",
+    "description": "Extend palm outward and push thumb outwards, then in",
+    "index": 1
   }
 ]
 var handsFlex = [
   {
     "title": "Claw Hand",
     "video": "images/clawHand.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
     "index": 0
+  },
+  {
+    "title": "Thumb Stretch",
+    "video": "images/thumbStretch.mp4",
+    "prev": "images/genericHandPrev.png",
+    "description": "Extend palm outward and push thumb outwards, then in",
+    "index": 1
   }
 ]
 var handsStrength = [
   {
     "title": "Dumbbell Grip",
     "video": "images/dumbellGrip.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/forearmHoldPrev.png",
     "description": "Grip dumbbell and let go, repeat for finger and forearm strength.",
     "index": 0
   },
   {
     "title": "Claw Hand",
     "video": "images/clawHand.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
     "index": 0
   }
@@ -990,40 +1012,48 @@ var thighsPain = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
+  },
+  {
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
+    "index": 1
   }
 ]
 var thighsFlex = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
 	"description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
-    "title": "Lunges",
-    "video": "images/lunges.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "Lower yourself on one leg, maintaining your body position no further than your foot.",
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
     "index": 1
   }
 ]
+//thighs
 var thighsStrength = [
   {
     "title": "Air Squats",
     "video": "images/airSquat.mp4",
-    "prev": "images/glutsPain1.gif",
+    "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
     "index": 0
   },
   {
-    "title": "Lunges",
-    "video": "images/lunges.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
     "index": 1
   }
 ]
