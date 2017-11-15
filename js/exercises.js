@@ -342,6 +342,13 @@ var calvesPain = [
     "prev": "images/glutsPain1.gif",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
     "index": 1
+  },
+  {
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
+    "index": 2
   }
 ]
 // calves flexibility
@@ -430,6 +437,20 @@ var feetPain = [
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
     "index": 0
+  },
+  {
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
+    "index": 1
+  },
+  {
+    "title": "Sitting Heel Curl",
+    "video": "images/sitcurl.mp4",
+    "prev": "images/sitcurlprev.gif",
+    "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
+    "index": 2
   }
 ]
 var feetFlex =  [
@@ -439,6 +460,27 @@ var feetFlex =  [
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
     "index": 0
+  },
+  {
+    "title": "Lunge Hold",
+    "video": "images/calfforward.mp4",
+    "prev": "images/calfforwardprev.gif",
+    "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
+    "index": 1
+  },
+  {
+    "title": "Heel Stretch Up",
+    "video": "images/heelstretch.mp4",
+    "prev": "images/heelstretchprev.gif",
+    "description": "Stand on both feet. Then get on the balls of your feet, bringing your heels as high as possible and hold. Then rest for 5 seconds and hold again.",
+    "index": 2
+  },
+  {
+    "title": "Sitting Heel Curl",
+    "video": "images/sitcurl.mp4",
+    "prev": "images/sitcurlprev.gif",
+    "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
+    "index": 3
   }
 ]
 var feetStrength = [
@@ -448,6 +490,27 @@ var feetStrength = [
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
     "index": 0
+  },
+  {
+    "title": "Lunges",
+    "video": "images/lunges.mp4",
+    "prev": "images/glutsPain1.gif",
+    "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
+    "index": 1
+  },
+  {
+    "title": "Heel Stretch Up",
+    "video": "images/heelstretch.mp4",
+    "prev": "images/heelstretchprev.gif",
+    "description": "Stand on both feet. Then get on the balls of your feet, bringing your heels as high as possible and hold. Then rest for 5 seconds and hold again.",
+    "index": 2
+  },
+  {
+    "title": "Sitting Heel Curl",
+    "video": "images/sitcurl.mp4",
+    "prev": "images/sitcurlprev.gif",
+    "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
+    "index": 3
   }
 ]
 // gluteus maximus pain relief
