@@ -84,7 +84,8 @@
 
 		//deletes item
 		function deleteVid() {
-			var indSet = historyVids.findIndex(x => x.title == arguments[0].title) ;
+			var indSet = arguments[0];
+			//var indSet = historyVids.findIndex(x => x.title == arguments[0].title) ;
 		//	var element1 = document.getElementById("element" + indexThis);
 			//element1.style.display = "none";
 			historyVids.splice(indSet,1);
@@ -151,7 +152,7 @@
 								<button onclick="detailFunct({{@index}})" class="detailbtn">Details</button>
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
-								<button onclick = "deleteVid({{json this}})" class = "btn btn-warning">Delete</button>
+								<button onclick = "deleteVid({{@index}})" class = "btn btn-warning">Delete</button>
 							</div>
 						</div>
 					</div>
