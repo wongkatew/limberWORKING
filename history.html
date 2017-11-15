@@ -56,8 +56,10 @@
 		/* When the user clicks on the button,
 		toggle between hiding and showing the detail content */
 		function detailFunct() {
-			var preview = document.getElementById("prev" + arguments[0].index);
-			var description = document.getElementById("description" + arguments[0].index);
+			var indSet = historyVids.findIndex(x => x.title == arguments[0].title) ;
+			var preview = document.getElementById("prev" + indSet);//arguments[0].index);
+			var description = document.getElementById("description" + indSet);//arguments[0].index);
+			
 			// alert(arguments[0].index);
 			if (preview.style.display == "none")
 			{
@@ -95,7 +97,7 @@
 <body>
 <!-- collapsible navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a href = "targetAreaF.html">
+	<a href = "targetareaF.html">
 		<button class="navbar-btn float-sm-left">
 			<
 		</button>
@@ -142,8 +144,8 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
-							<p style="display:none;" id="description{{index}}">{{description}}</p>
+							<img src={{prev}} style="width:100%; height:100%" id="prev{{@index}}" onclick="showVid({{json this}})"></img>
+							<p style="display:none;" id="description{{@index}}">{{description}}</p>
 						</div>
 						<div class="col-2">
 							<div class="row">

@@ -66,10 +66,10 @@
 		function detailFunct() {
 		console.log("clear");
 			console.log(arguments[0].index);
-			var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title);
+			var indSet = editSet.vids.findIndex(x => x.title == arguments[0].title) ;
 			console.log(indSet);
-			var preview = document.getElementById("prev" + arguments[0].index);
-			var description = document.getElementById("description" + arguments[0].index);
+			var preview = document.getElementById("prev" + indSet);//arguments[0].index);
+			var description = document.getElementById("description" + indSet);//arguments[0].index);
 			// alert(arguments[0].index);
 			if (preview.style.display == "none")
 			{
@@ -161,8 +161,8 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
-							<p style="display:none;" id="description{{index}}">{{description}}</p>
+							<img src={{prev}} style="width:100%; height:100%" id="prev{{@index}}" onclick="showVid({{json this}})"></img>
+							<p style="display:none;" id="description{{@index}}">{{description}}</p>
 						</div>
 						<div class="col-2">
 							<div class="row">
