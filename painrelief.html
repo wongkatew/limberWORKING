@@ -14,7 +14,6 @@
 	<script>
 		var currListOfVids;
 		var bodyPart;
-		var vidP;
 
 		$(document).ready(function() {
 			console.log('hello world');
@@ -185,7 +184,6 @@
 		//Open modal when user clicks on "create new playlist"
 		function openModal() {
 			$('#myModal').modal('show');
-			vidP = arguments[0];
 			//If the user clicks on "create" button, then call appendList
 			var createBtn = document.getElementById("createBtn");
 			createBtn.addEventListener('click', appendList);
@@ -205,7 +203,7 @@
 			}
 			var fullP = {
 				"name": nameP,
-				"vids": [vidP]
+				"vids": [arguments[0]]
 			};
 			// if (playlists.length >= 1) {
 			// 	fullP = ", " + fullP;
@@ -344,52 +342,5 @@
 
 </body>
 
-<style>
-.close {
-	color: #fff;
-	float: right;
-	font-size: 30px;
-	margin: 0;
-}
-.close:hover, .close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-}
-.modal-header {
-	background: #fbc02d;
-	color: #fff;
-}
-.modal-body p, .modal-body input {
-	border-color: #fbc02d;
-}
-.modal-body {
-	text-align: center;
-	background: #fff;
-}
-.modal-footer {
-	background: #fbc02d;
-	color: #fff;
-	text-align: center;
-	justify-content: center;
-	padding: inherit;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-#cancelBtn {
-	background-color: #fff;
-	border-color: #fff;
-	color: #fbc02d;
-	height: 50%;
-	width: 50%;
-}
-#createBtn {
-	background: #fbc02d;
-	border-color: #fff;
-	color: #fff;
-	height: 50%;
-	width: 50%;
-}
-</style>
 
 </html>
