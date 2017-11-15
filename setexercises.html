@@ -96,7 +96,7 @@
 		};
 
 		function moveUp() {
-			var indexThis = editSet.vids.indexOf(arguments[0]);
+			var indexThis = arguments[0];
 			//var indexThis = editSet.vids.findIndex( x => x.title == arguments[0].title);
 			//var indexThis = arguments[0].index;
 			if (indexThis > 0)
@@ -105,7 +105,6 @@
 				editSet.vids[indexThis] = editSet.vids[indexThis - 1];
 				editSet.vids[indexThis-1] = tmp;
 			}
-			console.log(arguments[0].title);
 			playlists[localStorage.getItem("currentSet")] = editSet;
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
@@ -190,7 +189,7 @@
 								
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
-								<button onclick = "moveUp({{json this}})" class = "btn btn-warning">^</button>
+								<button onclick = "moveUp({{@index}})" class = "btn btn-warning">^</button>
 								<button onclick="deleteVid({{@index}})" class="btn btn-warning">X</button>
 							</div>
 						</div>
