@@ -440,7 +440,7 @@ var calvesStrength = [
     "prev": "images/calfforwardprev.gif",
     "description": "Lower yourself on one leg, make sure knee does not go over foot to maintain joint health.",
     "index": 2
-  }
+  },
   {
 	  "title": "Tip Toes",
 	  "video": "images/tipToe.mp4",
