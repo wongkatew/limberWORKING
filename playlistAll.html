@@ -180,7 +180,7 @@
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     newPlaylist.id = playlists.length;
     document.getElementById(newPlaylist.id).addEventListener("click", function() {
-      localStorage.setItem("currentSet", newPlaylistName);
+      localStorage.setItem("currentSet", playlists.length-1);
       location.href = "setexercises.html";
     });
     //Local storage part - save the name of the playlist the user inputs//
