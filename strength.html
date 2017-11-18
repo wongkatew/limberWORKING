@@ -216,6 +216,8 @@
 				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
 			$('#inputName').val('');
+
+			document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Created and added to " + nameP + "!</div>";
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		};
 
@@ -226,11 +228,21 @@
 			var playlistName = "" + arguments[0]; // this is a string
 			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
 
-			// add video to playlist
-			playlists.filter(function(obj) {
-				if (obj.name === playlistName) {
-					obj.vids.push(currentVideoData);
-				}
+			document.getElementById("toAddPlaylistText").innerHTML +="Add to " + playlistName + "?";
+			$('#confirmAddPlaylist').modal('show');
+			$('#addToPlaylistBtn').click(function() {
+				// add video to playlist
+				playlists.filter(function(obj) {
+					if (obj.name === playlistName) {
+						obj.vids.push(currentVideoData);
+					}
+				});
+
+				// update the playlist in localStorage
+				localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+
+				// success notification and fade
+				document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Added to " + playlistName + "!</div>";
 			});
 
 			// update the playlist in localStorage
@@ -276,6 +288,23 @@
   </div>
 </div>
 
+<div class="modal modal-lg" id="confirmAddPlaylist" tabindex="-1" role="dialog" aria-labelledby="conAddLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+      <div class="modal-body">
+        <p id="toAddPlaylistText"></p>
+      </div>
+			<div class="modal-footer">
+				<button type="button" id="cancelAddbtn" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				<button type="button" id="addToPlaylistBtn" class="btn btn-primary" data-dismiss="modal">Add</button>
+			</div>
+    </div>
+  </div>
+</div>
+
 <!-- Hee Ro added this - modal to create new playlist -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -302,6 +331,7 @@
 <div class="col">
 		<h1 style="font-size:25px; text-align:center !important">STRENGTH EXERCISES:</h1>
 		<div id="bodbod"></div>
+		<div id="alerts"></div>
 	<div class="col-ld-3 col-10">
 		<div id="stuff" ></div>
 		<script id="entry-template" type="text/x-handlebars-template">
