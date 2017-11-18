@@ -227,7 +227,7 @@
 			var playlistName = "" + arguments[0]; // this is a string
 			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
 
-			document.getElementById("toAddPlaylistText").innerHTML +="Add to " + playlistName + "?";
+			document.getElementById("toAddPlaylistText").innerHTML ="Add to " + playlistName + "?";
 			$('#confirmAddPlaylist').modal('show');
 			$('#addToPlaylistBtn').click(function() {
 				// add video to playlist

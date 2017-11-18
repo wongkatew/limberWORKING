@@ -228,8 +228,8 @@
 			// alert(JSON.stringify(arguments[1]));  // DEBUGGING
 			var playlistName = "" + arguments[0]; // this is a string
 			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
-
-			document.getElementById("toAddPlaylistText").innerHTML +="Add to " + playlistName + "?";
+			
+			document.getElementById("toAddPlaylistText").innerHTML ="Add to " + playlistName + "?";
 			$('#confirmAddPlaylist').modal('show');
 			$('#addToPlaylistBtn').click(function() {
 				// add video to playlist
@@ -244,9 +244,12 @@
 
 				// success notification and fade
 				document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Added to " + playlistName + "!</div>";
+
 			});
 
 		};
+		
+
 	</script>
 </head>
 <body>
