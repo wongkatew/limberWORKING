@@ -251,3 +251,10 @@ span.psw {
   padding: 10px;
   color: black;
 }
+.tbHeader{
+	font-size:6vw;
+	text-align: center;
+	border: 4px solid #fbc02d ;
+	background:  	 #fff0b3;
+	border-radius:25px;
+}
