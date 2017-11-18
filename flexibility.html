@@ -212,7 +212,7 @@
 			playlists.push(fullP);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			for (var i = 0; i < currListOfVids.length; i++) {
-				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(glutsFlex[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
+				var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(currListOfVids[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
 				document.getElementById("funfun" + i).innerHTML += nameList;
 			}
 			$('#inputName').val('');
