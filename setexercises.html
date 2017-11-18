@@ -13,7 +13,7 @@
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
 	
-		
+		var vidInd;
 		if (localStorage.getItem("listsOfSets") != null) {
 					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
 
@@ -112,23 +112,49 @@
 		
 		function deleteSet()
 		{
-			var ind = playlists.indexOf(localStorage.getItem("currentSet"));
+			var ind = localStorage.getItem("currentSet");
 			playlists.splice(ind, 1);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 		}
 		
 		//deletes item
 		function deleteVid() {
-			var indSet = arguments[0] ;
+			var indSet = vidInd ;
 		//	var element1 = document.getElementById("element" + indexThis);
 			//element1.style.display = "none";
 			editSet.vids.splice(indSet,1);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
 		};
+		
+		function openModal() {
+			$('#conModal').modal('show');
+			vidInd = arguments[0];
+			//If the user clicks on "create" button, then call appendList
+			var createBtn = document.getElementById("deleteButton");
+			createBtn.addEventListener('click', deleteVid);
+		}
 	</script>
 </head>
 <body>
+<!-- delete modal confirm -->
+<div class="modal fade" id="conModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Would you like to delete this video?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+        <a href = "#" id = "deleteButton" class="btn btn-danger" role = "button" >Delete Exercise</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- collapsible navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a href = "playlistAll.html">
@@ -189,8 +215,8 @@
 								
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
-								<button onclick = "moveUp({{@index}})" class = "btn btn-warning">^</button>
-								<button onclick="deleteVid({{@index}})" class="btn btn-warning">X</button>
+								<button onclick = "moveUp({{@index}})" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-chevron-up"></span> Move Up</button>
+								<button onclick="openModal({{@index}})" class="btn btn-danger">Delete</button>
 							</div>
 						</div>
 					</div>
