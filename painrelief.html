@@ -228,7 +228,7 @@
 			// alert(JSON.stringify(arguments[1]));  // DEBUGGING
 			var playlistName = "" + arguments[0]; // this is a string
 			var currentVideoData = arguments[1]; // this is the JS object with the title, video, prev, and description
-			
+
 			document.getElementById("toAddPlaylistText").innerHTML ="Add to " + playlistName + "?";
 			$('#confirmAddPlaylist').modal('show');
 			$('#addToPlaylistBtn').click(function() {
@@ -248,7 +248,7 @@
 			});
 
 		};
-		
+
 
 	</script>
 </head>
@@ -338,7 +338,7 @@
 				{{#each this}}
 				<div class="row" style="padding: 5px;">
 					<div class="row">
-						<h3 style="font-size: 16px;">{{title}}</h3>
+						<h3 style="font-size: 20px; border-bottom-style: solid; margin-left: 3px;">{{title}}</h3>
 					</div>
 					<div class="row">
 						<div class="col">
