@@ -12,7 +12,7 @@
 	<script src="js/exercises.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<script>
-	
+
 		var vidInd;
 		if (localStorage.getItem("listsOfSets") != null) {
 					playlists = JSON.parse(localStorage.getItem("listsOfSets"));
@@ -20,11 +20,11 @@
 		}
 	//	var setIndex = playlists.findIndex(x => x.name == localStorage.getItem("currentSet"));
 		var editSet = playlists[localStorage.getItem("currentSet")];
-		
+
 		$(document).ready(function() {
 			console.log('hello world');
-			
-			
+
+
 			// compile the template
 			var source = $("#entry-template").html();
 			var template = Handlebars.compile(source);
@@ -38,7 +38,7 @@
 			}
 			$('#stuff').html(html); // THIS IS COMPLETELY NECESSARY FOR SOME REASON
 
-			
+
 		});
 
 		// so things can be read
@@ -109,14 +109,14 @@
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
 		};
-		
+		/*
 		function deleteSet()
 		{
 			var ind = localStorage.getItem("currentSet");
 			playlists.splice(ind, 1);
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
-		}
-		
+		}*/
+
 		//deletes item
 		function deleteVid() {
 			var indSet = vidInd ;
@@ -126,7 +126,7 @@
 			localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 			location.reload();
 		};
-		
+
 		function openModal() {
 			$('#conModal').modal('show');
 			vidInd = arguments[0];
@@ -197,7 +197,7 @@
 
 <div class="col">
 		<h1 id = "setname" style="font-size:25px; text-align:center !important"></h1>
-		<a href = "playlistAll.html" role = "button" class = "btn btn-warning" onclick = "deleteSet()">DELETE EXERCISE SET</a>
+	<!--	<a href = "playlistAll.html" role = "button" class = "btn btn-warning" onclick = "deleteSet()">DELETE EXERCISE SET</a>-->
 	<div class="col-ld-3 col-10">
 		<div id="stuff" ></div>
 		<script id="entry-template" type="text/x-handlebars-template">
@@ -215,7 +215,7 @@
 						<div class="col-2">
 							<div class="row">
 								<button onclick="detailFunct({{@index}})" class="detailbtn">Details</button>
-								
+
 							</div>
 							<div class="row"> <!--onclick="dropdownFunct({{json this}})"-->
 								<button onclick = "moveUp({{@index}})" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-chevron-up"></span> Move Up</button>
