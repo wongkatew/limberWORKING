@@ -22,7 +22,7 @@
       <a href = "targetareaF.html">
         <button class="navbar-btn float-sm-left">
   			     <
-  		       </button>
+  		  </button>
       </a>
     	<a class="navbar-brand" href="targetareaF.html">Limber</a>
     	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#limberNavBar" aria-controls="limberNavBar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,6 +77,26 @@
     </div>
   </div>
 
+  <!-- delete modal confirm -->
+  <div class="modal fade" id="conModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Exercise Set</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  	  <div class = "modal-body">
+  		Would you like to remove this exercise set from your list of Exercise Sets?
+  	  </div>
+        <div class="modal-footer">
+  		<button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+          <a href = "#" id = "deleteButton" class="btn btn-danger" role = "button" >Delete Exercise Set</a>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 
   <script>
@@ -90,13 +110,15 @@
   //var playlists = document.getElementsByClassName('card');
   var newPlaylistCard = document.getElementById('newPlaylistBtn');
   var deleteBtn = document.getElementsByClassName('deleteBtn');
+
+  var setInd = 0;
   //Listener for open modal click
   modalBtn.addEventListener('click', openModal);
 
   //Ready function runs every time page loads
   $(document).ready(function() {
     console.log('Playlists page ready');
-  //  localStorage.removeItem("listsOfSets");
+
     if (localStorage.getItem("listsOfSets") != null) {
       playlists = JSON.parse(localStorage.getItem("listsOfSets"));
       for (var i = 0; i < playlists.length; i++) {
@@ -106,25 +128,20 @@
         //Create a new playlist card for every playlist
         var one = document.createElement('one');
         one.className = 'card';
-        one.innerHTML = "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
+        //Image for each playlist
+        var pic = new Image();
+        pic.className = "pic";
+        pic.src = 'images/circle.png';
+    //    one.innerHTML = "<img src='images/circle.png' id='pic' style='width:100%;height:65%;box-shadow:0 0 5px 2px silver;;'/>";
+        one.appendChild(pic);
         document.body.insertBefore(one, newPlaylistCard);
         one.id = i;
-	/*	var self = document.getElementById(i);
-		(function(self){
-			self.chart.addEventListener("click", function() {
-				localStorage.setItem("currentSet", self.attr('id'));
-				location.href = "setexercises.html";
-			})
-		}
-		); */
-       // document.getElementById(i).addEventListener("click", function() {
-        //  localStorage.setItem("currentSet", this.attr('id'));
-        //  location.href = "setexercises.html";
-        //});
+
 		console.log(localStorage.getItem("currentSet"));
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
         var hLabel = document.createElement("h4");
+        hLabel.className = 'hcard';
         var newOne = new String();
         newOne = name.replace(/"/g, "");
         var title = document.createTextNode(newOne);
@@ -132,6 +149,15 @@
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
+
+        var trashBtn = document.createElement("button");
+        trashBtn.className = 'trashCan';
+        trashBtn.id = 'trash';
+        trashBtn.innerHTML = "<img src='images/trash.png' style='width:40%;height:40%;'/>";
+
+
+        one.appendChild(trashBtn);
+
       }
       console.log(playlists);
     }
@@ -140,17 +166,44 @@
   });
 	$(function()
 	{
-			$(".card").on('click',popup);
+		//	$(".card").on('click',popup);
+      $(".pic").on('click',popup);
+      $(".hcard").on('click',popup);
+      $(".trashCan").on('click', deleteConfirm);
 	});
 	function popup()
 	{
-			if ($(this).attr('id') != "newPlaylistBtn")
+      if ($(this).attr('id') != "newPlaylistBtn")
 			{
 				console.log("ding");
 				window.location.href = "setexercises.html";
-				localStorage.setItem("currentSet",$(this).attr('id'));
+        var myparent = $(this).parent();
+        localStorage.setItem("currentSet",$(myparent).attr('id'));
+//			localStorage.setItem("currentSet",$(this).attr('id'));
 			}
 	}
+  function deleteConfirm()
+  {
+    $('#conModal').modal('show');
+    var myparent = $(this).parent();
+    var ind = $(myparent).attr('id');
+    setInd = ind;
+    var createBtn = document.getElementById("deleteButton");
+    createBtn.addEventListener('click', deleteSet);
+  }
+
+  function deleteSet()
+  {
+    console.log("trashcan pressed");
+//    var myparent = $(this).parent();
+//    var ind = $(myparent).attr('id');
+    var ind = setInd
+    console.log(ind);
+    playlists.splice(ind, 1);
+    localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+    window.location.reload();
+  }
+
   //Function to open new playlist modal
   function openModal() {
     $('#myModal').modal('show');
@@ -170,26 +223,28 @@
     //If the user input a playlist name
     var newPlaylist = document.createElement('newPlaylist');
     newPlaylist.className = 'card';
-    //Set new playlist default image to be the monkey
-    newPlaylist.innerHTML= "<img src='images/Whale.png' style='width:100%;height:80%;box-shadow:0 0 5px 2px silver;;'/>";
+    //  newPlaylist.innerHTML= "<img src='images/circle.png' style='width:100%;height:65%;box-shadow:0 0 5px 2px silver;;'/>";
+    var pic = new Image();
+    pic.className = "pic";
+    pic.src = 'images/circle.png';
+    pic.id = "picture";
+    newPlaylist.appendChild(pic);
+
     //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     newPlaylist.id = playlists.length;
+/*
     document.getElementById(newPlaylist.id).addEventListener("click", function() {
-      localStorage.setItem("currentSet", playlists.length-1);
+  //  localStorage.setItem("currentSet", playlists.length-1);
+    localStorage.setItem("currentSet", newPlaylist.id );
+    location.href = "setexercises.html";
+  });*/
+
+    document.getElementById("picture").addEventListener("click", function() {
+      localStorage.setItem("currentSet", newPlaylist.id);
       location.href = "setexercises.html";
     });
-    //Local storage part - save the name of the playlist the user inputs//
-    //Get the user input name
-//    var newPlaylistName = JSON.stringify(document.getElementById('inputName').value);
-/*
-    //Get the list of playlist names from localStorage and parse
-     tempP = JSON.parse(localStorage.getItem('nameOfPlaylist'));
-    //Change input name string into JS object
-     var obj = JSON.parse(newPlaylistName);
-    //Add the new playlist onto localStorage
-     tempP.push(obj);
-     localStorage.setItem('nameOfPlaylist', JSON.stringify(tempP)); */
+
      var fullP = {
        "name": newPlaylistName,
        "vids": []
@@ -201,15 +256,32 @@
     var newDiv = document.createElement("divdiv");
     newDiv.className = 'card_content';
     var hLabel = document.createElement("h4");
+    hLabel.className = 'hcard';
+    hLabel.id = 'hlabel';
     var newOne = new String();
     newOne = newPlaylistName.replace(/"/g, "");
     var title = document.createTextNode(newOne);
     newDiv.appendChild(hLabel);
     hLabel.appendChild(title);
     newPlaylist.appendChild(hLabel);
+
+    document.getElementById("hlabel").addEventListener("click", function() {
+      localStorage.setItem("currentSet", newPlaylist.id);
+      location.href = "setexercises.html";
+    });
+
+    var trashBtn = document.createElement("button");
+    trashBtn.className = 'trashCan';
+    trashBtn.id = 'trash';
+    trashBtn.innerHTML = "<img src='images/trash.png' style='width:40%;height:40%;'/>";
+    newPlaylist.appendChild(trashBtn);
+    trashBtn.addEventListener('click', deleteConfirm);
+
     //Clear input field
     $('#inputName').val('');
   }
+
+
   </script>
 
 
