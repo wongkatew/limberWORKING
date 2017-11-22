@@ -18,16 +18,18 @@
 			console.log('hello world');
 			localStorage.setItem("currentBodyPart", "chest");
 		});
+
+    function goBack() {
+			window.history.back();
+		};
   </script>
 
   <body>
     <!-- collapsible navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a href="targetareaF.html">
-        <button class="navbar-btn float-sm-left">
+        <button class="navbar-btn float-sm-left" onclick="goBack()">
           <
         </button>
-      </a>
 
     	<a class="navbar-brand" href="targetareaF.html">Limber</a>
     	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#limberNavBar" aria-controls="limberNavBar" aria-expanded="false" aria-label="Toggle navigation">

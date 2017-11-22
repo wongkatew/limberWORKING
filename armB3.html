@@ -18,17 +18,19 @@
     $(document).ready(function() {
 			console.log('hello world');
 			localStorage.setItem("currentBodyPart", "upperArm");
-		})
+		});
+
+    function goBack() {
+			window.history.back();
+		};
   </script>
 
   <body>
     <!-- collapsible navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a href="targetareaF.html">
-        <button class="navbar-btn float-sm-left">
-  			     <
-  		  </button>
-      </a>
+      <button class="navbar-btn float-sm-left" onclick="goBack()">
+  			<
+  		</button>
 
     	<a class="navbar-brand" href="targetareaF.html">Limber</a>
     	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#limberNavBar" aria-controls="limberNavBar" aria-expanded="false" aria-label="Toggle navigation">
