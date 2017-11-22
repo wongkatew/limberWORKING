@@ -151,6 +151,8 @@
 			var preview = document.getElementById("prev" + arguments[0].index);
 			var description = document.getElementById("description" + arguments[0].index);
 			var playButton = document.getElementById("play" + arguments[0].index);
+
+
 			// alert(arguments[0].index);
 			if (preview.style.display == "none")
 			{
@@ -163,6 +165,8 @@
 				preview.style.display = "none";
 				description.style.display = "block";
 				playButton.style.display = "none";
+				historyVids.push(arguments[0]);
+				localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 			}
 		};
 
@@ -218,6 +222,9 @@
 			}
 			$('#inputName').val('');
 
+			historyVids.push(vidP);
+			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
+
 			document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Created and added to " + nameP + "!</div>";
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		};
@@ -244,8 +251,11 @@
 
 				// success notification and fade
 				document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Added to " + playlistName + "!</div>";
-
 			});
+
+			historyVids.push(currentVideoData);
+			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
+
 
 		};
 
