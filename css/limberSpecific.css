@@ -252,11 +252,14 @@ span.psw {
   color: black;
 }
 .tbHeader{
-	font-size:6vw;
+	font-family: "tahoma";
+	font-size:7vw;
 	text-align: center;
-	border: 4px solid #fbc02d ;
-	background:  	 #fff0b3;
+	padding: 2.5px;
+	bottom: 15px;
+	background:  	 #fbc02d;
 	border-radius:25px;
+	background-clip: content-box;
 }
 /*View Exercises button in targetareaF.html*/
 #str {

@@ -11,8 +11,8 @@
 <script src="js/bootstrap-confirmation.js"></script>
 	<link href="css/limberSpecific.css" rel="stylesheet"/>
 	<style>
-		h1 { font-size:6vh}
-		svg { position:absolute; top:10; left:0; height:90%; width:90%;  overflow: visible !important; }
+		h1 { font-size:10vh}
+		svg { position:absolute; top:10; left:25%; height:70%; width:70%;  overflow: visible !important; }
 		.modal {
 		  position: absolute;
 		  top: 10%;
@@ -25,6 +25,13 @@
 
 		.modal-footer
 		{
+		}
+		.btn-warning
+		{
+			font-family: "tahoma";
+			font-weight: bold;
+			margin-top:2.5px;
+			width: 30vw;
 		}
 
 	</style>
@@ -79,6 +86,24 @@ function goBack() {
 	</div>
 </nav>
 <h1 class = "tbHeader">Select the area you would like to work on</h1>
+<div class ="container">
+<div class = "row">
+  <div class ="col-">
+	<ul class = "list-group">
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Neck Exercises?">Neck</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Shoulder Exercises?">Shoulder</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Upper Arm Exercises?">Biceps</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Forearm Exercises?">Forearm</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Hands Exercises?">Hands</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Chest Exercises?">Chest</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Abdominal Exercises?">Abs</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Hip Exercises?">Hips</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Thigh Exercises?">Thighs</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Calves Exercises?">Calves</a>
+		<a href="#" class="btn btn-warning" onclick = "openModal(this)" id = "View Feet Exercises?">Feet</a>
+	</ul>
+  </div>
+  <div class ="col-">
 	<div class="container" id="bodyParts" >
 			<svg
 				id = "frontbody"
@@ -610,7 +635,7 @@ function goBack() {
 				   x="103.38497"
 				   y="251.84363"
 				   style="stroke-width:0.26458332">BODY</tspan></text>
-			<script>
+			<!--<script>
 
 				function rotate(){
 					var x = document.getElementById("bodyParts");
@@ -645,7 +670,7 @@ function goBack() {
 				})
 
 			</script>
-
+			-->
 			</svg>
 	</div>
 	
@@ -1089,17 +1114,35 @@ function goBack() {
 				function rotate(){
 					var x = document.getElementById("bodyParts");
 					var y = document.getElementById("bodyParts2");
+					// if viewing back
 					if (x.style.display === "none")
 					{
+						document.getElementById("View Upper Back Exercises?").innerHTML = "Chest";
+						document.getElementById("View Lower Back Exercises?").innerHTML = "Abs";
+						document.getElementById("View Glute Exercises?").innerHTML = "Hips";
+						// change id
+						document.getElementById("View Upper Back Exercises?").id = "View Chest Exercises?";
+						document.getElementById("View Lower Back Exercises?").id = "View Abdominal Exercises?";
+						document.getElementById("View Glute Exercises?").id = "View Hip Exercises?";
+						
 						x.style.display = "block";
 						y.style.display = "none";
 					}
+					//if viewing front
 					else
 					{
+						document.getElementById("View Chest Exercises?").innerHTML = "Upper Back";
+						document.getElementById("View Abdominal Exercises?").innerHTML = "Lower Back";
+						document.getElementById("View Hip Exercises?").innerHTML = "Glutes";
+						// chaange id
+						document.getElementById("View Chest Exercises?").id = "View Upper Back Exercises?";
+						document.getElementById("View Abdominal Exercises?").id = "View Lower Back Exercises?";
+						document.getElementById("View Hip Exercises?").id = "View Glute Exercises?";
 						x.style.display = "none";
 						y.style.display = "block";
 					}
 				}
+				/*
 				$(function()
 				{
 						$('.testbody').on('click',popup);
@@ -1112,15 +1155,29 @@ function goBack() {
 							$('#bodymodal').modal('show');
 							$(this).find('.anatomy').css({fill : "#A5E9B4"});
 				}
+				*/
 
 				$('.modal').on('hidden.bs.modal', function ()
 				{
 					$('svg').find(".testbody").find(".anatomy").css({fill: "#fbc02d"});
 				})
 
+				function openModal(param) 
+				{
+					var idtext = $(param).attr('id');
+					var bodyid = String(idtext.substr(0,idtext.length-1));
+					console.log(bodyid);
+					$('.modal-title').text( $(param).attr('id'));
+					$('#str').attr( "href", $(document.getElementById(bodyid)).find('.astr').attr("xlink:href"))	
+					$('.modal').modal('show');
+					$(document.getElementById(bodyid)).find('.anatomy').css({fill : "#A5E9B4"});
+				}
 			</script>
 			</svg>
 	</div>
+	</div>
+</div>
+</div>
 
 </body>
 
