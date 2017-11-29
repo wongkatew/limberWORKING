@@ -759,37 +759,10 @@ var handsStrength = [
     "video": "images/clawHand.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
-    "index": 0
+    "index": 1
   }
 ]
-// head
-var headPain = [
-  {
-    "title": "Placeholder",
-    "video": "images/glutsPain1.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
-    "index": 0
-  }
-]
-var headFlex = [
-  {
-    "title": "Placeholder",
-    "video": "images/glutsPain1.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
-    "index": 0
-  }
-]
-var headStrength = [
-  {
-    "title": "Placeholder",
-    "video": "images/glutsPain1.mp4",
-    "prev": "images/glutsPain1.gif",
-    "description": "beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep beep",
-    "index": 0
-  }
-]
+
 // hips
 var hipsPain = [
   {
