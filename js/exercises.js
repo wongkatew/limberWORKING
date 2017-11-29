@@ -27,8 +27,8 @@ var absPain = [
     "video": "images/childpose.m4v",
     "prev": "images/childposeprev.gif",
     "description": "Kneel on the floor and sit on your heels with your knees open. Lay your torso on the floor and spread out your arms.",
-    "reps": 4,
-    "sets": 3,
+    "reps": "4 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -36,8 +36,8 @@ var absPain = [
     "video": "images/sidebend.m4v",
     "prev": "images/sidebendprev.gif",
     "description": "Stand with your feet spread apart. Raise your right arm and lean your torso down to your left. Repeat with your left arm leaning to your right.",
-    "reps": 4,
-    "sets": 3,
+    "reps": "4 reps",
+    "sets": "3 sets",
     "index": 1
   }
 ]
@@ -48,8 +48,8 @@ var absFlex = [
     "video": "images/childpose.m4v",
     "prev": "images/childposeprev.gif",
     "description": "Kneel on the floor and sit on your heels with your knees open. Lay your torso on the floor and spread out your arms.",
-    "reps": 4,
-    "sets": 3,
+    "reps": "4 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -57,8 +57,8 @@ var absFlex = [
     "video": "images/sidebend.m4v",
     "prev": "images/sidebendprev.gif",
     "description": "Stand with your feet spread apart. Raise your right arm and lean your torso down to your left. Repeat with your left arm leaning to your right.",
-    "reps": 4,
-    "sets": 3,
+    "reps": "4 reps",
+    "sets": "3 sets",
     "index": 1
   }
 ]
@@ -70,8 +70,8 @@ var absStrength = [
     "video": "images/heeltouch.m4v",
     "prev": "images/heeltouchprev.gif",
     "description": "Lie down on your back with your knees bent. Raise your torso forward while sliding your hands to your heels.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -79,8 +79,8 @@ var absStrength = [
     "video": "images/legupsitup.m4v",
     "prev": "images/legupsitupprev.gif",
     "description": "Lie down on your back with your legs raised up. Place your hands behind your neck and raise your torso towards your legs.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -88,8 +88,8 @@ var absStrength = [
     "video": "images/plank.mp4",
     "prev": "images/plankprev.gif",
     "description": "Start with your body horizontal on the ground. Then lift yourself on your hands or forearms and hold the position as parallel to the floor as possible.",
-    "reps": 60,
-    "sets": 2,
+    "reps": "60 secs",
+    "sets": "2 sets",
     "index": 2
   },
   {
@@ -97,8 +97,8 @@ var absStrength = [
     "video": "images/sidecrunch.m4v",
     "prev": "images/sidecrunchprev.gif",
     "description": "Lie down on your side. Prop up your head with the arm closer to the floor, and bring your other arm to your ear. Lift your torso towards the ceiling.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 3
   },
   {
@@ -106,8 +106,8 @@ var absStrength = [
     "video": "images/situp.m4v",
     "prev": "images/situpprev.gif",
     "description": "Lie down on your back with your knees bent. Bend your arms to the side up to your head and lift your torso up to your knees.",
-    "reps": 30,
-    "sets": 3,
+    "reps": "30 reps",
+    "sets": "3 sets",
     "index": 4
   }
 ]
@@ -119,8 +119,8 @@ var armsTPain = [
     "video": "images/armPull.mp4",
     "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -128,8 +128,8 @@ var armsTPain = [
     "video": "images/bicepStretch.mp4",
     "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
-    "reps": 12,
-    "sets": 3,
+    "reps": "12 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -137,8 +137,8 @@ var armsTPain = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "3 sets",
     "index": 2
   }
 ]
@@ -150,8 +150,8 @@ var armsTFlex = [
     "video": "images/armPull.mp4",
     "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
-    "reps": 12,
-    "sets": 2,
+    "reps": "12 reps",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -159,8 +159,8 @@ var armsTFlex = [
     "video": "images/bicepStretch.mp4",
     "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -168,8 +168,8 @@ var armsTFlex = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 2
   }
 ]
@@ -180,8 +180,8 @@ var armsTStrength = [
     "video": "images/bicepCurl.mp4",
     "prev": "images/bicepCurlPrev.png",
     "description": "With some weight in hand, curl your arm upwards for one repetition.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -189,8 +189,8 @@ var armsTStrength = [
     "video": "images/pushupRegular.mp4",
     "prev": "images/pushupRegularPrev.png",
     "description": "Arms shoulder-width apart, lower yourself then push up for one repetition.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -198,8 +198,8 @@ var armsTStrength = [
     "video": "images/pushupClose.mp4",
     "prev": "images/pushupClosePrev.png",
     "description": "hands in triangle form, lower yourself then push up for one repetition. Works tricep muscles.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 2
   },
   {
@@ -207,8 +207,8 @@ var armsTStrength = [
     "video": "images/pushupOpen.mp4",
     "prev": "images/pushupOpenPrev.png",
     "description": "hands far apart, lower yourself then push up for one repetition. Works chest and shoulder muscles.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 3
   }
 ]
@@ -219,8 +219,8 @@ var armsBPain = [
     "video": "images/armPull.mp4",
     "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -228,8 +228,8 @@ var armsBPain = [
     "video": "images/bicepStretch.mp4",
     "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -237,8 +237,8 @@ var armsBPain = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 2
   }
 ]
@@ -250,8 +250,8 @@ var armsBFlex = [
     "video": "images/armPull.mp4",
     "prev": "images/armPullPrev.png",
     "description": "Grab one arm behind back and pull with the other, in a diagonal shape. Hold for a few seconds, then switch arms.",
-    "reps": 4,
-    "sets": 3,
+    "reps": "4 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -259,8 +259,8 @@ var armsBFlex = [
     "video": "images/bicepStretch.mp4",
     "prev": "images/bicepStretchPrev.png",
     "description": "With hands outstretched, reach forward, then pull an arm back. Then bring it back forward and repeat with other arm.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -268,8 +268,8 @@ var armsBFlex = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 6,
-    "sets": 2,
+    "reps": "6 reps",
+    "sets": "2 sets",
     "index": 2
   }
 ]
@@ -280,8 +280,8 @@ var armsBStrength = [
     "video": "images/glutsPain1.mp4",
     "prev": "images/bicepCurlPrev.png",
     "description": "With some weight in hand, curl your arm upwards for one repetition.",
-    "reps": 15,
-    "sets": 4,
+    "reps": "15 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -289,8 +289,8 @@ var armsBStrength = [
     "video": "images/dumbellGrip.mp4",
     "prev": "images/forearmHoldPrev.png",
     "description": "Grip dumbbell and let go, repeat for finger and forearm strength.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -301,8 +301,8 @@ var backTPain = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 30,
-    "sets": 4,
+    "reps": "30 secs",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -310,8 +310,8 @@ var backTPain = [
     "video": "images/rollshoulders.mp4",
     "prev": "images/rollshouldersprev.gif",
     "description": "Roll your shoulders slowly and with purpose, feeling your back muscles as you go.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -319,8 +319,8 @@ var backTPain = [
     "video": "images/swiffershoulder.mp4",
     "prev": "images/swiffershoulderprev.gif",
     "description": "Using a rod, hold it with both hands far apart in front of your. Slowly, without letting go, bring it all around to your back.",
-    "reps": 3,
-    "sets": 3,
+    "reps": "3 reps",
+    "sets": "3 sets",
     "index": 2
   }
 ]
@@ -331,8 +331,8 @@ var backTFlex = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 30,
-    "sets": 2,
+    "reps": "30 secs",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -340,8 +340,8 @@ var backTFlex = [
     "video": "images/rollshoulders.mp4",
     "prev": "images/rollshouldersprev.gif",
     "description": "Roll your shoulders slowly and with purpose, feeling your back muscles as you go.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -349,8 +349,8 @@ var backTFlex = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 3,
-    "sets": 4,
+    "reps": "3 reps",
+    "sets": "4 sets",
     "index": 2
   }
 ]
@@ -361,8 +361,8 @@ var backTStrength = [
     "video": "images/superman.mp4",
     "prev": "images/supermanprev.gif",
     "description": "Start out lying down. Then lift your limbs up from the ground as well as your torso. Hold the position for 30 seconds, then rest. Repeat.",
-    "reps": 20,
-    "sets": 3,
+    "reps": "20 secs",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -370,8 +370,8 @@ var backTStrength = [
     "video": "images/plank.mp4",
     "prev": "images/plankprev.gif",
     "description": "Start with your body horizontal on the ground. Then lift yourself on your hands or forearms and hold the position as parallel to the floor as possible.",
-    "reps": 60,
-    "sets": 2,
+    "reps": "60 secs",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -382,8 +382,8 @@ var backBPain = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 30,
-    "sets": 2,
+    "reps": "30 secs",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -391,8 +391,8 @@ var backBPain = [
     "video": "images/reversepigeon.mp4",
     "prev": "images/reversepigeonprev.gif",
     "description": "Lie down, then bend your legs where one ankle is over the thigh of the other leg. Then thread your arms to pull your leg toward you to feel a stretch.",
-    "reps": 10,
-    "sets": 2,
+    "reps": "10 reps",
+    "sets": "2 sets",
     "index": 1
   }
 ]
@@ -403,8 +403,8 @@ var backBFlex = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 30,
-    "sets": 3,
+    "reps": "30 secs",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -412,8 +412,8 @@ var backBFlex = [
     "video": "images/overheadlegstretch.mp4",
     "prev": "images/overheadlegstretchprev.gif",
     "description": "On a yoga mat or carpet, lie down on your back. Then, keeping your legs as straight as possible, bring them toward you until you feel a stretch. You can grab your legs to help.",
-    "reps": 30,
-    "sets": 2,
+    "reps": "30 secs",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -421,8 +421,8 @@ var backBFlex = [
     "video": "images/reversepigeon.mp4",
     "prev": "images/reversepigeonprev.gif",
     "description": "Lie down, then bend your legs where one ankle is over the thigh of the other leg. Then thread your arms to pull your leg toward you to feel a stretch.",
-    "reps": 10,
-    "sets": 2,
+    "reps": "10 reps",
+    "sets": "2 sets",
     "index": 2
   }
 ]
@@ -433,8 +433,8 @@ var backBStrength = [
     "video": "images/divebomberpushup.mp4",
     "prev": "images/divebomberpushupprev.gif",
     "description": "Get into a push up position, then bend into an upside down V with your bottom at the top. Slowly roll your body straight, bending your elbows, then return back to the original position.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -442,8 +442,8 @@ var backBStrength = [
     "video": "images/plank.mp4",
     "prev": "images/plankprev.gif",
     "description": "Start with your body horizontal on the ground. Then lift yourself on your hands or forearms and hold the position as parallel to the floor as possible.",
-    "reps": 60,
-    "sets": 3,
+    "reps": "60 secs",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -451,8 +451,8 @@ var backBStrength = [
     "video": "images/obliquestuff.mp4",
     "prev": "images/obliquestuffprev.gif",
     "description": "Do a normal sit up, but twist your torso with control side to side as you go up and down.",
-    "reps": 20,
-    "sets": 3,
+    "reps": "20 reps",
+    "sets": "3 sets",
     "index": 2
   }
 ]
@@ -463,8 +463,8 @@ var calvesPain = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -472,8 +472,8 @@ var calvesPain = [
     "video": "images/calfRotate.mp4",
     "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -481,8 +481,8 @@ var calvesPain = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 25,
-    "sets": 3,
+    "reps": "25 secs",
+    "sets": "3 sets",
     "index": 2
   }
 ]
@@ -493,8 +493,8 @@ var calvesFlex = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -502,8 +502,8 @@ var calvesFlex = [
     "video": "images/calfRotate.mp4",
     "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
-    "reps": 8,
-    "sets": 2,
+    "reps": "8 reps",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -511,8 +511,8 @@ var calvesFlex = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Lower yourself on one leg, make sure knee do not go over foot to maintain joint health.",
-    "reps": 25,
-    "sets": 3,
+    "reps": "25 secs",
+    "sets": "4 sets",
     "index": 2
   }
 ]
@@ -523,8 +523,8 @@ var calvesStrength = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -532,8 +532,8 @@ var calvesStrength = [
     "video": "images/calfRotate.mp4",
     "prev": "images/calfRotatePrev.png",
     "description": "Lift calf up and rotate about the knee joint for one repetition.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -541,8 +541,8 @@ var calvesStrength = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Lower yourself on one leg, make sure knee does not go over foot to maintain joint health.",
-    "reps": 20,
-    "sets": 4,
+    "reps": "20 secs",
+    "sets": "4 sets",
     "index": 2
   },
   {
@@ -550,8 +550,8 @@ var calvesStrength = [
 	  "video": "images/tipToe.mp4",
 	  "prev": "images/tipToePrev.png",
 	  "description": "Get on your tip toes and push up with your calf muscles for one repetition",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 3
   }
 ]
@@ -562,8 +562,8 @@ var chestPain = [
     "video": "images/backArmhold.mp4",
     "prev": "images/backArmholdprev.gif",
     "description": "Hold your hands behind your back and straighten your arms. You should feel your chest stretch forward.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -571,8 +571,8 @@ var chestPain = [
     "video": "images/backwardpretzel.m4v",
     "prev": "images/backpretzelprev.gif",
     "description": "Bring your arms behind your back and hold your elbows. Your chest should push forward.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -580,8 +580,8 @@ var chestPain = [
     "video": "images/sidewallStretch.m4v",
     "prev": "images/sidewallStretchprev.gif",
     "description": "Stand against a wall on your side with the arm closer to the wall raised 90 degrees behind you.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 2
   },
   {
@@ -589,8 +589,8 @@ var chestPain = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 3
   },
   {
@@ -598,8 +598,8 @@ var chestPain = [
     "video": "images/egyptian.m4v",
     "prev": "images/egyptianprev.gif",
     "description": "Lie down, facing down. Bring your forearms next to your chest and lift your back. Hold. ",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 4
   }
 ]
@@ -610,8 +610,8 @@ var chestFlex = [
     "video": "images/backArmhold.mp4",
     "prev": "images/backArmholdprev.gif",
     "description": "Hold your hands behind your back and straighten your arms. You should feel your chest stretch forward.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -619,8 +619,8 @@ var chestFlex = [
     "video": "images/backwardpretzel.m4v",
     "prev": "images/backpretzelprev.gif",
     "description": "Bring your arms behind your back and hold your elbows. Your chest should push forward.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -628,8 +628,8 @@ var chestFlex = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, hopefully to where your arms are straight. Hold.",
-    "reps": 30,
-    "sets": 3,
+    "reps": "30 secs",
+    "sets": "3 sets",
     "index": 2
   },
   {
@@ -637,8 +637,8 @@ var chestFlex = [
     "video": "images/leanonWall.m4v",
     "prev": "images/leanonWallprev.gif",
     "description": "Stand facing a wall. Place your hands on the wall at shoulder width and lean foward, stretching your chest.",
-    "reps": 30,
-    "sets": 2,
+    "reps": "30 secs",
+    "sets": "2 sets",
     "index": 3
   }
 ]
@@ -649,8 +649,8 @@ var chestStrength = [
     "video": "images/backArmhold.mp4",
     "prev": "images/backArmholdprev.gif",
     "description": "Hold your hands behind your back and straighten your arms. You should feel your chest stretch forward.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -658,8 +658,8 @@ var chestStrength = [
     "video": "images/backwardArmlift.m4v",
     "prev": "images/backwardArmliftprev.gif",
     "description": "Hold your hands behind your back and straighten your arms. Lift your arms slowly and release. Repeat.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -667,8 +667,8 @@ var chestStrength = [
     "video": "images/bottleLift.m4v",
     "prev": "images/bottleLiftprev.gif",
     "description": "Lie down on your back and hold two items or one long item in your hands above your chest. Lift up and release slowly.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 2
   },
   {
@@ -676,8 +676,8 @@ var chestStrength = [
     "video": "images/largeClap.m4v",
     "prev": "images/largeClapprev.gif",
     "description": "Stand with your arms spread out to the side. Bring your arms back to stretch your chest and clap forward. Repeat.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 3
   },
   {
@@ -685,8 +685,8 @@ var chestStrength = [
     "video": "images/wallpushups.m4v",
     "prev": "images/wallpushupsprev.gif",
     "description": "Stand facing a wall and place your hands on the wall at shoulder width. Lean forward and push yourself back off the wall.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "3 sets",
     "index": 4
   }
 ]
@@ -697,8 +697,8 @@ var feetPain = [
     "video": "images/footcramp.mp4",
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -706,8 +706,8 @@ var feetPain = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -715,8 +715,8 @@ var feetPain = [
     "video": "images/sitcurl.mp4",
     "prev": "images/sitcurlprev.gif",
     "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
-    "reps": 20,
-    "sets": 3,
+    "reps": "20 reps",
+    "sets": "4 sets",
     "index": 2
   }
 ]
@@ -726,8 +726,8 @@ var feetFlex =  [
     "video": "images/footcramp.mp4",
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -735,8 +735,8 @@ var feetFlex =  [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -744,8 +744,8 @@ var feetFlex =  [
     "video": "images/heelstretch.mp4",
     "prev": "images/heelstretchprev.gif",
     "description": "Stand on both feet. Then get on the balls of your feet, bringing your heels as high as possible and hold. Then rest for 5 seconds and hold again.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 2
   },
   {
@@ -753,8 +753,8 @@ var feetFlex =  [
     "video": "images/sitcurl.mp4",
     "prev": "images/sitcurlprev.gif",
     "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
-    "reps": 20,
-    "sets": 3,
+    "reps": "25 reps",
+    "sets": "4 sets",
     "index": 3
   }
 ]
@@ -764,8 +764,8 @@ var feetStrength = [
     "video": "images/footcramp.mp4",
     "prev": "images/footcrampprev.gif",
     "description": "Face the wall and place your heel on the floor and the ball of your foot on the wall. Lean forward to stretch, hold, then release. Repeat until cramp disappears.",
-    "reps": 15,
-    "sets": 3,
+    "reps": "15 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -773,8 +773,8 @@ var feetStrength = [
     "video": "images/lunges.mp4",
     "prev": "images/glutsPain1.gif",
     "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 1
   },
   {
@@ -782,8 +782,8 @@ var feetStrength = [
     "video": "images/heelstretch.mp4",
     "prev": "images/heelstretchprev.gif",
     "description": "Stand on both feet. Then get on the balls of your feet, bringing your heels as high as possible and hold. Then rest for 5 seconds and hold again.",
-    "reps": 10,
-    "sets": 3,
+    "reps": "10 reps",
+    "sets": "3 sets",
     "index": 2
   },
   {
@@ -791,8 +791,8 @@ var feetStrength = [
     "video": "images/sitcurl.mp4",
     "prev": "images/sitcurlprev.gif",
     "description": "Sit down on a chair. Rest your feet flat on the ground, then raise your heels and curl your feet inward, keeping your toes touching the ground. This is intended to help flat feet.",
-    "reps": 25,
-    "sets": 3,
+    "reps": "25 reps",
+    "sets": "4 sets",
     "index": 3
   }
 ]
@@ -803,8 +803,8 @@ var glutsPain = [
     "video": "images/overheadlegstretch.mp4",
     "prev": "images/overheadlegstretchprev.gif",
     "description": "On a yoga mat or carpet, lie down on your back. Then, keeping your legs as straight as possible, bring them toward you until you feel a stretch. You can grab your legs to help.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -812,8 +812,8 @@ var glutsPain = [
     "video": "images/reversepigeon.mp4",
     "prev": "images/reversepigeonprev.gif",
     "description": "Lie down, then bend your legs where one ankle is over the thigh of the other leg. Then thread your arms to pull your leg toward you to feel a stretch.",
-    "reps": 8,
-    "sets": 4,
+    "reps": "8 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -821,8 +821,8 @@ var glutsPain = [
     "video": "images/twistystretchy.mp4",
     "prev": "images/twistystretchyprev.gif",
     "description": "Sit down with both legs bent, where one leg is reached over the other leg. Slowly move your torso to the left, then the right. Repeat with the other leg over the other leg.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 2
   }
 ];
@@ -833,8 +833,8 @@ var glutsFlex = [
     "video": "images/overheadlegstretch.mp4",
     "prev": "images/overheadlegstretchprev.gif",
     "description": "On a yoga mat or carpet, lie down on your back. Then, keeping your legs as straight as possible, bring them toward you until you feel a stretch. You can grab your legs to help.",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -842,8 +842,8 @@ var glutsFlex = [
     "video": "images/reversepigeon.mp4",
     "prev": "images/reversepigeonprev.gif",
     "description": "Lie down, then bend your legs where one ankle is over the thigh of the other leg. Then thread your arms to pull your leg toward you to feel a stretch.",
-    "reps": 8,
-    "sets": 4,
+    "reps": "8 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -851,8 +851,8 @@ var glutsFlex = [
     "video": "images/twistystretchy.mp4",
     "prev": "images/twistystretchyprev.gif",
     "description": "Sit down with both legs bent, where one leg is reached over the other leg. Slowly move your torso to the left, then the right. Repeat with the other leg over the other leg.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 2
   },
   {
@@ -860,8 +860,8 @@ var glutsFlex = [
     "video": "images/butterfly.mp4",
     "prev": "images/butterflyprev.gif",
     "description": "Sit down and bend your legs so the bottom of your feet are touching each other. Lean your head and torso toward your feet until you feel a stretch.",
-    "reps": 30,
-    "sets": 2,
+    "reps": "30 secs",
+    "sets": "2 sets",
     "index": 3
   }
 ]
@@ -872,8 +872,8 @@ var glutsStrength = [
     "video": "images/firehydrant.mp4",
     "prev": "images/firehydrantprev.gif",
     "description": "Get on all fours and lift a leg up, bent, and lift it away from your hip outward (perpendicular to your body), flexing your muscles. Bring it back down with control, and repeat.",
-    "reps": 20,
-    "sets": 4,
+    "reps": "20 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -881,8 +881,8 @@ var glutsStrength = [
     "video": "images/reverselegbuttlift.mp4",
     "prev": "images/reverselegbuttliftprev.gif",
     "description": "Get on all fours and lift a leg up, either bent or straight, then lift it upward while flexing your muscles. Bring it down with control and without touching the ground, then repeat.",
-    "reps": 25,
-    "sets": 4,
+    "reps": "25 reps",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -894,8 +894,8 @@ var handsPain = [
     "video": "images/clawHand.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -903,8 +903,8 @@ var handsPain = [
     "video": "images/thumbStretch.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Extend palm outward and push thumb outwards, then in",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 1
   }
 ]
@@ -914,8 +914,8 @@ var handsFlex = [
     "video": "images/clawHand.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 0
   },
   {
@@ -923,8 +923,8 @@ var handsFlex = [
     "video": "images/thumbStretch.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Extend palm outward and push thumb outwards, then in",
-    "reps": 8,
-    "sets": 3,
+    "reps": "8 reps",
+    "sets": "3 sets",
     "index": 1
   }
 ]
@@ -934,8 +934,8 @@ var handsStrength = [
     "video": "images/dumbellGrip.mp4",
     "prev": "images/forearmHoldPrev.png",
     "description": "Grip dumbbell and let go, repeat for finger and forearm strength.",
-    "reps": 7,
-    "sets": 4,
+    "reps": "7 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -943,8 +943,8 @@ var handsStrength = [
     "video": "images/clawHand.mp4",
     "prev": "images/genericHandPrev.png",
     "description": "Make a claw shape with your hand and hold to build finger strength and flexibility",
-    "reps": 7,
-    "sets": 4,
+    "reps": "7 reps",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -956,8 +956,8 @@ var hipsPain = [
     "video": "images/sideswing.m4v",
     "prev": "images/sideswingprev.gif",
     "description": "Stand with your legs apart at shoulder width. Bend your arms up to your chest and twist your torso left and right.",
-    "reps": 7,
-    "sets": 4,
+    "reps": "7 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -965,8 +965,8 @@ var hipsPain = [
     "video": "images/downwardbend.m4v",
     "prev": "images/downbendprev.gif",
     "description": "Stand with your legs apart at shoulder width. Stretch down to your right as far as you can. Repeat on the left.",
-    "reps": 7,
-    "sets": 4,
+    "reps": "7 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -974,8 +974,8 @@ var hipsPain = [
     "video": "images/legcircles.m4v",
     "prev": "images/legcirclesprev.gif",
     "description": "Lie down on your back. Bend on knee and lift the other 45 degrees in the air away from you. Rotate the leg in the air in circles.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 2
   }
 ]
@@ -985,8 +985,8 @@ var hipsFlex = [
     "video": "images/downwardbend.m4v",
     "prev": "images/downbendprev.gif",
     "description": "Stand with your legs apart at shoulder width. Stretch down to your right as far as you can. Repeat on the left.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -994,8 +994,8 @@ var hipsFlex = [
     "video": "images/horizontalleglift.m4v",
     "prev": "images/horizontallegliftprev.gif",
     "description": "Lie down on your side with the arm closer to the ground propping up your head. Place the other arm on your hip and lift the leg closer to the ceiling and release.",
-    "reps": 12,
-    "sets": 4,
+    "reps": "12 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -1003,8 +1003,8 @@ var hipsFlex = [
     "video": "images/sidesplit.m4v",
     "prev": "images/sidesplitprev.gif",
     "description": "Sit with one leg bent. The foot closer to you and knee away from you. Then stretch the other leg in the opposite direction. Hold.",
-    "reps": 15,
-    "sets": 4,
+    "reps": "15 reps",
+    "sets": "4 sets",
     "index": 2
   }
 ]
@@ -1014,8 +1014,8 @@ var hipsStrength = [
     "video": "images/horizontalleglift.m4v",
     "prev": "images/horizontallegliftprev.gif",
     "description": "Lie down on your side with the arm closer to the ground propping up your head. Place the other arm on your hip and lift the leg closer to the ceiling and release.",
-    "reps": 12,
-    "sets": 4,
+    "reps": "12 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -1023,8 +1023,8 @@ var hipsStrength = [
     "video": "images/legcircles.m4v",
     "prev": "images/legcirclesprev.gif",
     "description": "Lie down on your back. Bend one knee and lift the other 45 degrees in the air away from you. Rotate the leg in the air in circles.",
-    "reps": 15,
-    "sets": 4,
+    "reps": "15 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -1032,8 +1032,8 @@ var hipsStrength = [
     "video": "images/backwardleglift.m4v",
     "prev": "images/backlegliftprev.gif",
     "description": "Rest on your hands and knees. Extend on leg backward - lift and release. Repeat.",
-    "reps": 8,
-    "sets": 4,
+    "reps": "8 reps",
+    "sets": "4 sets",
     "index": 2
   },
   {
@@ -1041,8 +1041,8 @@ var hipsStrength = [
     "video": "images/hiplift.m4v",
     "prev": "images/hipliftprev.gif",
     "description": "Lie down on your back. Bend one knee and lift the other 45 degrees in the air away from you. Keeping your leg straight, lift your hips and release.",
-    "reps": 7,
-    "sets": 4,
+    "reps": "7 reps",
+    "sets": "4 sets",
     "index": 3
   },
   {
@@ -1050,8 +1050,8 @@ var hipsStrength = [
     "video": "images/jumpingtoad.m4v",
     "prev": "images/jumpingtoadprev.gif",
     "description": "Stand with your arms on your hips and feet at shoulder width. Bend one knee up, and jump in the opposite leg's direction 3 times.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 4
   },
   {
@@ -1059,8 +1059,8 @@ var hipsStrength = [
     "video": "images/verticalleglift.m4v",
     "prev": "images/verticallegliftprev.gif",
     "description": "Stand with your arms on your hips and feet together. Raise one leg to the side until you reach 90 degrees and release. ",
-    "reps": 12,
-    "sets": 4,
+    "reps": "12 reps",
+    "sets": "4 sets",
     "index": 5
   }
 ]
@@ -1071,8 +1071,8 @@ var neckPain = [
     "video": "images/neckbendBack.m4v",
     "prev": "images/neckbendBackprev.gif",
     "description": "Standing, hold your hands behind your back keeping your arms straight. Stretch your neck back and hold.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -1080,8 +1080,8 @@ var neckPain = [
     "video": "images/neckLeftRight.m4v",
     "prev": "images/neckLeftRightprev.gif",
     "description": "Standing, slowly look to your right and then turn to your left. Repeat.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -1089,8 +1089,8 @@ var neckPain = [
     "video": "images/neckroundabout.mp4",
     "prev": "images/neckroundaboutprev.PNG",
     "description": "Standing, face down and roll your neck clockwise, and then counterclockwise.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 2
   },
   {
@@ -1098,8 +1098,8 @@ var neckPain = [
     "video": "images/sideNeckStretch.m4v",
     "prev": "images/sideNeckStretchprev.gif",
     "description": "Standing, raise your arm above your head and bring your hand down to hold the other side of your face. Push your head in that arm's direction. Hold.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 3
   }
 ]
@@ -1109,8 +1109,8 @@ var neckFlex = [
     "video": "images/neckbendBack.m4v",
     "prev": "images/neckbendBackprev.gif",
     "description": "Standing, hold your hands behind your back keeping your arms straight. Stretch your neck back and hold.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -1118,8 +1118,8 @@ var neckFlex = [
     "video": "images/neckLeftRight.m4v",
     "prev": "images/neckLeftRightprev.gif",
     "description": "Standing, slowly look to your right and then turn to your left. Repeat.",
-    "reps": 6,
-    "sets": 2,
+    "reps": "6 reps",
+    "sets": "2 sets",
     "index": 1
   },
   {
@@ -1127,8 +1127,8 @@ var neckFlex = [
     "video": "images/neckroundabout.mp4",
     "prev": "images/neckroundaboutprev.PNG",
     "description": "Standing, face down and roll your neck clockwise, and then counterclockwise.",
-    "reps": 3,
-    "sets": 2,
+    "reps": "3 reps",
+    "sets": "2 sets",
     "index": 2
   },
   {
@@ -1136,8 +1136,8 @@ var neckFlex = [
     "video": "images/sideNeckStretch.m4v",
     "prev": "images/sideNeckStretchprev.gif",
     "description": "Standing, raise your arm above your head and bring your hand down to hold the other side of your face. Push your head in that arm's direction. Hold.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 3
   }
 ]
@@ -1147,8 +1147,8 @@ var neckStrength = [
     "video": "images/backwardNecklift.m4v",
     "prev": "images/backwardNeckliftprev.gif",
     "description": "Standing, hold your hands behind your back keeping your arms straight. Stretch your neck back and lift your head. Repeat.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 0
   }
 ]
@@ -1159,8 +1159,8 @@ var shouldersPain = [
     "video": "images/rollshoulders.mp4",
     "prev": "images/rollshouldersprev.gif",
     "description": "Roll your shoulders slowly and with purpose, feeling your back muscles as you go.",
-    "reps": 5,
-    "sets": 2,
+    "reps": "5 reps",
+    "sets": "2 sets",
     "index": 0
   },
   {
@@ -1168,8 +1168,8 @@ var shouldersPain = [
     "video": "images/swiffershoulder.mp4",
     "prev": "images/swiffershoulderprev.gif",
     "description": "Using a rod, hold it with both hands far apart in front of your. Slowly, without letting go, bring it all around to your back.",
-    "reps": 4,
-    "sets": 2,
+    "reps": "4 reps",
+    "sets": "2 sets",
     "index": 1
   }
 ]
@@ -1179,8 +1179,8 @@ var shouldersFlex = [
     "video": "images/rollshoulders.mp4",
     "prev": "images/rollshouldersprev.gif",
     "description": "Roll your shoulders slowly and with purpose, feeling your back muscles as you go.",
-    "reps": 5,
-    "sets": 4,
+    "reps": "5 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -1188,8 +1188,8 @@ var shouldersFlex = [
     "video": "images/swiffershoulder.mp4",
     "prev": "images/swiffershoulderprev.gif",
     "description": "Using a rod, hold it with both hands far apart in front of your. Slowly, without letting go, bring it all around to your back.",
-    "reps": 3,
-    "sets": 4,
+    "reps": "3 reps",
+    "sets": "4 sets",
     "index": 1
   },
   {
@@ -1197,8 +1197,8 @@ var shouldersFlex = [
     "video": "images/armstretch.mp4",
     "prev": "images/armstretchprev.gif",
     "description": "Bring one arm across to the other side, parallel to the ground. Use the other arm to stretch it out. Repeat on the other side.",
-    "reps": 40,
-    "sets": 2,
+    "reps": "40 secs",
+    "sets": "2 sets",
     "index": 2
   }
 ]
@@ -1208,8 +1208,8 @@ var shouldersStrength = [
     "video": "images/divebomberpushup.mp4",
     "prev": "images/divebomberpushupprev.gif",
     "description": "Get into a push up position, then bend into an upside down V with your bottom at the top. Slowly roll your body straight, bending your elbows, then return back to the original position.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -1217,8 +1217,8 @@ var shouldersStrength = [
     "video": "images/cobrastretch.mp4",
     "prev": "images/cobrastretchprev.gif",
     "description": "Lie down, facing down. Lift your back up as far as possible, while keeping your elbows touching your sides. Once you go up, go back down. Repeat like normal push ups.",
-    "reps": 30,
-    "sets": 3,
+    "reps": "30 secs",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -1229,8 +1229,8 @@ var thighsPain = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-    "reps": 10,
-    "sets": 4,
+    "reps": "10 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -1238,8 +1238,8 @@ var thighsPain = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 40,
-    "sets": 2,
+    "reps": "40 secs",
+    "sets": "3 sets",
     "index": 1
   }
 ]
@@ -1249,8 +1249,8 @@ var thighsFlex = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
 	   "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-     "reps": 20,
-     "sets": 4,
+     "reps": "20 reps",
+     "sets": "4 sets",
      "index": 0
   },
   {
@@ -1258,8 +1258,8 @@ var thighsFlex = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 40,
-    "sets": 4,
+    "reps": "40 secs",
+    "sets": "4 sets",
     "index": 1
   }
 ]
@@ -1270,8 +1270,8 @@ var thighsStrength = [
     "video": "images/airSquat.mp4",
     "prev": "images/airSquatPrev.png",
     "description": "With arms outstretched, squat with your feet shoulder-width apart, and do not go over your knees.",
-    "reps": 20,
-    "sets": 4,
+    "reps": "20 reps",
+    "sets": "4 sets",
     "index": 0
   },
   {
@@ -1279,8 +1279,8 @@ var thighsStrength = [
     "video": "images/calfforward.mp4",
     "prev": "images/calfforwardprev.gif",
     "description": "Standing up, bring one leg in front of the other, bending the front leg and keeping the back leg straight until you feel a strength. Hold 20-30 seconds and repeat on other side.",
-    "reps": 40,
-    "sets": 4,
+    "reps": "40 secs",
+    "sets": "4 sets",
     "index": 1
   }
 ]
