@@ -91,7 +91,7 @@
   		Would you like to remove this exercise set from your list of Exercise Sets?
   	  </div>
         <div class="modal-footer">
-  		<button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+  		    <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
           <a href = "#" id = "deleteButton" class="btn btn-danger" role = "button" >Delete Exercise Set</a>
         </div>
       </div>
@@ -142,9 +142,28 @@
         newDiv.className = 'card_content';
         var hLabel = document.createElement("h4");
         hLabel.className = 'hcard';
+        hLabel.id = 'hlabel';
         var newOne = new String();
         newOne = name.replace(/"/g, "");
         var title = document.createTextNode(newOne);
+
+  //      hLabel.textContent.length //length
+    //    hLabel.style.fontSize ="10px" //Size maker
+  /*      a = [];
+        a.push("15px");
+        a.push("12px");
+
+        var diff = name.length - hLabel.textContent.length;
+        if (diff > 0)  {
+          console.log(hLabel.textContent.length);
+          if (diff <= 5) {
+            hLabel.style.fontSize = a[0];
+          }
+          else {
+            hLabel.style.fontSize = a[1];
+          }
+        }
+*/
         newDiv.appendChild(hLabel);
         hLabel.appendChild(title);
         one.appendChild(hLabel);
@@ -170,6 +189,13 @@
       $(".pic").on('click',popup);
       $(".hcard").on('click',popup);
       $(".trashCan").on('click', deleteConfirm);
+
+      console.log($('#aNewDiv').height());
+    /*  //TESTING AUTOMATIC FONT CHANGE
+      while ($('#hlabel').height() > $('#aNewDiv').height()) {
+        console.log("resizing");
+        $('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
+      }*/
 	});
 	function popup()
 	{
@@ -195,8 +221,6 @@
   function deleteSet()
   {
     console.log("trashcan pressed");
-//    var myparent = $(this).parent();
-//    var ind = $(myparent).attr('id');
     var ind = setInd
     console.log(ind);
     playlists.splice(ind, 1);
@@ -233,12 +257,6 @@
     //Insert the new playlist before the "new playlist" card
     document.body.insertBefore(newPlaylist, newPlaylistCard);
     newPlaylist.id = playlists.length;
-/*
-    document.getElementById(newPlaylist.id).addEventListener("click", function() {
-  //  localStorage.setItem("currentSet", playlists.length-1);
-    localStorage.setItem("currentSet", newPlaylist.id );
-    location.href = "setexercises.html";
-  });*/
 
     document.getElementById("picture").addEventListener("click", function() {
       localStorage.setItem("currentSet", newPlaylist.id);
@@ -251,10 +269,12 @@
      };
     playlists.push(fullP);
     localStorage.setItem("listsOfSets", JSON.stringify(playlists));
+
     // for (var i = 0; i < playlists.length; i++) {
       // var nameList = "<li><a href=\"#\" onclick = \"addToPlaylistExisting('"+ nameP +"', " + (JSON.stringify(playlists[i])).replace(/"/g, "'") + ")\">" + nameP + "</a></li>";
     var newDiv = document.createElement("divdiv");
     newDiv.className = 'card_content';
+    newDiv.id = 'aNewDiv';
     var hLabel = document.createElement("h4");
     hLabel.className = 'hcard';
     hLabel.id = 'hlabel';
@@ -280,9 +300,17 @@
     //Clear input field
     $('#inputName').val('');
   }
-
-
   </script>
 
-
 </html>
+
+<style>
+
+/*
+#hlabel {
+  width: 150px;
+  height: 20px;
+  font-size: 1em;
+}
+*/
+</style>

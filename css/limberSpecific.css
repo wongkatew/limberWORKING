@@ -111,7 +111,7 @@ span.psw {
 
 .detailbtn {
   background-color:#c49000;
-  color: white;
+  color: #000;
   padding: 14px;
   font-size: 14px;
   border: none;
@@ -129,7 +129,7 @@ span.psw {
 
 .dropbtn {
   background-color:#c49000;
-  color: white;
+  color: #000;
   padding: 15px;
   font-size: 14px;
   border: none;
@@ -294,4 +294,20 @@ span.psw {
   width: 100%;
   height: 65%;
   box-shadow:0 0 5px 2px silver;
+}
+.btn-success {
+  color: #000;
+}
+#addToPlaylistBtn {
+  color: #000;
+}
+#cancelAddbtn {
+  color: #000;
+}
+.btn-danger {
+  color: #000;
+}
+#deletHistoryVid {
+  background-color: red;
+  border-color: red;
 }
