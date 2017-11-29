@@ -288,7 +288,7 @@
 				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 			</div>
       <div class="modal-body">
-        <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" style="top: 0; left: 0; width:100%; height: 100%"></iframe>
+        <iframe width="100%" height="500%" frameborder="0" allowfullscreen="" style="border: 0; position: relative; top: 0; left:0; right:0; bottom:0; height: 40vh !important; max-width: 90vw !important;"></iframe>
       </div>
     </div>
   </div>
@@ -348,7 +348,7 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<img src={{prev}} style="width:100%; height:100%" id="prev{{index}}" onclick="showVid({{json this}})"></img>
+							<img src={{prev}} style="width:100%; height:100%; max-width:100%; max-height: 50vh !important;" id="prev{{index}}" onclick="showVid({{json this}})"></img>
 							<img src="images/play.png" class="overlay_pic" onclick="showVid({{json this}})" id="play{{index}}"></img>
 							<p style="display:none;" id="description{{index}}">{{description}}</p>
 						</div>
