@@ -315,7 +315,11 @@ span.psw {
 .btn-danger {
   color: #000;
 }
-#deletHistoryVid {
+#deleteHistoryVid {
   background-color: red;
   border-color: red;
+}
+#deleteButton {
+  height: 50%;
+	width: 50%;
 }
