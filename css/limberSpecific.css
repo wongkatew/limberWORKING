@@ -300,9 +300,17 @@ span.psw {
 }
 #addToPlaylistBtn {
   color: #000;
+  background: #fbc02d;
+	border-color: #fff;
+  height: 50%;
+	width: 50%;
 }
 #cancelAddbtn {
   color: #000;
+  background-color: #fff;
+	border-color: #fbc02d;
+  height: 50%;
+	width: 50%;
 }
 .btn-danger {
   color: #000;
