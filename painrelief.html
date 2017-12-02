@@ -225,7 +225,7 @@
 			historyVids.push(vidP);
 			localStorage.setItem("historyOfVids", JSON.stringify(historyVids));
 
-			document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Created and added to " + nameP + "!</div>";
+			document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" style=\"color:#000\" data-dismiss=\"alert\">x</button>Created and added to " + nameP + "!</div>";
 			// document.getElementById("funfun" + arguments[0].index).innerHTML += nameList;
 		};
 
@@ -250,7 +250,7 @@
 				localStorage.setItem("listsOfSets", JSON.stringify(playlists));
 
 				// success notification and fade
-				document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\">x</button>Added to " + playlistName + "!</div>";
+				document.getElementById("alerts").innerHTML = "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" style=\"color:#000\" data-dismiss=\"alert\">x</button>Added to " + playlistName + "!</div>";
 			});
 
 			historyVids.push(currentVideoData);
