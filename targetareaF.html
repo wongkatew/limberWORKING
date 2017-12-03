@@ -821,7 +821,7 @@ function goBack() {
 					 id="chestDet1"
 					 inkscape:connector-curvature="0"
 					 sodipodi:nodetypes="cccccccccccccccccccc" />
-				<a class = "astr" xlink:href = "chest3.html"> </a>
+				<a class = "astr" xlink:href = "backT3.html"> </a>
 				<a class = "aflex" xlink:href = "flexibility.html"> </a>
 				<a class = "apain" xlink:href = "images/chest.png"> </a>
 			</a>
@@ -851,7 +851,7 @@ function goBack() {
 					 id="path2525-3"
 					 inkscape:connector-curvature="0"
 					 sodipodi:nodetypes="cscccccccccc" />
-				<a class = "astr" xlink:href = "abs3.html"> </a>
+				<a class = "astr" xlink:href = "backB3.html"> </a>
 				<a class = "aflex" xlink:href = "flexibility.html"> </a>
 				<a class = "apain" xlink:href = "images/abs.png"> </a>
 			</a>
@@ -1287,12 +1287,25 @@ function goBack() {
 				});
 				function popup()
 				{
+						if (isBack == 0)
+						{
 							$('#str').attr( "href", $(this).find('.astr').attr("xlink:href"));
 							$('.modal-title').text( $(this).attr('id'));
 							$('#partlogo').attr( "src", $(this).find('.apain').attr("xlink:href"));
 							$('#bodymodal').modal('show');
 							$(this).find('.anatomy').css({fill : "#fbc02d"});
 							$(this).find('.anatomy_det').css({fill : "#F9A825"});
+						}
+						else
+						{
+							var idtext = $(this).attr('id');
+							$('#str').attr( "href", $(this).find('.astr').attr("xlink:href"));
+							$('.modal-title').text( idtext.substr(0,idtext.length-1) );
+							$('#partlogo').attr( "src", $(this).find('.apain').attr("xlink:href"));
+							$('#bodymodal').modal('show');
+							$(this).find('.anatomy').css({fill : "#fbc02d"});
+							$(this).find('.anatomy_det').css({fill : "#F9A825"});
+						}
 				}
 				
 
