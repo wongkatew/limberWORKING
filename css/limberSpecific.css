@@ -286,8 +286,8 @@ span.psw {
   padding: 0;
   margin: 0;
   background-color: #fff;
-/*  position: absolute; */
-  right: 0px;
+  position: absolute;
+  right: 42px;
   bottom: 10px;
 }
 .pic {

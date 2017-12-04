@@ -137,7 +137,7 @@
         document.body.insertBefore(one, newPlaylistCard);
         one.id = i;
 
-		console.log(localStorage.getItem("currentSet"));
+//    		console.log(localStorage.getItem("currentSet"));
         var newDiv = document.createElement("divdiv");
         newDiv.className = 'card_content';
         var hLabel = document.createElement("h4");
@@ -147,20 +147,26 @@
         newOne = name.replace(/"/g, "");
         var title = document.createTextNode(newOne);
 
-  //      hLabel.textContent.length //length
-    //    hLabel.style.fontSize ="10px" //Size maker
-  /*      a = [];
+
+        //Check for text field size and adjust font accordingly
+//        hLabel.textContent.length //length
+//        hLabel.style.fontSize ="10px" //Size maker
+/*        a = [];
         a.push("15px");
         a.push("12px");
+        a.push("10px");
 
-        var diff = name.length - hLabel.textContent.length;
+        console.log("The input name length is " + name.length);
+        var diff = name.length - title.length;
         if (diff > 0)  {
-          console.log(hLabel.textContent.length);
+          console.log(title.length);
           if (diff <= 5) {
             hLabel.style.fontSize = a[0];
+            console.log("15px chosen");
           }
           else {
             hLabel.style.fontSize = a[1];
+            console.log("12px chosen");
           }
         }
 */
@@ -190,13 +196,25 @@
       $(".hcard").on('click',popup);
       $(".trashCan").on('click', deleteConfirm);
 
-      console.log($('#aNewDiv').height());
-    /*  //TESTING AUTOMATIC FONT CHANGE
-      while ($('#hlabel').height() > $('#aNewDiv').height()) {
+//      console.log($('#aNewDiv').height());
+      //TESTING AUTOMATIC FONT CHANGE
+/*      while ($('#hlabel').height() > $('#aNewDiv').height()) {
         console.log("resizing");
+        console.log($('#hlabel').height());
         $('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
-      }*/
+      }
+*/
 	});
+  function adjustFont(x, y) {
+    console.log(x);
+    while (x > 10) {
+      console.log("resizing");
+      $("#hlabel"+y).css('font-size', (parseInt($('#hlabel'+y).css('font-size')) - 1) + "px");
+      //$('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
+      x--;
+    }
+    return;
+  }
 	function popup()
 	{
       if ($(this).attr('id') != "newPlaylistBtn")
@@ -277,15 +295,30 @@
     newDiv.id = 'aNewDiv';
     var hLabel = document.createElement("h4");
     hLabel.className = 'hcard';
-    hLabel.id = 'hlabel';
+    hLabel.id = 'hlabel' + playlists.length;
     var newOne = new String();
     newOne = newPlaylistName.replace(/"/g, "");
+    newOne.id = "newName";
+    newOne.length = newPlaylistName.length;
     var title = document.createTextNode(newOne);
+
     newDiv.appendChild(hLabel);
     hLabel.appendChild(title);
     newPlaylist.appendChild(hLabel);
 
-    document.getElementById("hlabel").addEventListener("click", function() {
+    console.log($("#hlabel"+playlists.length).width());
+    console.log(newPlaylistName.length);
+
+    // console.log($("#hlabel")[0].scrollWidth);
+    // console.log($("#hlabel").innerWidth());
+
+    if (newPlaylistName.length > 10) {
+      adjustFont(newPlaylistName.length, playlists.length);
+      console.log("resizing called");
+      // $('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
+    }
+
+    document.getElementById("hlabel"+playlists.length).addEventListener("click", function() {
       localStorage.setItem("currentSet", newPlaylist.id);
       location.href = "setexercises.html";
     });
@@ -305,12 +338,7 @@
 </html>
 
 <style>
-
-/*
 #hlabel {
-  width: 150px;
-  height: 20px;
-  font-size: 1em;
+  overflow: hidden;
 }
-*/
 </style>
