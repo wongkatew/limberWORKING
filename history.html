@@ -20,6 +20,14 @@
 
 
 		$(document).ready(function() {
+			for (i = 1; i < historyVids.length; i++)
+			{
+				if (historyVids[i].title == historyVids[i-1].title)
+				{
+					historyVids.splice(i,1); 
+					i = i-1;
+				}
+			}
 			console.log('hello world');
 
 
