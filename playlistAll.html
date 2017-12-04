@@ -142,38 +142,21 @@
         newDiv.className = 'card_content';
         var hLabel = document.createElement("h4");
         hLabel.className = 'hcard';
-        hLabel.id = 'hlabel';
+        hLabel.id = 'hlabel' + i;
         var newOne = new String();
         newOne = name.replace(/"/g, "");
         var title = document.createTextNode(newOne);
 
-
-        //Check for text field size and adjust font accordingly
-//        hLabel.textContent.length //length
-//        hLabel.style.fontSize ="10px" //Size maker
-/*        a = [];
-        a.push("15px");
-        a.push("12px");
-        a.push("10px");
-
-        console.log("The input name length is " + name.length);
-        var diff = name.length - title.length;
-        if (diff > 0)  {
-          console.log(title.length);
-          if (diff <= 5) {
-            hLabel.style.fontSize = a[0];
-            console.log("15px chosen");
-          }
-          else {
-            hLabel.style.fontSize = a[1];
-            console.log("12px chosen");
-          }
-        }
-*/
         newDiv.appendChild(hLabel);
         hLabel.appendChild(title);
         one.appendChild(hLabel);
         //HOW to set a general playlist to THE playlist we want to display?
+
+        if (name.length > 10) {
+          adjustFontReady(name.length, i);
+          console.log("resizing READY");
+          // $('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
+        }
 
         var trashBtn = document.createElement("button");
         trashBtn.className = 'trashCan';
@@ -205,10 +188,20 @@
       }
 */
 	});
-  function adjustFont(x, y) {
+  function adjustFontReady(x, y) {
     console.log(x);
     while (x > 10) {
-      console.log("resizing");
+      console.log("resizing READY");
+      $("#hlabel"+y).css('font-size', (parseInt($('#hlabel'+y).css('font-size')) - 1) + "px");
+      //$('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
+      x--;
+    }
+    return;
+  }
+  function adjustFont(x, y) {
+//    console.log(x);
+    while (x > 10) {
+//      console.log("resizing");
       $("#hlabel"+y).css('font-size', (parseInt($('#hlabel'+y).css('font-size')) - 1) + "px");
       //$('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
       x--;
@@ -306,15 +299,15 @@
     hLabel.appendChild(title);
     newPlaylist.appendChild(hLabel);
 
-    console.log($("#hlabel"+playlists.length).width());
-    console.log(newPlaylistName.length);
+//    console.log($("#hlabel"+playlists.length).width());
+//    console.log(newPlaylistName.length);
 
     // console.log($("#hlabel")[0].scrollWidth);
     // console.log($("#hlabel").innerWidth());
 
     if (newPlaylistName.length > 10) {
       adjustFont(newPlaylistName.length, playlists.length);
-      console.log("resizing called");
+//      console.log("resizing called");
       // $('#hlabel').css('font-size', (parseInt($('#hlabel').css('font-size')) - 1) + "px" );
     }
 
