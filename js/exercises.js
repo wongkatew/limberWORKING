@@ -771,7 +771,7 @@ var feetStrength = [
   {
     "title": "Lunges",
     "video": "images/lunges.mp4",
-    "prev": "images/lungesPrev.gif",
+    "prev": "images/lungesPrev.png",
     "description": "Lower yourself on one leg, make sure knee doesn't go over foot to maintain joint health.",
     "reps": "8 reps",
     "sets": "3 sets",
