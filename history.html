@@ -16,6 +16,7 @@
 		var vidInd;
 		var setlists = localStorage.getItem("historyOfVids");
 		historyVids = JSON.parse(setlists);
+		historyVids = historyVids.reverse();
 
 
 		$(document).ready(function() {
